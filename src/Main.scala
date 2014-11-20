@@ -1,6 +1,8 @@
 /**
  * Created by Conor on 11/20/2014.
  */
-class Main {
-
+object Main {
+  def main(args: Array[String]) {
+    println("Hello, world!")
+  }
 }
