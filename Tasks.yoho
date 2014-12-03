@@ -1,12 +1,9 @@
 -Claim yo shit:
 
-Main
 System
 Document Checker
 Security
-Jail
-setup(message)
-notify(message)
+
 
 Conor:
  - Queue
@@ -17,3 +14,8 @@ Conor:
 Geoff:
 
 Kocsen:
+ - Main
+ - Jail
+ - Setup (message)
+ - Nofify (message)
+
