@@ -1,21 +1,22 @@
 -Claim yo shit:
 
-System
-Document Checker
-Security
+System (Actor)
+Document Checker (Actor)
+Security (Actor)
+Passenger
 
 
 Conor:
- - Queue
- - Body Scanner
- - Bag Scanner
- - sendPassenger(message)
+ - Queue (Actor)
+ - Body Scanner (Actor)
+ - Bag Scanner (Actor)
+ - sendPassenger (message)
 
 Geoff:
 
 Kocsen:
  - Main
- - Jail
+ - Jail (Actor)
  - Setup (message)
  - Nofify (message)
 
