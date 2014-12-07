@@ -4,9 +4,7 @@
  */
 
 import akka.actor.Actor
-sealed abstract class Message
-case object Setup extends Message
-case object SendPassenger extends Message
+import akka.actor.ActorRef
 
 class BagScanner extends Actor[Message] {
 
