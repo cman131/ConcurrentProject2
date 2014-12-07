@@ -16,7 +16,7 @@ class BodyScanner extends Actor[Message] {
 			security = msg.secRef
 		case msg: SendPassenger => // receive a new passenger
 			result = (new scala.util.Random).nextInt(5)!=2
-			security.tell(new SendPassenger(msg.passenger, result), getSelf())
-			queue.tell(new Notify(true), getSelf())
+			security ! new SendPassenger(msg.passenger, result)
+			queue ! new Notify(true)
 	}
 }

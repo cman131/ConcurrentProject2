@@ -26,11 +26,11 @@ class Queue extends Actor[Message] {
 			bags = msg.passenger +: bags
 			// Now update the scanners if they are free
 			if(isBagFree){
-				bag.tell(new SendPassenger(bags.dequeue()), getSelf())
+				bag ! new SendPassenger(bags.dequeue())
 				isBagFree = false
 			}
 			if(isBodyFree){
-				body.tell(new SendPassenger(bodies.dequeue()), getSelf())
+				body ! new SendPassenger(bodies.dequeue())
 				isBodyFree = false
 			}
 
@@ -38,14 +38,14 @@ class Queue extends Actor[Message] {
 		{
 			case b: BodyScanner =>
 				if(bodies.size()>0){
-					body.tell(new SendPassenger(bodies.dequeue()), getSelf())
+					body ! new SendPassenger(bodies.dequeue())
 				}
 				else{
 					isBodyFree = true;
 				}
 			case b: BagScanner =>
 				if(bags.size()>0){
-					bag.tell(new SendPassenger(bags.dequeue()), getSelf())
+					bag ! new SendPassenger(bags.dequeue())
 				}
 				else{
 					isBagFree = true;
