@@ -6,8 +6,9 @@
  * @author Geoff Berl
  */
 
+import akka.actor.Actor
 
-object Passenger {
+class Passenger extends Actor {
   
   // Some fields maybe??
   var hasBag : Boolean = true;
