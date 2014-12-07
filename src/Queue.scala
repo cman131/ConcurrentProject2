@@ -12,32 +12,47 @@ case object SendPassenger extends Message
 case object Notify extends Message
 
 class Queue extends Actor[Message] {
-	val body
-	val bag
-	val isBagFree = True
-	val isBodyFree = True
+	var body: BodyScanner
+	var bag: BagScanner
+	var isBagFree = true
+	var isBodyFree = true
 
 	val bodies = Queue.empty[Passenger]
 	val bags = Queue.empty[Passenger]
 
 	def receive = {
-		case Setup(msg) => // receive setup msg
+		case msg: Setup => // receive setup msg
 			body = msg.bodyRef
 			bag = msg.bagRef
-		case SendPassenger(msg) => () // receive a new passenger
+		case msg: SendPassenger => // receive a new passenger
 			bodies = msg.passenger +: bodies
 			bags = msg.passenger +: bags
 			// Now update the scanners if they are free
-
-		case Notify(msg) => // a scanner has become free
-			{
-			case BodyScanner =>
-				//TODO
-			case BagScanner =>
-				//TODO
-			default =>
-				// I've been poisoned
+			if(isBagFree){
+				bag.tell(new SendPassenger(bags.dequeue()), getSelf())
+				isBagFree = false
+			}
+			if(isBodyFree){
+				body.tell(new SendPassenger(bodies.dequeue()), getSelf())
+				isBodyFree = false
 			}
 
+		case msg: Notify => // a scanner has become free
+		{
+			case b: BodyScanner =>
+				if(bodies.size()>0){
+					body.tell(new SendPassenger(bodies.dequeue()), getSelf())
+				}
+				else{
+					isBodyFree = true;
+				}
+			case b: BagScanner =>
+				if(bags.size()>0){
+					bag.tell(new SendPassenger(bags.dequeue()), getSelf())
+				}
+				else{
+					isBagFree = true;
+				}
+		}
 	}
 }

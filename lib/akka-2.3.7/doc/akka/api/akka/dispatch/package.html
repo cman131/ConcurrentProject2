@@ -1,0 +1,1446 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>dispatch - akka.dispatch</title>
+          <meta name="description" content="dispatch - akka.dispatch" />
+          <meta name="keywords" content="dispatch akka.dispatch" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'akka.dispatch.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="akka">akka</a></p>
+        <h1>dispatch</h1> <span class="permalink">
+      <a href="../../index.html#akka.dispatch.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dispatch</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph437" viewBox="0.00 0.00 3876.50 216.00" height="216pt" width="3877pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 212)" class="graph" id="graph0"><polygon points="-4,4 -4,-212 3872.5,-212 3872.5,4 -4,4" stroke="none" fill="white"></polygon><!-- node0 --><g class="node class" id="graph437_0"><g id="a_class|graph437_0"><a xlink:title="akka.dispatch.PinnedDispatcher" xlink:href="PinnedDispatcher.html#inheritance-diagram"><polygon points="129,-86 0,-86 0,-61 129,-61 129,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="31.5" text-anchor="start">PinnedDispatcher</text></a></g></g><!-- node1 --><g class="node class" id="graph437_1"><g id="a_class|graph437_1"><a xlink:title="akka.dispatch.NodeMessageQueue" xlink:href="NodeMessageQueue.html#inheritance-diagram"><polygon points="452.5,-86 308.5,-86 308.5,-61 452.5,-61 452.5,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="318.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="339.5" text-anchor="start">NodeMessageQueue</text></a></g></g><!-- node2 --><g class="node class" id="graph437_2"><g id="a_class|graph437_2"><a xlink:title="akka.dispatch.UnboundedPriorityMailbox" xlink:href="UnboundedPriorityMailbox.html#inheritance-diagram"><polygon points="2032,-147 1863,-147 1863,-122 2032,-122 2032,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="1873.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="1894.5" text-anchor="start">UnboundedPriorityMailbox</text></a></g></g><!-- node3 --><g class="node class" id="graph437_3"><g id="a_class|graph437_3"><a xlink:title="akka.dispatch.BoundedPriorityMailbox" xlink:href="BoundedPriorityMailbox.html#inheritance-diagram"><polygon points="2206.5,-147 2050.5,-147 2050.5,-122 2206.5,-122 2206.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="2060.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="2081.5" text-anchor="start">BoundedPriorityMailbox</text></a></g></g><!-- node4 --><g class="node class" id="graph437_4"><g id="a_class|graph437_4"><a xlink:title="akka.dispatch.UnboundedDequeBasedMailbox" xlink:href="UnboundedDequeBasedMailbox.html#inheritance-diagram"><polygon points="2422.5,-147 2224.5,-147 2224.5,-122 2422.5,-122 2422.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="2234.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="2255.5" text-anchor="start">UnboundedDequeBasedMailbox</text></a></g></g><!-- node5 --><g class="node class" id="graph437_5"><g id="a_class|graph437_5"><a xlink:title="akka.dispatch.ForkJoinExecutorConfigurator" xlink:href="ForkJoinExecutorConfigurator.html#inheritance-diagram"><polygon points="3051,-86 2868,-86 2868,-61 3051,-61 3051,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="2878.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="2899.5" text-anchor="start">ForkJoinExecutorConfigurator</text></a></g></g><!-- node6 --><g class="node trait" id="graph437_6"><g id="a_trait|graph437_6"><a xlink:title="akka.dispatch.MailboxType" xlink:href="MailboxType.html#inheritance-diagram"><polygon points="2295.5,-208 2193.5,-208 2193.5,-183 2295.5,-183 2295.5,-208" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="2203.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-192.5" x="2224.5" text-anchor="start">MailboxType</text></a></g></g><!-- node6&#45;&gt;node2 --><g class="edge inheritance" id="graph437_6_2"><g id="a_inheritance|graph437_6_2"><a xlink:title="UnboundedPriorityMailbox is a subtype of MailboxType"><path d="M2188.46,-183.368C2136.16,-172.978 2058.44,-157.539 2005.51,-147.024" stroke="#d4d4d4" fill="none"></path><polygon points="2188.2,-185.1 2193.44,-184.358 2188.88,-181.667 2188.2,-185.1" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6&#45;&gt;node3 --><g class="edge inheritance" id="graph437_6_3"><g id="a_inheritance|graph437_6_3"><a xlink:title="BoundedPriorityMailbox is a subtype of MailboxType"><path d="M2217.19,-180.61C2197.2,-170.442 2170.38,-156.799 2151.48,-147.188" stroke="#d4d4d4" fill="none"></path><polygon points="2216.61,-182.277 2221.86,-182.984 2218.2,-179.158 2216.61,-182.277" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6&#45;&gt;node4 --><g class="edge inheritance" id="graph437_6_4"><g id="a_inheritance|graph437_6_4"><a xlink:title="UnboundedDequeBasedMailbox is a subtype of MailboxType"><path d="M2264.16,-179.819C2277.68,-169.723 2295.38,-156.499 2307.92,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="2263.07,-178.449 2260.11,-182.843 2265.16,-181.254 2263.07,-178.449" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node class" id="graph437_9"><g id="a_class|graph437_9"><a xlink:title="akka.dispatch.BoundedDequeBasedMailbox" xlink:href="BoundedDequeBasedMailbox.html#inheritance-diagram"><polygon points="2626,-147 2441,-147 2441,-122 2626,-122 2626,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="2451.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="2472.5" text-anchor="start">BoundedDequeBasedMailbox</text></a></g></g><!-- node6&#45;&gt;node9 --><g class="edge inheritance" id="graph437_6_9"><g id="a_inheritance|graph437_6_9"><a xlink:title="BoundedDequeBasedMailbox is a subtype of MailboxType"><path d="M2300.66,-183.035C2351.53,-172.649 2426.12,-157.422 2477.08,-147.019" stroke="#d4d4d4" fill="none"></path><polygon points="2300.05,-181.373 2295.5,-184.088 2300.75,-184.802 2300.05,-181.373" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15 --><g class="node class" id="graph437_15"><g id="a_class|graph437_15"><a xlink:title="akka.dispatch.UnboundedMailbox" xlink:href="UnboundedMailbox.html#inheritance-diagram"><polygon points="2780.5,-147 2644.5,-147 2644.5,-122 2780.5,-122 2780.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="2654.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="2675.5" text-anchor="start">UnboundedMailbox</text></a></g></g><!-- node6&#45;&gt;node15 --><g class="edge inheritance" id="graph437_6_15"><g id="a_inheritance|graph437_6_15"><a xlink:title="UnboundedMailbox is a subtype of MailboxType"><path d="M2300.61,-183.601C2301.92,-183.394 2303.22,-183.193 2304.5,-183 2450.4,-161.096 2488.16,-165.763 2634.5,-147 2637.76,-146.582 2641.09,-146.142 2644.46,-145.686" stroke="#d4d4d4" fill="none"></path><polygon points="2300.17,-181.899 2295.52,-184.432 2300.73,-185.354 2300.17,-181.899" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node18 --><g class="node class" id="graph437_18"><g id="a_class|graph437_18"><a xlink:title="akka.dispatch.BoundedMailbox" xlink:href="BoundedMailbox.html#inheritance-diagram"><polygon points="2922,-147 2799,-147 2799,-122 2922,-122 2922,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="2809.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="2830.5" text-anchor="start">BoundedMailbox</text></a></g></g><!-- node6&#45;&gt;node18 --><g class="edge inheritance" id="graph437_6_18"><g id="a_inheritance|graph437_6_18"><a xlink:title="BoundedMailbox is a subtype of MailboxType"><path d="M2301.01,-183.482C2302.18,-183.314 2303.35,-183.153 2304.5,-183 2518.78,-154.609 2574.84,-172.303 2789.5,-147 2792.6,-146.635 2795.77,-146.231 2798.97,-145.8" stroke="#d4d4d4" fill="none"></path><polygon points="2300.51,-181.787 2295.82,-184.26 2301.03,-185.248 2300.51,-181.787" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node19 --><g class="node class" id="graph437_19"><g id="a_class|graph437_19"><a xlink:title="akka.dispatch.SingleConsumerOnlyUnboundedMailbox" xlink:href="SingleConsumerOnlyUnboundedMailbox.html#inheritance-diagram"><polygon points="1844.5,-147 1608.5,-147 1608.5,-122 1844.5,-122 1844.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="1618.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="1639.5" text-anchor="start">SingleConsumerOnlyUnboundedMailbox</text></a></g></g><!-- node6&#45;&gt;node19 --><g class="edge inheritance" id="graph437_6_19"><g id="a_inheritance|graph437_6_19"><a xlink:title="SingleConsumerOnlyUnboundedMailbox is a subtype of MailboxType"><path d="M2188.35,-188.105C2102.01,-178.271 1935.36,-159.289 1827.63,-147.019" stroke="#d4d4d4" fill="none"></path><polygon points="2188.25,-189.854 2193.41,-188.681 2188.64,-186.377 2188.25,-189.854" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node trait" id="graph437_7"><g id="a_trait|graph437_7"><a xlink:title="akka.dispatch.DequeBasedMessageQueueSemantics" xlink:href="DequeBasedMessageQueueSemantics.html#inheritance-diagram"><polygon points="1236,-147 1005,-147 1005,-122 1236,-122 1236,-147" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="1015.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="1036.5" text-anchor="start">DequeBasedMessageQueueSemantics</text></a></g></g><!-- node27 --><g class="node trait" id="graph437_27"><g id="a_trait|graph437_27"><a xlink:title="akka.dispatch.BoundedDequeBasedMessageQueueSemantics" xlink:href="BoundedDequeBasedMessageQueueSemantics.html#inheritance-diagram"><polygon points="1744.5,-86 1470.5,-86 1470.5,-61 1744.5,-61 1744.5,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="1480.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="1501.5" text-anchor="start">BoundedDequeBasedMessageQueueSemantics</text></a></g></g><!-- node7&#45;&gt;node27 --><g class="edge inheritance" id="graph437_7_27"><g id="a_inheritance|graph437_7_27"><a xlink:title="BoundedDequeBasedMessageQueueSemantics is a subtype of DequeBasedMessageQueueSemantics"><path d="M1220.62,-121.371C1306.11,-111.014 1428.22,-96.22 1512.27,-86.0371" stroke="#d4d4d4" fill="none"></path><polygon points="1220.31,-119.645 1215.55,-121.984 1220.73,-123.12 1220.31,-119.645" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node29 --><g class="node trait" id="graph437_29"><g id="a_trait|graph437_29"><a xlink:title="akka.dispatch.UnboundedDequeBasedMessageQueueSemantics" xlink:href="UnboundedDequeBasedMessageQueueSemantics.html#inheritance-diagram"><polygon points="1012,-86 725,-86 725,-61 1012,-61 1012,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="735.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="756.5" text-anchor="start">UnboundedDequeBasedMessageQueueSemantics</text></a></g></g><!-- node7&#45;&gt;node29 --><g class="edge inheritance" id="graph437_7_29"><g id="a_inheritance|graph437_7_29"><a xlink:title="UnboundedDequeBasedMessageQueueSemantics is a subtype of DequeBasedMessageQueueSemantics"><path d="M1066.3,-120.811C1022.28,-110.504 960.7,-96.0865 917.992,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="1066.05,-122.548 1071.31,-121.984 1066.84,-119.14 1066.05,-122.548" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node33 --><g class="node trait" id="graph437_33"><g id="a_trait|graph437_33"><a xlink:title="akka.dispatch.DequeBasedMessageQueue" xlink:href="DequeBasedMessageQueue.html#inheritance-diagram"><polygon points="1210.5,-86 1030.5,-86 1030.5,-61 1210.5,-61 1210.5,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="1040.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="1061.5" text-anchor="start">DequeBasedMessageQueue</text></a></g></g><!-- node7&#45;&gt;node33 --><g class="edge inheritance" id="graph437_7_33"><g id="a_inheritance|graph437_7_33"><a xlink:title="DequeBasedMessageQueue is a subtype of DequeBasedMessageQueueSemantics"><path d="M1120.5,-116.687C1120.5,-106.917 1120.5,-94.8534 1120.5,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="1118.75,-116.843 1120.5,-121.843 1122.25,-116.844 1118.75,-116.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node class" id="graph437_8"><g id="a_class|graph437_8"><a xlink:title="akka.dispatch.BalancingDispatcherConfigurator" xlink:href="BalancingDispatcherConfigurator.html#inheritance-diagram"><polygon points="3488.5,-147 3286.5,-147 3286.5,-122 3488.5,-122 3488.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="3296.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="3317.5" text-anchor="start">BalancingDispatcherConfigurator</text></a></g></g><!-- node10 --><g class="node trait" id="graph437_10"><g id="a_trait|graph437_10"><a xlink:title="akka.dispatch.ProducesMessageQueue" xlink:href="ProducesMessageQueue.html#inheritance-diagram"><polygon points="2489.5,-208 2313.5,-208 2313.5,-183 2489.5,-183 2489.5,-208" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="2323.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-192.5" x="2344.5" text-anchor="start">ProducesMessageQueue[T]</text></a></g></g><!-- node10&#45;&gt;node2 --><g class="edge inheritance" id="graph437_10_2"><g id="a_inheritance|graph437_10_2"><a xlink:title="UnboundedPriorityMailbox is a subtype of ProducesMessageQueue[T]"><path d="M2308.14,-182.367C2227.07,-171.832 2110.69,-156.707 2032.26,-146.515" stroke="#d4d4d4" fill="none"></path><polygon points="2308.24,-184.145 2313.43,-183.054 2308.69,-180.674 2308.24,-184.145" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node3 --><g class="edge inheritance" id="graph437_10_3"><g id="a_inheritance|graph437_10_3"><a xlink:title="BoundedPriorityMailbox is a subtype of ProducesMessageQueue[T]"><path d="M2343.08,-181.874C2295.37,-171.562 2228.48,-157.107 2182.12,-147.087" stroke="#d4d4d4" fill="none"></path><polygon points="2342.96,-183.638 2348.21,-182.984 2343.7,-180.217 2342.96,-183.638" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node4 --><g class="edge inheritance" id="graph437_10_4"><g id="a_inheritance|graph437_10_4"><a xlink:title="UnboundedDequeBasedMailbox is a subtype of ProducesMessageQueue[T]"><path d="M2382.09,-179.819C2368.74,-169.723 2351.26,-156.499 2338.88,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="2381.05,-181.223 2386.09,-182.843 2383.16,-178.431 2381.05,-181.223" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node9 --><g class="edge inheritance" id="graph437_10_9"><g id="a_inheritance|graph437_10_9"><a xlink:title="BoundedDequeBasedMailbox is a subtype of ProducesMessageQueue[T]"><path d="M2432,-180.866C2454.81,-170.672 2485.67,-156.88 2507.35,-147.188" stroke="#d4d4d4" fill="none"></path><polygon points="2431.11,-179.346 2427.26,-182.984 2432.54,-182.541 2431.11,-179.346" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node15 --><g class="edge inheritance" id="graph437_10_15"><g id="a_inheritance|graph437_10_15"><a xlink:title="UnboundedMailbox is a subtype of ProducesMessageQueue[T]"><path d="M2467.4,-181.997C2521.89,-171.661 2598.65,-157.098 2651.69,-147.037" stroke="#d4d4d4" fill="none"></path><polygon points="2466.79,-180.333 2462.2,-182.984 2467.44,-183.771 2466.79,-180.333" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node18 --><g class="edge inheritance" id="graph437_10_18"><g id="a_inheritance|graph437_10_18"><a xlink:title="BoundedMailbox is a subtype of ProducesMessageQueue[T]"><path d="M2494.98,-184.085C2573.65,-175.073 2689.07,-161.275 2789.5,-147 2792.59,-146.561 2795.75,-146.097 2798.95,-145.619" stroke="#d4d4d4" fill="none"></path><polygon points="2494.62,-182.365 2489.85,-184.672 2495.02,-185.842 2494.62,-182.365" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node19 --><g class="edge inheritance" id="graph437_10_19"><g id="a_inheritance|graph437_10_19"><a xlink:title="SingleConsumerOnlyUnboundedMailbox is a subtype of ProducesMessageQueue[T]"><path d="M2308.4,-183.392C2307.09,-183.259 2305.79,-183.128 2304.5,-183 2104.4,-163.159 2053.86,-164.067 1853.5,-147 1850.63,-146.756 1847.73,-146.507 1844.8,-146.254" stroke="#d4d4d4" fill="none"></path><polygon points="2308.33,-185.144 2313.49,-183.916 2308.69,-181.663 2308.33,-185.144" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node trait" id="graph437_11"><g id="a_trait|graph437_11"><a xlink:title="akka.dispatch.UnboundedQueueBasedMessageQueue" xlink:href="UnboundedQueueBasedMessageQueue.html#inheritance-diagram"><polygon points="706.5,-86 470.5,-86 470.5,-61 706.5,-61 706.5,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="480.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="501.5" text-anchor="start">UnboundedQueueBasedMessageQueue</text></a></g></g><!-- node12 --><g class="node class" id="graph437_12"><g id="a_class|graph437_12"><a xlink:title="akka.dispatch.DefaultExecutorServiceConfigurator" xlink:href="DefaultExecutorServiceConfigurator.html#inheritance-diagram"><polygon points="3285.5,-86 3069.5,-86 3069.5,-61 3285.5,-61 3285.5,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="3079.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="3100.5" text-anchor="start">DefaultExecutorServiceConfigurator</text></a></g></g><!-- node13 --><g class="node trait" id="graph437_13"><g id="a_trait|graph437_13"><a xlink:title="akka.dispatch.BoundedMessageQueueSemantics" xlink:href="BoundedMessageQueueSemantics.html#inheritance-diagram"><polygon points="1590,-147 1377,-147 1377,-122 1590,-122 1590,-147" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="1387.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="1408.5" text-anchor="start">BoundedMessageQueueSemantics</text></a></g></g><!-- node13&#45;&gt;node27 --><g class="edge inheritance" id="graph437_13_27"><g id="a_inheritance|graph437_13_27"><a xlink:title="BoundedDequeBasedMessageQueueSemantics is a subtype of BoundedMessageQueueSemantics"><path d="M1512.42,-119.738C1533.82,-109.557 1562.65,-95.8399 1582.93,-86.1884" stroke="#d4d4d4" fill="none"></path><polygon points="1511.47,-118.256 1507.7,-121.984 1512.97,-121.416 1511.47,-118.256" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node37 --><g class="node trait" id="graph437_37"><g id="a_trait|graph437_37"><a xlink:title="akka.dispatch.BoundedQueueBasedMessageQueue" xlink:href="BoundedQueueBasedMessageQueue.html#inheritance-diagram"><polygon points="1452,-86 1229,-86 1229,-61 1452,-61 1452,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="1239.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="1260.5" text-anchor="start">BoundedQueueBasedMessageQueue</text></a></g></g><!-- node13&#45;&gt;node37 --><g class="edge inheritance" id="graph437_13_37"><g id="a_inheritance|graph437_13_37"><a xlink:title="BoundedQueueBasedMessageQueue is a subtype of BoundedMessageQueueSemantics"><path d="M1450.77,-119.994C1426.03,-109.788 1392.42,-95.921 1368.83,-86.1884" stroke="#d4d4d4" fill="none"></path><polygon points="1450.3,-121.695 1455.59,-121.984 1451.63,-118.459 1450.3,-121.695" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node14 --><g class="node class" id="graph437_14"><g id="a_class|graph437_14"><a xlink:title="akka.dispatch.MessageDispatcher" xlink:href="MessageDispatcher.html#inheritance-diagram"><polygon points="211,-208 72,-208 72,-183 211,-183 211,-208" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-202.5" x="82.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-192.5" x="103.5" text-anchor="start">MessageDispatcher</text></a></g></g><!-- node23 --><g class="node class" id="graph437_23"><g id="a_class|graph437_23"><a xlink:title="akka.dispatch.Dispatcher" xlink:href="Dispatcher.html#inheritance-diagram"><polygon points="189.5,-147 93.5,-147 93.5,-122 189.5,-122 189.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="103.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="124.5" text-anchor="start">Dispatcher</text></a></g></g><!-- node14&#45;&gt;node23 --><g class="edge inheritance" id="graph437_14_23"><g id="a_inheritance|graph437_14_23"><a xlink:title="Dispatcher is a subtype of MessageDispatcher"><path d="M141.5,-177.687C141.5,-167.917 141.5,-155.853 141.5,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="139.75,-177.843 141.5,-182.843 143.25,-177.844 139.75,-177.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node16 --><g class="node class" id="graph437_16"><g id="a_class|graph437_16"><a xlink:title="akka.dispatch.DispatcherConfigurator" xlink:href="DispatcherConfigurator.html#inheritance-diagram"><polygon points="3662.5,-147 3506.5,-147 3506.5,-122 3662.5,-122 3662.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="3516.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="3537.5" text-anchor="start">DispatcherConfigurator</text></a></g></g><!-- node17 --><g class="node class" id="graph437_17"><g id="a_class|graph437_17"><a xlink:title="akka.dispatch.ThreadPoolConfig" xlink:href="ThreadPoolConfig.html#inheritance-diagram"><polygon points="3068.5,-147 2940.5,-147 2940.5,-122 3068.5,-122 3068.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="2950.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="2971.5" text-anchor="start">ThreadPoolConfig</text></a></g></g><!-- node20 --><g class="node class" id="graph437_20"><g id="a_class|graph437_20"><a xlink:title="akka.dispatch.ExecutorServiceConfigurator" xlink:href="ExecutorServiceConfigurator.html#inheritance-diagram"><polygon points="3268,-147 3087,-147 3087,-122 3268,-122 3268,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="3097.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="3118.5" text-anchor="start">ExecutorServiceConfigurator</text></a></g></g><!-- node20&#45;&gt;node5 --><g class="edge inheritance" id="graph437_20_5"><g id="a_inheritance|graph437_20_5"><a xlink:title="ForkJoinExecutorConfigurator is a subtype of ExecutorServiceConfigurator"><path d="M3129.92,-120.623C3091.88,-110.329 3039.04,-96.0257 3002.31,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="3129.67,-122.367 3134.95,-121.984 3130.58,-118.989 3129.67,-122.367" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node12 --><g class="edge inheritance" id="graph437_20_12"><g id="a_inheritance|graph437_20_12"><a xlink:title="DefaultExecutorServiceConfigurator is a subtype of ExecutorServiceConfigurator"><path d="M3177.5,-116.687C3177.5,-106.917 3177.5,-94.8534 3177.5,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="3175.75,-116.843 3177.5,-121.843 3179.25,-116.844 3175.75,-116.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node36 --><g class="node class" id="graph437_36"><g id="a_class|graph437_36"><a xlink:title="akka.dispatch.ThreadPoolExecutorConfigurator" xlink:href="ThreadPoolExecutorConfigurator.html#inheritance-diagram"><polygon points="3503,-86 3304,-86 3304,-61 3503,-61 3503,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="3314.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="3335.5" text-anchor="start">ThreadPoolExecutorConfigurator</text></a></g></g><!-- node20&#45;&gt;node36 --><g class="edge inheritance" id="graph437_20_36"><g id="a_inheritance|graph437_20_36"><a xlink:title="ThreadPoolExecutorConfigurator is a subtype of ExecutorServiceConfigurator"><path d="M3226.83,-120.623C3266.26,-110.329 3321.05,-96.0257 3359.11,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="3226.01,-119.028 3221.61,-121.984 3226.89,-122.414 3226.01,-119.028" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node21 --><g class="node trait" id="graph437_21"><g id="a_trait|graph437_21"><a xlink:title="akka.dispatch.MultipleConsumerSemantics" xlink:href="MultipleConsumerSemantics.html#inheritance-diagram"><polygon points="944.5,-208 762.5,-208 762.5,-183 944.5,-183 944.5,-208" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="772.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-192.5" x="793.5" text-anchor="start">MultipleConsumerSemantics</text></a></g></g><!-- node22 --><g class="node trait" id="graph437_22"><g id="a_trait|graph437_22"><a xlink:title="akka.dispatch.QueueBasedMessageQueue" xlink:href="QueueBasedMessageQueue.html#inheritance-diagram"><polygon points="943.5,-147 763.5,-147 763.5,-122 943.5,-122 943.5,-147" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="773.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="794.5" text-anchor="start">QueueBasedMessageQueue</text></a></g></g><!-- node21&#45;&gt;node22 --><g class="edge inheritance" id="graph437_21_22"><g id="a_inheritance|graph437_21_22"><a xlink:title="QueueBasedMessageQueue is a subtype of MultipleConsumerSemantics"><path d="M853.5,-177.687C853.5,-167.917 853.5,-155.853 853.5,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="851.75,-177.843 853.5,-182.843 855.25,-177.844 851.75,-177.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node22&#45;&gt;node11 --><g class="edge inheritance" id="graph437_22_11"><g id="a_inheritance|graph437_22_11"><a xlink:title="UnboundedQueueBasedMessageQueue is a subtype of QueueBasedMessageQueue"><path d="M796.79,-120.874C750.475,-110.562 685.547,-96.1068 640.545,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="796.515,-122.606 801.776,-121.984 797.276,-119.189 796.515,-122.606" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node22&#45;&gt;node33 --><g class="edge inheritance" id="graph437_22_33"><g id="a_inheritance|graph437_22_33"><a xlink:title="DequeBasedMessageQueue is a subtype of QueueBasedMessageQueue"><path d="M910.638,-120.874C957.302,-110.562 1022.72,-96.1068 1068.06,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="910.119,-119.196 905.614,-121.984 910.874,-122.614 910.119,-119.196" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node22&#45;&gt;node37 --><g class="edge inheritance" id="graph437_22_37"><g id="a_inheritance|graph437_22_37"><a xlink:title="BoundedQueueBasedMessageQueue is a subtype of QueueBasedMessageQueue"><path d="M948.75,-121.96C1034.47,-111.576 1159.76,-96.3969 1245.42,-86.0186" stroke="#d4d4d4" fill="none"></path><polygon points="948.428,-120.237 943.675,-122.575 948.849,-123.711 948.428,-120.237" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node23&#45;&gt;node0 --><g class="edge inheritance" id="graph437_23_0"><g id="a_inheritance|graph437_23_0"><a xlink:title="PinnedDispatcher is a subtype of Dispatcher"><path d="M121.998,-118.557C108.867,-108.495 91.8007,-95.4187 79.6811,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="121.254,-120.191 126.287,-121.843 123.383,-117.413 121.254,-120.191" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node35 --><g class="node class" id="graph437_35"><g id="a_class|graph437_35"><a xlink:title="akka.dispatch.BalancingDispatcher" xlink:href="BalancingDispatcher.html#inheritance-diagram"><polygon points="290,-86 147,-86 147,-61 290,-61 290,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="157.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="178.5" text-anchor="start">BalancingDispatcher</text></a></g></g><!-- node23&#45;&gt;node35 --><g class="edge inheritance" id="graph437_23_35"><g id="a_inheritance|graph437_23_35"><a xlink:title="BalancingDispatcher is a subtype of Dispatcher"><path d="M161.002,-118.557C174.133,-108.495 191.199,-95.4187 203.319,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="159.617,-117.413 156.713,-121.843 161.746,-120.191 159.617,-117.413" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node24 --><g class="node class" id="graph437_24"><g id="a_class|graph437_24"><a xlink:title="akka.dispatch.PinnedDispatcherConfigurator" xlink:href="PinnedDispatcherConfigurator.html#inheritance-diagram"><polygon points="3868.5,-147 3680.5,-147 3680.5,-122 3868.5,-122 3868.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="3690.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="3711.5" text-anchor="start">PinnedDispatcherConfigurator</text></a></g></g><!-- node25 --><g class="node trait" id="graph437_25"><g id="a_trait|graph437_25"><a xlink:title="akka.dispatch.MessageQueue" xlink:href="MessageQueue.html#inheritance-diagram"><polygon points="582,-208 463,-208 463,-183 582,-183 582,-208" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="473.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-192.5" x="494.5" text-anchor="start">MessageQueue</text></a></g></g><!-- node25&#45;&gt;node1 --><g class="edge inheritance" id="graph437_25_1"><g id="a_inheritance|graph437_25_1"><a xlink:title="NodeMessageQueue is a subtype of MessageQueue"><path d="M457.793,-188.374C403.861,-181.771 333.109,-169.107 315.5,-147 297.7,-124.653 331.729,-100.215 356.914,-86.186" stroke="#d4d4d4" fill="none"></path><polygon points="457.784,-190.135 462.957,-188.994 458.202,-186.66 457.784,-190.135" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node25&#45;&gt;node22 --><g class="edge inheritance" id="graph437_25_22"><g id="a_inheritance|graph437_25_22"><a xlink:title="QueueBasedMessageQueue is a subtype of MessageQueue"><path d="M587.255,-182.958C645.476,-172.58 730.545,-157.416 788.761,-147.04" stroke="#d4d4d4" fill="none"></path><polygon points="586.674,-181.284 582.058,-183.884 587.288,-184.729 586.674,-181.284" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node26 --><g class="node trait" id="graph437_26"><g id="a_trait|graph437_26"><a xlink:title="akka.dispatch.UnboundedDequeBasedMessageQueue" xlink:href="UnboundedDequeBasedMessageQueue.html#inheritance-diagram"><polygon points="1113.5,-25 877.5,-25 877.5,-0 1113.5,-0 1113.5,-25" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="887.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="908.5" text-anchor="start">UnboundedDequeBasedMessageQueue</text></a></g></g><!-- node28 --><g class="node trait" id="graph437_28"><g id="a_trait|graph437_28"><a xlink:title="akka.dispatch.BoundedDequeBasedMessageQueue" xlink:href="BoundedDequeBasedMessageQueue.html#inheritance-diagram"><polygon points="1357,-25 1134,-25 1134,-0 1357,-0 1357,-25" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-19.5" x="1144.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="1165.5" text-anchor="start">BoundedDequeBasedMessageQueue</text></a></g></g><!-- node27&#45;&gt;node28 --><g class="edge inheritance" id="graph437_27_28"><g id="a_inheritance|graph437_27_28"><a xlink:title="BoundedDequeBasedMessageQueue is a subtype of BoundedDequeBasedMessageQueueSemantics"><path d="M1531.55,-60.1222C1468.09,-49.7783 1378.27,-35.1388 1316.29,-25.0371" stroke="#d4d4d4" fill="none"></path><polygon points="1531.63,-61.907 1536.84,-60.9841 1532.19,-58.4526 1531.63,-61.907" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node29&#45;&gt;node26 --><g class="edge inheritance" id="graph437_29_26"><g id="a_inheritance|graph437_29_26"><a xlink:title="UnboundedDequeBasedMessageQueue is a subtype of UnboundedDequeBasedMessageQueueSemantics"><path d="M897.847,-58.8663C919.79,-48.6725 949.478,-34.8805 970.34,-25.1884" stroke="#d4d4d4" fill="none"></path><polygon points="897.086,-57.2904 893.288,-60.9841 898.56,-60.4646 897.086,-57.2904" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node30 --><g class="node class" id="graph437_30"><g id="a_class|graph437_30"><a xlink:title="akka.dispatch.AbstractNodeQueue" xlink:href="AbstractNodeQueue.html#inheritance-diagram"><polygon points="480,-147 325,-147 325,-122 480,-122 480,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="335.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="356.5" text-anchor="start">AbstractNodeQueue[T]</text></a></g></g><!-- node30&#45;&gt;node1 --><g class="edge inheritance" id="graph437_30_1"><g id="a_inheritance|graph437_30_1"><a xlink:title="NodeMessageQueue is a subtype of AbstractNodeQueue[T]"><path d="M396.332,-116.958C392.671,-107.141 388.12,-94.9342 384.837,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="394.767,-117.77 398.154,-121.843 398.046,-116.547 394.767,-117.77" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node31 --><g class="node trait" id="graph437_31"><g id="a_trait|graph437_31"><a xlink:title="akka.dispatch.UnboundedMessageQueueSemantics" xlink:href="UnboundedMessageQueueSemantics.html#inheritance-diagram"><polygon points="723,-147 498,-147 498,-122 723,-122 723,-147" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="508.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="529.5" text-anchor="start">UnboundedMessageQueueSemantics</text></a></g></g><!-- node31&#45;&gt;node1 --><g class="edge inheritance" id="graph437_31_1"><g id="a_inheritance|graph437_31_1"><a xlink:title="NodeMessageQueue is a subtype of UnboundedMessageQueueSemantics"><path d="M560.3,-120.623C520.171,-110.329 464.414,-96.0257 425.672,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="560.33,-122.437 565.608,-121.984 561.199,-119.047 560.33,-122.437" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node31&#45;&gt;node11 --><g class="edge inheritance" id="graph437_31_11"><g id="a_inheritance|graph437_31_11"><a xlink:title="UnboundedQueueBasedMessageQueue is a subtype of UnboundedMessageQueueSemantics"><path d="M604.332,-116.958C600.671,-107.141 596.12,-94.9342 592.837,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="602.767,-117.77 606.154,-121.843 606.046,-116.547 602.767,-117.77" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node31&#45;&gt;node29 --><g class="edge inheritance" id="graph437_31_29"><g id="a_inheritance|graph437_31_29"><a xlink:title="UnboundedDequeBasedMessageQueueSemantics is a subtype of UnboundedMessageQueueSemantics"><path d="M665.986,-120.811C711.059,-110.504 774.105,-96.0865 817.829,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="665.341,-119.163 660.857,-121.984 666.122,-122.575 665.341,-119.163" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node32 --><g class="node trait" id="graph437_32"><g id="a_trait|graph437_32"><a xlink:title="akka.dispatch.ExecutorServiceFactoryProvider" xlink:href="ExecutorServiceFactoryProvider.html#inheritance-diagram"><polygon points="3188,-208 2993,-208 2993,-183 3188,-183 3188,-208" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-202.5" x="3003.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-192.5" x="3024.5" text-anchor="start">ExecutorServiceFactoryProvider</text></a></g></g><!-- node32&#45;&gt;node17 --><g class="edge inheritance" id="graph437_32_17"><g id="a_inheritance|graph437_32_17"><a xlink:title="ThreadPoolConfig is a subtype of ExecutorServiceFactoryProvider"><path d="M3069.1,-179.819C3054.38,-169.723 3035.11,-156.499 3021.46,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="3068.4,-181.458 3073.51,-182.843 3070.38,-178.572 3068.4,-181.458" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node32&#45;&gt;node20 --><g class="edge inheritance" id="graph437_32_20"><g id="a_inheritance|graph437_32_20"><a xlink:title="ExecutorServiceConfigurator is a subtype of ExecutorServiceFactoryProvider"><path d="M3112.15,-179.819C3127.04,-169.723 3146.53,-156.499 3160.35,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="3110.84,-178.589 3107.69,-182.843 3112.81,-181.485 3110.84,-178.589" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node33&#45;&gt;node26 --><g class="edge inheritance" id="graph437_33_26"><g id="a_inheritance|graph437_33_26"><a xlink:title="UnboundedDequeBasedMessageQueue is a subtype of DequeBasedMessageQueue"><path d="M1091.34,-58.7381C1069.77,-48.5571 1040.71,-34.8399 1020.26,-25.1884" stroke="#d4d4d4" fill="none"></path><polygon points="1090.83,-60.4325 1096.1,-60.9841 1092.33,-57.2673 1090.83,-60.4325" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node33&#45;&gt;node28 --><g class="edge inheritance" id="graph437_33_28"><g id="a_inheritance|graph437_33_28"><a xlink:title="BoundedDequeBasedMessageQueue is a subtype of DequeBasedMessageQueue"><path d="M1149.66,-58.7381C1171.23,-48.5571 1200.29,-34.8399 1220.74,-25.1884" stroke="#d4d4d4" fill="none"></path><polygon points="1148.67,-57.2673 1144.9,-60.9841 1150.17,-60.4325 1148.67,-57.2673" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node34 --><g class="node class" id="graph437_34"><g id="a_class|graph437_34"><a xlink:title="akka.dispatch.MessageDispatcherConfigurator" xlink:href="MessageDispatcherConfigurator.html#inheritance-diagram"><polygon points="3683.5,-208 3485.5,-208 3485.5,-183 3683.5,-183 3683.5,-208" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-202.5" x="3495.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-192.5" x="3516.5" text-anchor="start">MessageDispatcherConfigurator</text></a></g></g><!-- node34&#45;&gt;node8 --><g class="edge inheritance" id="graph437_34_8"><g id="a_inheritance|graph437_34_8"><a xlink:title="BalancingDispatcherConfigurator is a subtype of MessageDispatcherConfigurator"><path d="M3541.08,-181.496C3506.74,-171.212 3459.24,-156.985 3426.19,-147.087" stroke="#d4d4d4" fill="none"></path><polygon points="3540.76,-183.226 3546.05,-182.984 3541.76,-179.873 3540.76,-183.226" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node34&#45;&gt;node16 --><g class="edge inheritance" id="graph437_34_16"><g id="a_inheritance|graph437_34_16"><a xlink:title="DispatcherConfigurator is a subtype of MessageDispatcherConfigurator"><path d="M3584.5,-177.687C3584.5,-167.917 3584.5,-155.853 3584.5,-147.132" stroke="#d4d4d4" fill="none"></path><polygon points="3582.75,-177.843 3584.5,-182.843 3586.25,-177.844 3582.75,-177.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node34&#45;&gt;node24 --><g class="edge inheritance" id="graph437_34_24"><g id="a_inheritance|graph437_34_24"><a xlink:title="PinnedDispatcherConfigurator is a subtype of MessageDispatcherConfigurator"><path d="M3626.38,-181.496C3659.5,-171.212 3705.31,-156.985 3737.18,-147.087" stroke="#d4d4d4" fill="none"></path><polygon points="3625.84,-179.83 3621.58,-182.984 3626.88,-183.173 3625.84,-179.83" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="akka.dispatch.AbstractNodeQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractNodeQueue[T]extendsAtomicReference[akka.dispatch.AbstractNodeQueue.Node[T]]"></a>
+      <a id="AbstractNodeQueue[T]:AbstractNodeQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AbstractNodeQueue.html"><span class="name">AbstractNodeQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="java.util.concurrent.atomic.AtomicReference">AtomicReference</span>[<span class="extype" name="akka.dispatch.AbstractNodeQueue.Node">Node</span>[<span class="extype" name="akka.dispatch.AbstractNodeQueue.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@AbstractNodeQueue[T]extendsAtomicReference[akka.dispatch.AbstractNodeQueue.Node[T]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.BalancingDispatcherConfigurator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BalancingDispatcherConfiguratorextendsMessageDispatcherConfigurator"></a>
+      <a id="BalancingDispatcherConfigurator:BalancingDispatcherConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BalancingDispatcherConfigurator.html"><span class="name">BalancingDispatcherConfigurator</span></a><span class="result"> extends <a href="MessageDispatcherConfigurator.html" class="extype" name="akka.dispatch.MessageDispatcherConfigurator">MessageDispatcherConfigurator</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BalancingDispatcherConfiguratorextendsMessageDispatcherConfigurator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Configurator for creating <a href="BalancingDispatcher.html" class="extype" name="akka.dispatch.BalancingDispatcher">akka.dispatch.BalancingDispatcher</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Configurator for creating <a href="BalancingDispatcher.html" class="extype" name="akka.dispatch.BalancingDispatcher">akka.dispatch.BalancingDispatcher</a>.
+Returns the same dispatcher instance for for each invocation
+of the <code>dispatcher()</code> method.
+</p></div></div>
+    </li><li name="akka.dispatch.BoundedDequeBasedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoundedDequeBasedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.BoundedDequeBasedMailbox.MessageQueue]withProductwithSerializable"></a>
+      <a id="BoundedDequeBasedMailbox:BoundedDequeBasedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedDequeBasedMailbox.html"><span class="name">BoundedDequeBasedMailbox</span></a><span class="params">(<span name="capacity">capacity: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="pushTimeOut">pushTimeOut: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="MailboxType.html" class="extype" name="akka.dispatch.MailboxType">MailboxType</a> with <a href="ProducesMessageQueue.html" class="extype" name="akka.dispatch.ProducesMessageQueue">ProducesMessageQueue</a>[<a href="BoundedDequeBasedMailbox$$MessageQueue.html" class="extype" name="akka.dispatch.BoundedDequeBasedMailbox.MessageQueue">dispatch.BoundedDequeBasedMailbox.MessageQueue</a>] with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedDequeBasedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.BoundedDequeBasedMailbox.MessageQueue]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">BoundedDequeBasedMailbox is an bounded MailboxType, backed by a Deque.</p>
+    </li><li name="akka.dispatch.BoundedDequeBasedMessageQueue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BoundedDequeBasedMessageQueueextendsDequeBasedMessageQueuewithBoundedDequeBasedMessageQueueSemantics"></a>
+      <a id="BoundedDequeBasedMessageQueue:BoundedDequeBasedMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedDequeBasedMessageQueue.html"><span class="name">BoundedDequeBasedMessageQueue</span></a><span class="result"> extends <a href="DequeBasedMessageQueue.html" class="extype" name="akka.dispatch.DequeBasedMessageQueue">DequeBasedMessageQueue</a> with <a href="BoundedDequeBasedMessageQueueSemantics.html" class="extype" name="akka.dispatch.BoundedDequeBasedMessageQueueSemantics">BoundedDequeBasedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedDequeBasedMessageQueueextendsDequeBasedMessageQueuewithBoundedDequeBasedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">BoundedMessageQueueSemantics adds bounded semantics to a DequeBasedMessageQueue,
+i.e.</p><div class="fullcomment"><div class="comment cmt"><p>BoundedMessageQueueSemantics adds bounded semantics to a DequeBasedMessageQueue,
+i.e. blocking enqueue with timeout.
+</p></div></div>
+    </li><li name="akka.dispatch.BoundedDequeBasedMessageQueueSemantics" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BoundedDequeBasedMessageQueueSemanticsextendsDequeBasedMessageQueueSemanticswithBoundedMessageQueueSemantics"></a>
+      <a id="BoundedDequeBasedMessageQueueSemantics:BoundedDequeBasedMessageQueueSemantics"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedDequeBasedMessageQueueSemantics.html"><span class="name">BoundedDequeBasedMessageQueueSemantics</span></a><span class="result"> extends <a href="DequeBasedMessageQueueSemantics.html" class="extype" name="akka.dispatch.DequeBasedMessageQueueSemantics">DequeBasedMessageQueueSemantics</a> with <a href="BoundedMessageQueueSemantics.html" class="extype" name="akka.dispatch.BoundedMessageQueueSemantics">BoundedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedDequeBasedMessageQueueSemanticsextendsDequeBasedMessageQueueSemanticswithBoundedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.BoundedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoundedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.BoundedMailbox.MessageQueue]withProductwithSerializable"></a>
+      <a id="BoundedMailbox:BoundedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedMailbox.html"><span class="name">BoundedMailbox</span></a><span class="params">(<span name="capacity">capacity: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="pushTimeOut">pushTimeOut: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="MailboxType.html" class="extype" name="akka.dispatch.MailboxType">MailboxType</a> with <a href="ProducesMessageQueue.html" class="extype" name="akka.dispatch.ProducesMessageQueue">ProducesMessageQueue</a>[<a href="BoundedMailbox$$MessageQueue.html" class="extype" name="akka.dispatch.BoundedMailbox.MessageQueue">dispatch.BoundedMailbox.MessageQueue</a>] with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.BoundedMailbox.MessageQueue]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">BoundedMailbox is the default bounded MailboxType used by Akka Actors.</p>
+    </li><li name="akka.dispatch.BoundedMessageQueueSemantics" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BoundedMessageQueueSemanticsextendsAnyRef"></a>
+      <a id="BoundedMessageQueueSemantics:BoundedMessageQueueSemantics"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedMessageQueueSemantics.html"><span class="name">BoundedMessageQueueSemantics</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedMessageQueueSemanticsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">BoundedMessageQueueSemantics adds bounded semantics to a QueueBasedMessageQueue,
+i.e.</p><div class="fullcomment"><div class="comment cmt"><p>BoundedMessageQueueSemantics adds bounded semantics to a QueueBasedMessageQueue,
+i.e. blocking enqueue with timeout.
+</p></div></div>
+    </li><li name="akka.dispatch.BoundedPriorityMailbox" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BoundedPriorityMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.BoundedPriorityMailbox.MessageQueue]"></a>
+      <a id="BoundedPriorityMailbox:BoundedPriorityMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedPriorityMailbox.html"><span class="name">BoundedPriorityMailbox</span></a><span class="result"> extends <a href="MailboxType.html" class="extype" name="akka.dispatch.MailboxType">MailboxType</a> with <a href="ProducesMessageQueue.html" class="extype" name="akka.dispatch.ProducesMessageQueue">ProducesMessageQueue</a>[<a href="BoundedPriorityMailbox$$MessageQueue.html" class="extype" name="akka.dispatch.BoundedPriorityMailbox.MessageQueue">dispatch.BoundedPriorityMailbox.MessageQueue</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedPriorityMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.BoundedPriorityMailbox.MessageQueue]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">BoundedPriorityMailbox is a bounded mailbox that allows for prioritization of its contents.</p><div class="fullcomment"><div class="comment cmt"><p>BoundedPriorityMailbox is a bounded mailbox that allows for prioritization of its contents.
+Extend this class and provide the Comparator in the constructor.
+</p></div></div>
+    </li><li name="akka.dispatch.BoundedQueueBasedMessageQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BoundedQueueBasedMessageQueueextendsQueueBasedMessageQueuewithBoundedMessageQueueSemantics"></a>
+      <a id="BoundedQueueBasedMessageQueue:BoundedQueueBasedMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedQueueBasedMessageQueue.html"><span class="name">BoundedQueueBasedMessageQueue</span></a><span class="result"> extends <a href="QueueBasedMessageQueue.html" class="extype" name="akka.dispatch.QueueBasedMessageQueue">QueueBasedMessageQueue</a> with <a href="BoundedMessageQueueSemantics.html" class="extype" name="akka.dispatch.BoundedMessageQueueSemantics">BoundedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedQueueBasedMessageQueueextendsQueueBasedMessageQueuewithBoundedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.DefaultExecutorServiceConfigurator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultExecutorServiceConfiguratorextendsExecutorServiceConfigurator"></a>
+      <a id="DefaultExecutorServiceConfigurator:DefaultExecutorServiceConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultExecutorServiceConfigurator.html"><span class="name">DefaultExecutorServiceConfigurator</span></a><span class="result"> extends <a href="ExecutorServiceConfigurator.html" class="extype" name="akka.dispatch.ExecutorServiceConfigurator">ExecutorServiceConfigurator</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@DefaultExecutorServiceConfiguratorextendsExecutorServiceConfigurator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.DequeBasedMessageQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DequeBasedMessageQueueextendsQueueBasedMessageQueuewithDequeBasedMessageQueueSemantics"></a>
+      <a id="DequeBasedMessageQueue:DequeBasedMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DequeBasedMessageQueue.html"><span class="name">DequeBasedMessageQueue</span></a><span class="result"> extends <a href="QueueBasedMessageQueue.html" class="extype" name="akka.dispatch.QueueBasedMessageQueue">QueueBasedMessageQueue</a> with <a href="DequeBasedMessageQueueSemantics.html" class="extype" name="akka.dispatch.DequeBasedMessageQueueSemantics">DequeBasedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@DequeBasedMessageQueueextendsQueueBasedMessageQueuewithDequeBasedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.DequeBasedMessageQueueSemantics" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DequeBasedMessageQueueSemanticsextendsAnyRef"></a>
+      <a id="DequeBasedMessageQueueSemantics:DequeBasedMessageQueueSemantics"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DequeBasedMessageQueueSemantics.html"><span class="name">DequeBasedMessageQueueSemantics</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@DequeBasedMessageQueueSemanticsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">DequeBasedMessageQueue refines QueueBasedMessageQueue to be backed by a java.util.Deque.</p>
+    </li><li name="akka.dispatch.Dispatcher" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DispatcherextendsMessageDispatcher"></a>
+      <a id="Dispatcher:Dispatcher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Dispatcher.html"><span class="name">Dispatcher</span></a><span class="result"> extends <a href="MessageDispatcher.html" class="extype" name="akka.dispatch.MessageDispatcher">MessageDispatcher</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@DispatcherextendsMessageDispatcher" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The event-based <code><code>Dispatcher</code></code> binds a set of Actors to a thread pool backed up by a
+<code>BlockingQueue</code>.</p><div class="fullcomment"><div class="comment cmt"><p>The event-based <code><code>Dispatcher</code></code> binds a set of Actors to a thread pool backed up by a
+<code>BlockingQueue</code>.</p><p>The preferred way of creating dispatchers is to define configuration of it and use the
+the <code>lookup</code> method in <a href="Dispatchers.html" class="extype" name="akka.dispatch.Dispatchers">akka.dispatch.Dispatchers</a>.
+</p></div></div>
+    </li><li name="akka.dispatch.DispatcherConfigurator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DispatcherConfiguratorextendsMessageDispatcherConfigurator"></a>
+      <a id="DispatcherConfigurator:DispatcherConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherConfigurator.html"><span class="name">DispatcherConfigurator</span></a><span class="result"> extends <a href="MessageDispatcherConfigurator.html" class="extype" name="akka.dispatch.MessageDispatcherConfigurator">MessageDispatcherConfigurator</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@DispatcherConfiguratorextendsMessageDispatcherConfigurator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Configurator for creating <a href="Dispatcher.html" class="extype" name="akka.dispatch.Dispatcher">akka.dispatch.Dispatcher</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Configurator for creating <a href="Dispatcher.html" class="extype" name="akka.dispatch.Dispatcher">akka.dispatch.Dispatcher</a>.
+Returns the same dispatcher instance for for each invocation
+of the <code>dispatcher()</code> method.
+</p></div></div>
+    </li><li name="akka.dispatch.DispatcherPrerequisites" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DispatcherPrerequisitesextendsAnyRef"></a>
+      <a id="DispatcherPrerequisites:DispatcherPrerequisites"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherPrerequisites.html"><span class="name">DispatcherPrerequisites</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@DispatcherPrerequisitesextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">DispatcherPrerequisites represents useful contextual pieces when constructing a MessageDispatcher
+</p>
+    </li><li name="akka.dispatch.Dispatchers" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DispatchersextendsAnyRef"></a>
+      <a id="Dispatchers:Dispatchers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Dispatchers.html"><span class="name">Dispatchers</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@DispatchersextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Dispatchers are to be defined in configuration to allow for tuning
+for different environments.</p><div class="fullcomment"><div class="comment cmt"><p>Dispatchers are to be defined in configuration to allow for tuning
+for different environments. Use the <code>lookup</code> method to create
+a dispatcher as specified in configuration.</p><p>Look in <code>akka.actor.default-dispatcher</code> section of the reference.conf
+for documentation of dispatcher options.
+</p></div></div>
+    </li><li name="akka.dispatch.Envelope" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EnvelopeextendsProductwithSerializable"></a>
+      <a id="Envelope:Envelope"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Envelope.html"><span class="name">Envelope</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@EnvelopeextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.ExecutorServiceConfigurator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExecutorServiceConfiguratorextendsExecutorServiceFactoryProvider"></a>
+      <a id="ExecutorServiceConfigurator:ExecutorServiceConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ExecutorServiceConfigurator.html"><span class="name">ExecutorServiceConfigurator</span></a><span class="result"> extends <a href="ExecutorServiceFactoryProvider.html" class="extype" name="akka.dispatch.ExecutorServiceFactoryProvider">ExecutorServiceFactoryProvider</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ExecutorServiceConfiguratorextendsExecutorServiceFactoryProvider" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An ExecutorServiceConfigurator is a class that given some prerequisites and a configuration can create instances of ExecutorService
+</p>
+    </li><li name="akka.dispatch.ExecutorServiceDelegate" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExecutorServiceDelegateextendsExecutorService"></a>
+      <a id="ExecutorServiceDelegate:ExecutorServiceDelegate"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ExecutorServiceDelegate.html"><span class="name">ExecutorServiceDelegate</span></a><span class="result"> extends <span class="extype" name="java.util.concurrent.ExecutorService">ExecutorService</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ExecutorServiceDelegateextendsExecutorService" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">As the name says
+</p>
+    </li><li name="akka.dispatch.ExecutorServiceFactory" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExecutorServiceFactoryextendsAnyRef"></a>
+      <a id="ExecutorServiceFactory:ExecutorServiceFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ExecutorServiceFactory.html"><span class="name">ExecutorServiceFactory</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ExecutorServiceFactoryextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Function0 without the fun stuff (mostly for the sake of the Java API side of things)
+</p>
+    </li><li name="akka.dispatch.ExecutorServiceFactoryProvider" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExecutorServiceFactoryProviderextendsAnyRef"></a>
+      <a id="ExecutorServiceFactoryProvider:ExecutorServiceFactoryProvider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ExecutorServiceFactoryProvider.html"><span class="name">ExecutorServiceFactoryProvider</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ExecutorServiceFactoryProviderextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Generic way to specify an ExecutorService to a Dispatcher, create it with the given name if desired
+</p>
+    </li><li name="akka.dispatch.Foreach" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Foreach[-T]extendsjapi.UnitFunctionBridge[T]"></a>
+      <a id="Foreach[-T]:Foreach[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Foreach.html"><span class="name">Foreach</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <a href="japi$$UnitFunctionBridge.html" class="extype" name="akka.dispatch.japi.UnitFunctionBridge">UnitFunctionBridge</a>[<span class="extype" name="akka.dispatch.Foreach.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Foreach[-T]extendsjapi.UnitFunctionBridge[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Callback for the Future.foreach operation that will be invoked if the Future that this callback
+is registered on becomes completed with a success.</p><div class="fullcomment"><div class="comment cmt"><p>Callback for the Future.foreach operation that will be invoked if the Future that this callback
+is registered on becomes completed with a success. This method is essentially the same operation
+as onSuccess.</p><p>SAM (Single Abstract Method) class
+Java API
+</p></div></div>
+    </li><li name="akka.dispatch.ForkJoinExecutorConfigurator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ForkJoinExecutorConfiguratorextendsExecutorServiceConfigurator"></a>
+      <a id="ForkJoinExecutorConfigurator:ForkJoinExecutorConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ForkJoinExecutorConfigurator.html"><span class="name">ForkJoinExecutorConfigurator</span></a><span class="result"> extends <a href="ExecutorServiceConfigurator.html" class="extype" name="akka.dispatch.ExecutorServiceConfigurator">ExecutorServiceConfigurator</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ForkJoinExecutorConfiguratorextendsExecutorServiceConfigurator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.MailboxType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MailboxTypeextendsAnyRef"></a>
+      <a id="MailboxType:MailboxType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MailboxType.html"><span class="name">MailboxType</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@MailboxTypeextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">MailboxType is a factory to create MessageQueues for an optionally
+provided ActorContext.</p><div class="fullcomment"><div class="comment cmt"><p>MailboxType is a factory to create MessageQueues for an optionally
+provided ActorContext.</p><p><b>Possibly Important Notice</b></p><p>When implementing a custom mailbox type, be aware that there is special
+semantics attached to <code>system.actorOf()</code> in that sending to the returned
+ActorRef may—for a short period of time—enqueue the messages first in a
+dummy queue. Top-level actors are created in two steps, and only after the
+guardian actor has performed that second step will all previously sent
+messages be transferred from the dummy queue into the real mailbox.
+</p></div></div>
+    </li><li name="akka.dispatch.Mapper" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Mapper[-T,+R]extendsAbstractFunction1[T,R]"></a>
+      <a id="Mapper[-T,+R]:Mapper[T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Mapper.html"><span class="name">Mapper</span></a><span class="tparams">[<span name="T">-T</span>, <span name="R">+R</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.runtime.AbstractFunction1" class="extype" target="_top">AbstractFunction1</a>[<span class="extype" name="akka.dispatch.Mapper.T">T</span>, <span class="extype" name="akka.dispatch.Mapper.R">R</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Mapper[-T,+R]extendsAbstractFunction1[T,R]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Callback for the Future.map and Future.flatMap operations that will be invoked
+if the Future that this callback is registered on becomes completed with a success.</p><div class="fullcomment"><div class="comment cmt"><p>Callback for the Future.map and Future.flatMap operations that will be invoked
+if the Future that this callback is registered on becomes completed with a success.
+This callback is the equivalent of an akka.japi.Function</p><p>Override &quot;apply&quot; normally, or &quot;checkedApply&quot; if you need to throw checked exceptions.</p><p>SAM (Single Abstract Method) class</p><p>Java API
+</p></div></div>
+    </li><li name="akka.dispatch.MessageDispatcher" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MessageDispatcherextendsAbstractMessageDispatcherwithBatchingExecutorwithExecutionContextExecutor"></a>
+      <a id="MessageDispatcher:MessageDispatcher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MessageDispatcher.html"><span class="name">MessageDispatcher</span></a><span class="result"> extends <span class="extype" name="akka.dispatch.AbstractMessageDispatcher">AbstractMessageDispatcher</span> with <span class="extype" name="akka.dispatch.BatchingExecutor">BatchingExecutor</span> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.concurrent.ExecutionContextExecutor" class="extype" target="_top">ExecutionContextExecutor</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@MessageDispatcherextendsAbstractMessageDispatcherwithBatchingExecutorwithExecutionContextExecutor" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.MessageDispatcherConfigurator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MessageDispatcherConfiguratorextendsAnyRef"></a>
+      <a id="MessageDispatcherConfigurator:MessageDispatcherConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MessageDispatcherConfigurator.html"><span class="name">MessageDispatcherConfigurator</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@MessageDispatcherConfiguratorextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Base class to be used for hooking in new dispatchers into Dispatchers.</p>
+    </li><li name="akka.dispatch.MessageQueue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MessageQueueextendsAnyRef"></a>
+      <a id="MessageQueue:MessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MessageQueue.html"><span class="name">MessageQueue</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@MessageQueueextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A MessageQueue is one of the core components in forming an Akka Mailbox.</p><div class="fullcomment"><div class="comment cmt"><p>A MessageQueue is one of the core components in forming an Akka Mailbox.
+The MessageQueue is where the normal messages that are sent to Actors will be enqueued (and subsequently dequeued)
+It needs to at least support N producers and 1 consumer thread-safely.
+</p></div></div>
+    </li><li name="akka.dispatch.MonitorableThreadFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MonitorableThreadFactoryextendsThreadFactorywithForkJoinPool.ForkJoinWorkerThreadFactorywithProductwithSerializable"></a>
+      <a id="MonitorableThreadFactory:MonitorableThreadFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MonitorableThreadFactory.html"><span class="name">MonitorableThreadFactory</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="daemonic">daemonic: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="contextClassLoader">contextClassLoader: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="java.lang.ClassLoader">ClassLoader</span>]</span>, <span name="exceptionHandler">exceptionHandler: <span class="extype" name="java.lang.Thread.UncaughtExceptionHandler">UncaughtExceptionHandler</span> = <span class="symbol"><span class="name"><a href="MonitorableThreadFactory$.html">MonitorableThreadFactory.doNothing</a></span></span></span>, <span name="counter">counter: <span class="extype" name="java.util.concurrent.atomic.AtomicLong">AtomicLong</span> = <span class="symbol">new AtomicLong</span></span>)</span><span class="result"> extends <span class="extype" name="java.util.concurrent.ThreadFactory">ThreadFactory</span> with <span class="extype" name="scala.concurrent.forkjoin.ForkJoinPool.ForkJoinWorkerThreadFactory">ForkJoinWorkerThreadFactory</span> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@MonitorableThreadFactoryextendsThreadFactorywithForkJoinPool.ForkJoinWorkerThreadFactorywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.MultipleConsumerSemantics" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MultipleConsumerSemanticsextendsAnyRef"></a>
+      <a id="MultipleConsumerSemantics:MultipleConsumerSemantics"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MultipleConsumerSemantics.html"><span class="name">MultipleConsumerSemantics</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@MultipleConsumerSemanticsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This is a marker trait for message queues which support multiple consumers,
+as is required by the BalancingDispatcher.</p>
+    </li><li name="akka.dispatch.NodeMessageQueue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NodeMessageQueueextendsAbstractNodeQueue[akka.dispatch.Envelope]withMessageQueuewithUnboundedMessageQueueSemantics"></a>
+      <a id="NodeMessageQueue:NodeMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeMessageQueue.html"><span class="name">NodeMessageQueue</span></a><span class="result"> extends <a href="AbstractNodeQueue.html" class="extype" name="akka.dispatch.AbstractNodeQueue">AbstractNodeQueue</a>[<a href="Envelope.html" class="extype" name="akka.dispatch.Envelope">Envelope</a>] with <a href="MessageQueue.html" class="extype" name="akka.dispatch.MessageQueue">MessageQueue</a> with <a href="UnboundedMessageQueueSemantics.html" class="extype" name="akka.dispatch.UnboundedMessageQueueSemantics">UnboundedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@NodeMessageQueueextendsAbstractNodeQueue[akka.dispatch.Envelope]withMessageQueuewithUnboundedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.OnComplete" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="OnComplete[-T]extendsjapi.CallbackBridge[scala.util.Try[T]]"></a>
+      <a id="OnComplete[-T]:OnComplete[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OnComplete.html"><span class="name">OnComplete</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <a href="japi$$CallbackBridge.html" class="extype" name="akka.dispatch.japi.CallbackBridge">CallbackBridge</a>[<a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<span class="extype" name="akka.dispatch.OnComplete.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@OnComplete[-T]extendsjapi.CallbackBridge[scala.util.Try[T]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Callback for when a Future is completed with either failure or a success
+SAM (Single Abstract Method) class</p><div class="fullcomment"><div class="comment cmt"><p>Callback for when a Future is completed with either failure or a success
+SAM (Single Abstract Method) class</p><p>Java API
+</p></div></div>
+    </li><li name="akka.dispatch.OnFailure" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="OnFailureextendsjapi.CallbackBridge[Throwable]"></a>
+      <a id="OnFailure:OnFailure"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OnFailure.html"><span class="name">OnFailure</span></a><span class="result"> extends <a href="japi$$CallbackBridge.html" class="extype" name="akka.dispatch.japi.CallbackBridge">CallbackBridge</a>[<span class="extype" name="scala.Throwable">Throwable</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@OnFailureextendsjapi.CallbackBridge[Throwable]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Callback for when a Future is completed with a failure
+SAM (Single Abstract Method) class</p><div class="fullcomment"><div class="comment cmt"><p>Callback for when a Future is completed with a failure
+SAM (Single Abstract Method) class</p><p>Java API
+</p></div></div>
+    </li><li name="akka.dispatch.OnSuccess" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="OnSuccess[-T]extendsjapi.CallbackBridge[T]"></a>
+      <a id="OnSuccess[-T]:OnSuccess[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OnSuccess.html"><span class="name">OnSuccess</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <a href="japi$$CallbackBridge.html" class="extype" name="akka.dispatch.japi.CallbackBridge">CallbackBridge</a>[<span class="extype" name="akka.dispatch.OnSuccess.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@OnSuccess[-T]extendsjapi.CallbackBridge[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Callback for when a Future is completed successfully
+SAM (Single Abstract Method) class</p><div class="fullcomment"><div class="comment cmt"><p>Callback for when a Future is completed successfully
+SAM (Single Abstract Method) class</p><p>Java API
+</p></div></div>
+    </li><li name="akka.dispatch.PinnedDispatcher" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PinnedDispatcherextendsDispatcher"></a>
+      <a id="PinnedDispatcher:PinnedDispatcher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PinnedDispatcher.html"><span class="name">PinnedDispatcher</span></a><span class="result"> extends <a href="Dispatcher.html" class="extype" name="akka.dispatch.Dispatcher">Dispatcher</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@PinnedDispatcherextendsDispatcher" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Dedicates a unique thread for each actor passed in as reference.</p><div class="fullcomment"><div class="comment cmt"><p>Dedicates a unique thread for each actor passed in as reference. Served through its messageQueue.</p><p>The preferred way of creating dispatchers is to define configuration of it and use the
+the <code>lookup</code> method in <a href="Dispatchers.html" class="extype" name="akka.dispatch.Dispatchers">akka.dispatch.Dispatchers</a>.
+</p></div></div>
+    </li><li name="akka.dispatch.PinnedDispatcherConfigurator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PinnedDispatcherConfiguratorextendsMessageDispatcherConfigurator"></a>
+      <a id="PinnedDispatcherConfigurator:PinnedDispatcherConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PinnedDispatcherConfigurator.html"><span class="name">PinnedDispatcherConfigurator</span></a><span class="result"> extends <a href="MessageDispatcherConfigurator.html" class="extype" name="akka.dispatch.MessageDispatcherConfigurator">MessageDispatcherConfigurator</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@PinnedDispatcherConfiguratorextendsMessageDispatcherConfigurator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Configurator for creating <a href="PinnedDispatcher.html" class="extype" name="akka.dispatch.PinnedDispatcher">akka.dispatch.PinnedDispatcher</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Configurator for creating <a href="PinnedDispatcher.html" class="extype" name="akka.dispatch.PinnedDispatcher">akka.dispatch.PinnedDispatcher</a>.
+Returns new dispatcher instance for for each invocation
+of the <code>dispatcher()</code> method.
+</p></div></div>
+    </li><li name="akka.dispatch.PriorityGenerator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PriorityGeneratorextendsComparator[akka.dispatch.Envelope]"></a>
+      <a id="PriorityGenerator:PriorityGenerator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PriorityGenerator.html"><span class="name">PriorityGenerator</span></a><span class="result"> extends <span class="extype" name="java.util.Comparator">Comparator</span>[<a href="Envelope.html" class="extype" name="akka.dispatch.Envelope">Envelope</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@PriorityGeneratorextendsComparator[akka.dispatch.Envelope]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A PriorityGenerator is a convenience API to create a Comparator that orders the messages of a
+PriorityDispatcher
+</p>
+    </li><li name="akka.dispatch.ProducesMessageQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProducesMessageQueue[T&lt;:akka.dispatch.MessageQueue]extendsAnyRef"></a>
+      <a id="ProducesMessageQueue[T&lt;:MessageQueue]:ProducesMessageQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ProducesMessageQueue.html"><span class="name">ProducesMessageQueue</span></a><span class="tparams">[<span name="T">T &lt;: <a href="MessageQueue.html" class="extype" name="akka.dispatch.MessageQueue">MessageQueue</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ProducesMessageQueue[T&lt;:akka.dispatch.MessageQueue]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.QueueBasedMessageQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="QueueBasedMessageQueueextendsMessageQueuewithMultipleConsumerSemantics"></a>
+      <a id="QueueBasedMessageQueue:QueueBasedMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="QueueBasedMessageQueue.html"><span class="name">QueueBasedMessageQueue</span></a><span class="result"> extends <a href="MessageQueue.html" class="extype" name="akka.dispatch.MessageQueue">MessageQueue</a> with <a href="MultipleConsumerSemantics.html" class="extype" name="akka.dispatch.MultipleConsumerSemantics">MultipleConsumerSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@QueueBasedMessageQueueextendsMessageQueuewithMultipleConsumerSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A QueueBasedMessageQueue is a MessageQueue backed by a java.util.Queue.</p>
+    </li><li name="akka.dispatch.Recover" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Recover[+T]extendsjapi.RecoverBridge[T]"></a>
+      <a id="Recover[+T]:Recover[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Recover.html"><span class="name">Recover</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="japi$$RecoverBridge.html" class="extype" name="akka.dispatch.japi.RecoverBridge">RecoverBridge</a>[<span class="extype" name="akka.dispatch.Recover.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Recover[+T]extendsjapi.RecoverBridge[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Callback for the Future.recover operation that conditionally turns failures into successes.</p><div class="fullcomment"><div class="comment cmt"><p>Callback for the Future.recover operation that conditionally turns failures into successes.</p><p>SAM (Single Abstract Method) class</p><p>Java API
+</p></div></div>
+    </li><li name="akka.dispatch.RequiresMessageQueue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RequiresMessageQueue[T]extendsAnyRef"></a>
+      <a id="RequiresMessageQueue[T]:RequiresMessageQueue[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RequiresMessageQueue.html"><span class="name">RequiresMessageQueue</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@RequiresMessageQueue[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Trait to signal that an Actor requires a certain type of message queue semantics.</p><div class="fullcomment"><div class="comment cmt"><p>Trait to signal that an Actor requires a certain type of message queue semantics.</p><p>The mailbox type will be looked up by mapping the type T via akka.actor.mailbox.requirements in the config,
+to a mailbox configuration. If no mailbox is assigned on Props or in deployment config then this one will be used.</p><p>The queue type of the created mailbox will be checked against the type T and actor creation will fail if it doesn't
+fulfill the requirements.
+</p></div></div>
+    </li><li name="akka.dispatch.SaneRejectedExecutionHandler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SaneRejectedExecutionHandlerextendsRejectedExecutionHandler"></a>
+      <a id="SaneRejectedExecutionHandler:SaneRejectedExecutionHandler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SaneRejectedExecutionHandler.html"><span class="name">SaneRejectedExecutionHandler</span></a><span class="result"> extends <span class="extype" name="java.util.concurrent.RejectedExecutionHandler">RejectedExecutionHandler</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@SaneRejectedExecutionHandlerextendsRejectedExecutionHandler" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The RejectedExecutionHandler used by Akka, it improves on CallerRunsPolicy
+by throwing a RejectedExecutionException if the executor isShutdown.</p><div class="fullcomment"><div class="comment cmt"><p>The RejectedExecutionHandler used by Akka, it improves on CallerRunsPolicy
+by throwing a RejectedExecutionException if the executor isShutdown.
+(CallerRunsPolicy silently discards the runnable in this case, which is arguably broken)
+</p></div></div>
+    </li><li name="akka.dispatch.SingleConsumerOnlyUnboundedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SingleConsumerOnlyUnboundedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.NodeMessageQueue]withProductwithSerializable"></a>
+      <a id="SingleConsumerOnlyUnboundedMailbox:SingleConsumerOnlyUnboundedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SingleConsumerOnlyUnboundedMailbox.html"><span class="name">SingleConsumerOnlyUnboundedMailbox</span></a><span class="params">()</span><span class="result"> extends <a href="MailboxType.html" class="extype" name="akka.dispatch.MailboxType">MailboxType</a> with <a href="ProducesMessageQueue.html" class="extype" name="akka.dispatch.ProducesMessageQueue">ProducesMessageQueue</a>[<a href="NodeMessageQueue.html" class="extype" name="akka.dispatch.NodeMessageQueue">NodeMessageQueue</a>] with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@SingleConsumerOnlyUnboundedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.NodeMessageQueue]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">SingleConsumerOnlyUnboundedMailbox is a high-performance, multiple producer—single consumer, unbounded MailboxType,
+the only drawback is that you can't have multiple consumers,
+which rules out using it with BalancingPool (BalancingDispatcher) for instance.</p>
+    </li><li name="akka.dispatch.TaskInvocation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TaskInvocationextendsBatchablewithProductwithSerializable"></a>
+      <a id="TaskInvocation:TaskInvocation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TaskInvocation.html"><span class="name">TaskInvocation</span></a><span class="params">(<span name="eventStream">eventStream: <a href="../event/EventStream.html" class="extype" name="akka.event.EventStream">EventStream</a></span>, <span name="runnable">runnable: <span class="extype" name="java.lang.Runnable">Runnable</span></span>, <span name="cleanup">cleanup: () ⇒ <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result"> extends <span class="extype" name="akka.dispatch.Batchable">Batchable</span> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@TaskInvocationextendsBatchablewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.ThreadPoolConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ThreadPoolConfigextendsExecutorServiceFactoryProviderwithProductwithSerializable"></a>
+      <a id="ThreadPoolConfig:ThreadPoolConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ThreadPoolConfig.html"><span class="name">ThreadPoolConfig</span></a><span class="params">(<span name="allowCorePoolTimeout">allowCorePoolTimeout: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a> = <span class="defval" name='<span class="name"><a href="ThreadPoolConfig$.html">ThreadPoolConfig.defaultAllowCoreThreadTimeout</a></span>'>...</span></span>, <span name="corePoolSize">corePoolSize: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="defval" name='<span class="name"><a href="ThreadPoolConfig$.html">ThreadPoolConfig.defaultCorePoolSize</a></span>'>...</span></span>, <span name="maxPoolSize">maxPoolSize: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="symbol"><span class="name"><a href="ThreadPoolConfig$.html">ThreadPoolConfig.defaultMaxPoolSize</a></span></span></span>, <span name="threadTimeout">threadTimeout: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.concurrent.duration.Duration" class="extype" target="_top">Duration</a> = <span class="symbol"><span class="name"><a href="ThreadPoolConfig$.html">ThreadPoolConfig.defaultTimeout</a></span></span></span>, <span name="queueFactory">queueFactory: <a href="ThreadPoolConfig$.html#QueueFactory=()=&gt;java.util.concurrent.BlockingQueue[Runnable]" class="extmbr" name="akka.dispatch.ThreadPoolConfig.QueueFactory">QueueFactory</a> = <span class="defval" name='<span class="name"><a href="ThreadPoolConfig$.html">ThreadPoolConfig.linkedBlockingQueue()</a></span>'>...</span></span>, <span name="rejectionPolicy">rejectionPolicy: <span class="extype" name="java.util.concurrent.RejectedExecutionHandler">RejectedExecutionHandler</span> = <span class="defval" name='<span class="name"><a href="ThreadPoolConfig$.html">ThreadPoolConfig.defaultRejectionPolicy</a></span>'>...</span></span>)</span><span class="result"> extends <a href="ExecutorServiceFactoryProvider.html" class="extype" name="akka.dispatch.ExecutorServiceFactoryProvider">ExecutorServiceFactoryProvider</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ThreadPoolConfigextendsExecutorServiceFactoryProviderwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A small configuration DSL to create ThreadPoolExecutors that can be provided as an ExecutorServiceFactoryProvider to Dispatcher
+</p>
+    </li><li name="akka.dispatch.ThreadPoolConfigBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ThreadPoolConfigBuilderextendsProductwithSerializable"></a>
+      <a id="ThreadPoolConfigBuilder:ThreadPoolConfigBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ThreadPoolConfigBuilder.html"><span class="name">ThreadPoolConfigBuilder</span></a><span class="params">(<span name="config">config: <a href="ThreadPoolConfig.html" class="extype" name="akka.dispatch.ThreadPoolConfig">ThreadPoolConfig</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ThreadPoolConfigBuilderextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A DSL to configure and create a MessageDispatcher with a ThreadPoolExecutor
+</p>
+    </li><li name="akka.dispatch.ThreadPoolExecutorConfigurator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ThreadPoolExecutorConfiguratorextendsExecutorServiceConfigurator"></a>
+      <a id="ThreadPoolExecutorConfigurator:ThreadPoolExecutorConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ThreadPoolExecutorConfigurator.html"><span class="name">ThreadPoolExecutorConfigurator</span></a><span class="result"> extends <a href="ExecutorServiceConfigurator.html" class="extype" name="akka.dispatch.ExecutorServiceConfigurator">ExecutorServiceConfigurator</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ThreadPoolExecutorConfiguratorextendsExecutorServiceConfigurator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.UnboundedDequeBasedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnboundedDequeBasedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.UnboundedDequeBasedMailbox.MessageQueue]withProductwithSerializable"></a>
+      <a id="UnboundedDequeBasedMailbox:UnboundedDequeBasedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedDequeBasedMailbox.html"><span class="name">UnboundedDequeBasedMailbox</span></a><span class="params">()</span><span class="result"> extends <a href="MailboxType.html" class="extype" name="akka.dispatch.MailboxType">MailboxType</a> with <a href="ProducesMessageQueue.html" class="extype" name="akka.dispatch.ProducesMessageQueue">ProducesMessageQueue</a>[<a href="UnboundedDequeBasedMailbox$$MessageQueue.html" class="extype" name="akka.dispatch.UnboundedDequeBasedMailbox.MessageQueue">dispatch.UnboundedDequeBasedMailbox.MessageQueue</a>] with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedDequeBasedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.UnboundedDequeBasedMailbox.MessageQueue]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">UnboundedDequeBasedMailbox is an unbounded MailboxType, backed by a Deque.</p>
+    </li><li name="akka.dispatch.UnboundedDequeBasedMessageQueue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UnboundedDequeBasedMessageQueueextendsDequeBasedMessageQueuewithUnboundedDequeBasedMessageQueueSemantics"></a>
+      <a id="UnboundedDequeBasedMessageQueue:UnboundedDequeBasedMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedDequeBasedMessageQueue.html"><span class="name">UnboundedDequeBasedMessageQueue</span></a><span class="result"> extends <a href="DequeBasedMessageQueue.html" class="extype" name="akka.dispatch.DequeBasedMessageQueue">DequeBasedMessageQueue</a> with <a href="UnboundedDequeBasedMessageQueueSemantics.html" class="extype" name="akka.dispatch.UnboundedDequeBasedMessageQueueSemantics">UnboundedDequeBasedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedDequeBasedMessageQueueextendsDequeBasedMessageQueuewithUnboundedDequeBasedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">UnboundedDequeBasedMessageQueueSemantics adds unbounded semantics to a DequeBasedMessageQueue,
+i.e.</p><div class="fullcomment"><div class="comment cmt"><p>UnboundedDequeBasedMessageQueueSemantics adds unbounded semantics to a DequeBasedMessageQueue,
+i.e. a non-blocking enqueue and dequeue.
+</p></div></div>
+    </li><li name="akka.dispatch.UnboundedDequeBasedMessageQueueSemantics" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UnboundedDequeBasedMessageQueueSemanticsextendsDequeBasedMessageQueueSemanticswithUnboundedMessageQueueSemantics"></a>
+      <a id="UnboundedDequeBasedMessageQueueSemantics:UnboundedDequeBasedMessageQueueSemantics"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedDequeBasedMessageQueueSemantics.html"><span class="name">UnboundedDequeBasedMessageQueueSemantics</span></a><span class="result"> extends <a href="DequeBasedMessageQueueSemantics.html" class="extype" name="akka.dispatch.DequeBasedMessageQueueSemantics">DequeBasedMessageQueueSemantics</a> with <a href="UnboundedMessageQueueSemantics.html" class="extype" name="akka.dispatch.UnboundedMessageQueueSemantics">UnboundedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedDequeBasedMessageQueueSemanticsextendsDequeBasedMessageQueueSemanticswithUnboundedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.UnboundedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnboundedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.UnboundedMailbox.MessageQueue]withProductwithSerializable"></a>
+      <a id="UnboundedMailbox:UnboundedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedMailbox.html"><span class="name">UnboundedMailbox</span></a><span class="params">()</span><span class="result"> extends <a href="MailboxType.html" class="extype" name="akka.dispatch.MailboxType">MailboxType</a> with <a href="ProducesMessageQueue.html" class="extype" name="akka.dispatch.ProducesMessageQueue">ProducesMessageQueue</a>[<a href="UnboundedMailbox$$MessageQueue.html" class="extype" name="akka.dispatch.UnboundedMailbox.MessageQueue">dispatch.UnboundedMailbox.MessageQueue</a>] with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.UnboundedMailbox.MessageQueue]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">UnboundedMailbox is the default unbounded MailboxType used by Akka Actors.</p>
+    </li><li name="akka.dispatch.UnboundedMessageQueueSemantics" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UnboundedMessageQueueSemanticsextendsAnyRef"></a>
+      <a id="UnboundedMessageQueueSemantics:UnboundedMessageQueueSemantics"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedMessageQueueSemantics.html"><span class="name">UnboundedMessageQueueSemantics</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedMessageQueueSemanticsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">UnboundedMessageQueueSemantics adds unbounded semantics to a QueueBasedMessageQueue,
+i.e.</p><div class="fullcomment"><div class="comment cmt"><p>UnboundedMessageQueueSemantics adds unbounded semantics to a QueueBasedMessageQueue,
+i.e. a non-blocking enqueue and dequeue.
+</p></div></div>
+    </li><li name="akka.dispatch.UnboundedPriorityMailbox" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UnboundedPriorityMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.UnboundedPriorityMailbox.MessageQueue]"></a>
+      <a id="UnboundedPriorityMailbox:UnboundedPriorityMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedPriorityMailbox.html"><span class="name">UnboundedPriorityMailbox</span></a><span class="result"> extends <a href="MailboxType.html" class="extype" name="akka.dispatch.MailboxType">MailboxType</a> with <a href="ProducesMessageQueue.html" class="extype" name="akka.dispatch.ProducesMessageQueue">ProducesMessageQueue</a>[<a href="UnboundedPriorityMailbox$$MessageQueue.html" class="extype" name="akka.dispatch.UnboundedPriorityMailbox.MessageQueue">dispatch.UnboundedPriorityMailbox.MessageQueue</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedPriorityMailboxextendsMailboxTypewithProducesMessageQueue[akka.dispatch.UnboundedPriorityMailbox.MessageQueue]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">UnboundedPriorityMailbox is an unbounded mailbox that allows for prioritization of its contents.</p><div class="fullcomment"><div class="comment cmt"><p>UnboundedPriorityMailbox is an unbounded mailbox that allows for prioritization of its contents.
+Extend this class and provide the Comparator in the constructor.
+</p></div></div>
+    </li><li name="akka.dispatch.UnboundedQueueBasedMessageQueue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UnboundedQueueBasedMessageQueueextendsQueueBasedMessageQueuewithUnboundedMessageQueueSemantics"></a>
+      <a id="UnboundedQueueBasedMessageQueue:UnboundedQueueBasedMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedQueueBasedMessageQueue.html"><span class="name">UnboundedQueueBasedMessageQueue</span></a><span class="result"> extends <a href="QueueBasedMessageQueue.html" class="extype" name="akka.dispatch.QueueBasedMessageQueue">QueueBasedMessageQueue</a> with <a href="UnboundedMessageQueueSemantics.html" class="extype" name="akka.dispatch.UnboundedMessageQueueSemantics">UnboundedMessageQueueSemantics</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedQueueBasedMessageQueueextendsQueueBasedMessageQueuewithUnboundedMessageQueueSemantics" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.BalancingDispatcher" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BalancingDispatcherextendsDispatcher"></a>
+      <a id="BalancingDispatcher:BalancingDispatcher"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BalancingDispatcher.html"><span class="name deprecated" title="Deprecated: (Since version 2.3) Use BalancingPool instead of BalancingDispatcher">BalancingDispatcher</span></a><span class="result"> extends <a href="Dispatcher.html" class="extype" name="akka.dispatch.Dispatcher">Dispatcher</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BalancingDispatcherextendsDispatcher" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An executor based event driven dispatcher which will try to redistribute work from busy actors to idle actors.</p><div class="fullcomment"><div class="comment cmt"><p>An executor based event driven dispatcher which will try to redistribute work from busy actors to idle actors. It is assumed
+that all actors using the same instance of this dispatcher can process all messages that have been sent to one of the actors. I.e. the
+actors belong to a pool of actors, and to the client there is no guarantee about which actor instance actually processes a given message.</p><p>Although the technique used in this implementation is commonly known as &quot;work stealing&quot;, the actual implementation is probably
+best described as &quot;work donating&quot; because the actor of which work is being stolen takes the initiative.</p><p>The preferred way of creating dispatchers is to define configuration of it and use the
+the <code>lookup</code> method in <a href="Dispatchers.html" class="extype" name="akka.dispatch.Dispatchers">akka.dispatch.Dispatchers</a>.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.3)</i> Use BalancingPool instead of BalancingDispatcher</p></dd><dt>See also</dt><dd><span class="cmt"><p>akka.dispatch.Dispatchers
+</p></span><span class="cmt"><p>akka.dispatch.BalancingDispatcher</p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="akka.dispatch.BoundedDequeBasedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoundedDequeBasedMailbox"></a>
+      <a id="BoundedDequeBasedMailbox:BoundedDequeBasedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedDequeBasedMailbox$.html"><span class="name">BoundedDequeBasedMailbox</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedDequeBasedMailbox" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.BoundedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoundedMailbox"></a>
+      <a id="BoundedMailbox:BoundedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedMailbox$.html"><span class="name">BoundedMailbox</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedMailbox" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.BoundedPriorityMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BoundedPriorityMailbox"></a>
+      <a id="BoundedPriorityMailbox:BoundedPriorityMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedPriorityMailbox$.html"><span class="name">BoundedPriorityMailbox</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@BoundedPriorityMailbox" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.Dispatchers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Dispatchers"></a>
+      <a id="Dispatchers:Dispatchers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Dispatchers$.html"><span class="name">Dispatchers</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Dispatchers" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.Envelope" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Envelope"></a>
+      <a id="Envelope:Envelope"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Envelope$.html"><span class="name">Envelope</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Envelope" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.ExecutionContexts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExecutionContexts"></a>
+      <a id="ExecutionContexts:ExecutionContexts"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ExecutionContexts$.html"><span class="name">ExecutionContexts</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ExecutionContexts" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">ExecutionContexts is the Java API for ExecutionContexts
+</p>
+    </li><li name="akka.dispatch.Filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Filter"></a>
+      <a id="Filter:Filter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Filter$.html"><span class="name">Filter</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Filter" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><i><b>Java API (not recommended):</b></i>
+Callback for the Future.filter operation that creates a new Future which will
+conditionally contain the success of another Future.</i></p><div class="fullcomment"><div class="comment cmt"><p><i><b>Java API (not recommended):</b></i>
+Callback for the Future.filter operation that creates a new Future which will
+conditionally contain the success of another Future.</p><p>Unfortunately it is not possible to express the type of a Scala filter in
+Java: Function1[T, Boolean], where “Boolean” is the primitive type. It is
+possible to use <code>Future.filter</code> by constructing such a function indirectly:</p><pre><span class="kw">import</span> static akka.dispatch.Filter.filterOf;
+Future&lt;<span class="std">String</span>&gt; f = ...;
+f.filter(filterOf(<span class="kw">new</span> <span class="std">Function</span>&lt;<span class="std">String</span>, <span class="std">Boolean</span>&gt;() {
+  @Override
+  public <span class="std">Boolean</span> apply(<span class="std">String</span> s) {
+    ...
+  }
+}));</pre><p>However, <code>Future.filter</code> exists mainly to support Scala’s for-comprehensions,
+thus Java users should prefer <code>Future.map</code>, translating non-matching values
+to failure cases.
+</p></div></div>
+    </li><li name="akka.dispatch.ForkJoinExecutorConfigurator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ForkJoinExecutorConfigurator"></a>
+      <a id="ForkJoinExecutorConfigurator:ForkJoinExecutorConfigurator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ForkJoinExecutorConfigurator$.html"><span class="name">ForkJoinExecutorConfigurator</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ForkJoinExecutorConfigurator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.Futures" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Futures"></a>
+      <a id="Futures:Futures"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Futures$.html"><span class="name">Futures</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Futures" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Futures is the Java API for Futures and Promises
+</p>
+    </li><li name="akka.dispatch.Mailboxes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Mailboxes"></a>
+      <a id="Mailboxes:Mailboxes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Mailboxes$.html"><span class="name">Mailboxes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@Mailboxes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.MonitorableThreadFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MonitorableThreadFactory"></a>
+      <a id="MonitorableThreadFactory:MonitorableThreadFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MonitorableThreadFactory$.html"><span class="name">MonitorableThreadFactory</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@MonitorableThreadFactory" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.PriorityGenerator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PriorityGenerator"></a>
+      <a id="PriorityGenerator:PriorityGenerator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PriorityGenerator$.html"><span class="name">PriorityGenerator</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@PriorityGenerator" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.ThreadPoolConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ThreadPoolConfig"></a>
+      <a id="ThreadPoolConfig:ThreadPoolConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ThreadPoolConfig$.html"><span class="name">ThreadPoolConfig</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@ThreadPoolConfig" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.UnboundedDequeBasedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnboundedDequeBasedMailbox"></a>
+      <a id="UnboundedDequeBasedMailbox:UnboundedDequeBasedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedDequeBasedMailbox$.html"><span class="name">UnboundedDequeBasedMailbox</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedDequeBasedMailbox" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.UnboundedMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnboundedMailbox"></a>
+      <a id="UnboundedMailbox:UnboundedMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedMailbox$.html"><span class="name">UnboundedMailbox</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedMailbox" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.UnboundedPriorityMailbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnboundedPriorityMailbox"></a>
+      <a id="UnboundedPriorityMailbox:UnboundedPriorityMailbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UnboundedPriorityMailbox$.html"><span class="name">UnboundedPriorityMailbox</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@UnboundedPriorityMailbox" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.dispatch.japi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="japi"></a>
+      <a id="japi:japi"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="japi$.html"><span class="name">japi</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.dispatch.package@japi" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This class contains bridge classes between Scala and Java.</p><div class="fullcomment"><div class="comment cmt"><p>This class contains bridge classes between Scala and Java.
+Internal use only.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>mailbox - akka.actor.mailbox</title>
+          <meta name="description" content="mailbox - akka.actor.mailbox" />
+          <meta name="keywords" content="mailbox akka.actor.mailbox" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'akka.actor.mailbox.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="akka">akka</a>.<a href="../package.html" class="extype" name="akka.actor">actor</a></p>
+        <h1>mailbox</h1> <span class="permalink">
+      <a href="../../../index.html#akka.actor.mailbox.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mailbox</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph702" viewBox="0.00 0.00 365.50 94.00" height="94pt" width="366pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 90)" class="graph" id="graph0"><polygon points="-4,4 -4,-90 361.5,-90 361.5,4 -4,4" stroke="none" fill="white"></polygon><!-- node0 --><g class="node class" id="graph702_0"><g id="a_class|graph702_0"><a xlink:title="akka.actor.mailbox.DurableMessageQueue" xlink:href="DurableMessageQueue.html#inheritance-diagram"><polygon points="156,-86 0,-86 0,-61 156,-61 156,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-80.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="31" text-anchor="start">DurableMessageQueue</text></a></g></g><!-- node2 --><g class="node class" id="graph702_2"><g id="a_class|graph702_2"><a xlink:title="akka.actor.mailbox.DurableMessageQueueWithSerialization" xlink:href="DurableMessageQueueWithSerialization.html#inheritance-diagram"><polygon points="289.5,-25 54.5,-25 54.5,-0 289.5,-0 289.5,-25" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-19.5" x="65" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="86" text-anchor="start">DurableMessageQueueWithSerialization</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph702_0_2"><g id="a_inheritance|graph702_0_2"><a xlink:title="DurableMessageQueueWithSerialization is a subtype of DurableMessageQueue"><path d="M100.976,-58.0789C117.112,-47.9511 138.415,-34.5802 153.467,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="99.876,-56.7031 96.5714,-60.8435 101.737,-59.6676 99.876,-56.7031" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node1 --><g class="node trait" id="graph702_1"><g id="a_trait|graph702_1"><a xlink:title="akka.actor.mailbox.DurableMessageSerialization" xlink:href="DurableMessageSerialization.html#inheritance-diagram"><polygon points="357.5,-86 174.5,-86 174.5,-61 357.5,-61 357.5,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="185" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="206" text-anchor="start">DurableMessageSerialization</text></a></g></g><!-- node1&#45;&gt;node2 --><g class="edge inheritance" id="graph702_1_2"><g id="a_inheritance|graph702_1_2"><a xlink:title="DurableMessageQueueWithSerialization is a subtype of DurableMessageSerialization"><path d="M243.024,-58.0789C226.888,-47.9511 205.585,-34.5802 190.533,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="242.263,-59.6676 247.429,-60.8435 244.124,-56.7031 242.263,-59.6676" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="akka.actor.mailbox.DurableMailboxSettings" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DurableMailboxSettingsextendsAnyRef"></a>
+      <a id="DurableMailboxSettings:DurableMailboxSettings"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DurableMailboxSettings.html"><span class="name deprecated" title="Deprecated: (Since version 2.3) durable mailboxes are superseded by akka-persistence">DurableMailboxSettings</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.actor.mailbox.package@DurableMailboxSettingsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Conventional organization of durable mailbox settings:</p><div class="fullcomment"><div class="comment cmt"><p>Conventional organization of durable mailbox settings:</p><pre>akka {
+  actor {
+    my-durable-dispatcher {
+      mailbox-<span class="kw">type</span> = <span class="lit">"my.durable.mailbox"</span>
+      my-durable-mailbox {
+        setting1 = <span class="num">1</span>
+        setting2 = <span class="num">2</span>
+      }
+    }
+  }
+}</pre><p>where name=“my-durable-mailbox” in this example.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.3)</i> durable mailboxes are superseded by akka-persistence</p></dd></dl></div>
+    </li><li name="akka.actor.mailbox.DurableMessageQueue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DurableMessageQueueextendsMessageQueue"></a>
+      <a id="DurableMessageQueue:DurableMessageQueue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DurableMessageQueue.html"><span class="name deprecated" title="Deprecated: (Since version 2.3) durable mailboxes are superseded by akka-persistence">DurableMessageQueue</span></a><span class="result"> extends <a href="../../dispatch/MessageQueue.html" class="extype" name="akka.dispatch.MessageQueue">MessageQueue</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.actor.mailbox.package@DurableMessageQueueextendsMessageQueue" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.3)</i> durable mailboxes are superseded by akka-persistence</p></dd></dl></div>
+    </li><li name="akka.actor.mailbox.DurableMessageQueueWithSerialization" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DurableMessageQueueWithSerializationextendsDurableMessageQueuewithDurableMessageSerialization"></a>
+      <a id="DurableMessageQueueWithSerialization:DurableMessageQueueWithSerialization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DurableMessageQueueWithSerialization.html"><span class="name deprecated" title="Deprecated: (Since version 2.3) durable mailboxes are superseded by akka-persistence">DurableMessageQueueWithSerialization</span></a><span class="result"> extends <a href="DurableMessageQueue.html" class="extype" name="akka.actor.mailbox.DurableMessageQueue">DurableMessageQueue</a> with <a href="DurableMessageSerialization.html" class="extype" name="akka.actor.mailbox.DurableMessageSerialization">DurableMessageSerialization</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.actor.mailbox.package@DurableMessageQueueWithSerializationextendsDurableMessageQueuewithDurableMessageSerialization" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API
+DurableMessageQueue with functionality to serialize and deserialize Envelopes (messages)
+</p><div class="fullcomment"><div class="comment cmt"><p>Java API
+DurableMessageQueue with functionality to serialize and deserialize Envelopes (messages)
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.3)</i> durable mailboxes are superseded by akka-persistence</p></dd></dl></div>
+    </li><li name="akka.actor.mailbox.DurableMessageSerialization" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DurableMessageSerializationextendsAnyRef"></a>
+      <a id="DurableMessageSerialization:DurableMessageSerialization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DurableMessageSerialization.html"><span class="name deprecated" title="Deprecated: (Since version 2.3) durable mailboxes are superseded by akka-persistence">DurableMessageSerialization</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.actor.mailbox.package@DurableMessageSerializationextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">DurableMessageSerialization can be mixed into a DurableMessageQueue and adds functionality
+to serialize and deserialize Envelopes (messages)
+</p><div class="fullcomment"><div class="comment cmt"><p>DurableMessageSerialization can be mixed into a DurableMessageQueue and adds functionality
+to serialize and deserialize Envelopes (messages)
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.3)</i> durable mailboxes are superseded by akka-persistence</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="akka.actor.mailbox.filebased" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="filebased"></a>
+      <a id="filebased:filebased"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="filebased/package.html"><span class="name">filebased</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.actor.mailbox.package@filebased" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

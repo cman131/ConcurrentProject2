@@ -1,0 +1,805 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>ClusterEvent - akka.cluster.ClusterEvent</title>
+          <meta name="description" content="ClusterEvent - akka.cluster.ClusterEvent" />
+          <meta name="keywords" content="ClusterEvent akka.cluster.ClusterEvent" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'akka.cluster.ClusterEvent$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/object_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="akka">akka</a>.<a href="package.html" class="extype" name="akka.cluster">cluster</a></p>
+        <h1>ClusterEvent</h1> <span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ClusterEvent</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Domain events published to the event bus.
+Subscribe with:</p><pre>Cluster(system).subscribe(actorRef, classOf[ClusterDomainEvent])</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="http://github.com/akka/akka/tree/v2.3.7//akka-cluster/src/main/scala/akka/cluster/ClusterEvent.scala" target="_blank">ClusterEvent.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph169" viewBox="0.00 0.00 1065.50 155.00" height="155pt" width="1066pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="graph0"><polygon points="-4,4 -4,-151 1061.5,-151 1061.5,4 -4,4" stroke="none" fill="white"></polygon><!-- node0 --><g class="node class" id="graph169_0"><g id="a_class|graph169_0"><a xlink:title="akka.cluster.ClusterEvent.ClusterMetricsChanged" xlink:href="ClusterEvent$$ClusterMetricsChanged.html#inheritance-diagram"><polygon points="156,-86 0,-86 0,-61 156,-61 156,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="31" text-anchor="start">ClusterMetricsChanged</text></a></g></g><!-- node1 --><g class="node class" id="graph169_1"><g id="a_class|graph169_1"><a xlink:title="akka.cluster.ClusterEvent.ReachableMember" xlink:href="ClusterEvent$$ReachableMember.html#inheritance-diagram"><polygon points="217.5,-25 84.5,-25 84.5,-0 217.5,-0 217.5,-25" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="95" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="116" text-anchor="start">ReachableMember</text></a></g></g><!-- node2 --><g class="node class" id="graph169_2"><g id="a_class|graph169_2"><a xlink:title="akka.cluster.ClusterEvent.UnreachableMember" xlink:href="ClusterEvent$$UnreachableMember.html#inheritance-diagram"><polygon points="380.5,-25 235.5,-25 235.5,-0 380.5,-0 380.5,-25" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="246" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="267" text-anchor="start">UnreachableMember</text></a></g></g><!-- node3 --><g class="node trait" id="graph169_3"><g id="a_trait|graph169_3"><a xlink:title="akka.cluster.ClusterEvent.ReachabilityEvent" xlink:href="ClusterEvent$$ReachabilityEvent.html#inheritance-diagram"><polygon points="302,-86 174,-86 174,-61 302,-61 302,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="184" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="205" text-anchor="start">ReachabilityEvent</text></a></g></g><!-- node3&#45;&gt;node1 --><g class="edge inheritance" id="graph169_3_1"><g id="a_inheritance|graph169_3_1"><a xlink:title="ReachableMember is a subtype of ReachabilityEvent"><path d="M216.351,-57.8185C201.464,-47.7228 181.965,-34.4995 168.153,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="215.691,-59.4855 220.812,-60.8435 217.656,-56.5887 215.691,-59.4855" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node2 --><g class="edge inheritance" id="graph169_3_2"><g id="a_inheritance|graph169_3_2"><a xlink:title="UnreachableMember is a subtype of ReachabilityEvent"><path d="M255.729,-57.5567C267.667,-47.4951 283.181,-34.4187 294.199,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="254.525,-56.283 251.83,-60.8435 256.781,-58.9592 254.525,-56.283" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node class" id="graph169_4"><g id="a_class|graph169_4"><a xlink:title="akka.cluster.ClusterEvent.RoleLeaderChanged" xlink:href="ClusterEvent$$RoleLeaderChanged.html#inheritance-diagram"><polygon points="460,-86 320,-86 320,-61 460,-61 460,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="330" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="351" text-anchor="start">RoleLeaderChanged</text></a></g></g><!-- node5 --><g class="node class" id="graph169_5"><g id="a_class|graph169_5"><a xlink:title="akka.cluster.ClusterEvent.LeaderChanged" xlink:href="ClusterEvent$$LeaderChanged.html#inheritance-diagram"><polygon points="598,-86 478,-86 478,-61 598,-61 598,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="488" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="509" text-anchor="start">LeaderChanged</text></a></g></g><!-- node6 --><g class="node class" id="graph169_6"><g id="a_class|graph169_6"><a xlink:title="akka.cluster.ClusterEvent.MemberRemoved" xlink:href="ClusterEvent$$MemberRemoved.html#inheritance-diagram"><polygon points="596.5,-25 467.5,-25 467.5,-0 596.5,-0 596.5,-25" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="478" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="499" text-anchor="start">MemberRemoved</text></a></g></g><!-- node7 --><g class="node class" id="graph169_7"><g id="a_class|graph169_7"><a xlink:title="akka.cluster.ClusterEvent.MemberExited" xlink:href="ClusterEvent$$MemberExited.html#inheritance-diagram"><polygon points="729,-25 615,-25 615,-0 729,-0 729,-25" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="625" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="646" text-anchor="start">MemberExited</text></a></g></g><!-- node8 --><g class="node class" id="graph169_8"><g id="a_class|graph169_8"><a xlink:title="akka.cluster.ClusterEvent.MemberUp" xlink:href="ClusterEvent$$MemberUp.html#inheritance-diagram"><polygon points="845,-25 747,-25 747,-0 845,-0 845,-25" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="757" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="778" text-anchor="start">MemberUp</text></a></g></g><!-- node9 --><g class="node trait" id="graph169_9"><g id="a_trait|graph169_9"><a xlink:title="akka.cluster.ClusterEvent.MemberEvent" xlink:href="ClusterEvent$$MemberEvent.html#inheritance-diagram"><polygon points="727.5,-86 616.5,-86 616.5,-61 727.5,-61 727.5,-86" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="627" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="648" text-anchor="start">MemberEvent</text></a></g></g><!-- node9&#45;&gt;node6 --><g class="edge inheritance" id="graph169_9_6"><g id="a_inheritance|graph169_9_6"><a xlink:title="MemberRemoved is a subtype of MemberEvent"><path d="M639.952,-58.9941C615.734,-48.788 582.83,-34.921 559.735,-25.1884" stroke="#d4d4d4" fill="none"></path><polygon points="639.387,-60.655 644.674,-60.9841 640.746,-57.4297 639.387,-60.655" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9&#45;&gt;node7 --><g class="edge inheritance" id="graph169_9_7"><g id="a_inheritance|graph169_9_7"><a xlink:title="MemberExited is a subtype of MemberEvent"><path d="M672,-55.6874C672,-45.9173 672,-33.8534 672,-25.1323" stroke="#d4d4d4" fill="none"></path><polygon points="670.25,-55.8435 672,-60.8435 673.75,-55.8435 670.25,-55.8435" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9&#45;&gt;node8 --><g class="edge inheritance" id="graph169_9_8"><g id="a_inheritance|graph169_9_8"><a xlink:title="MemberUp is a subtype of MemberEvent"><path d="M700.923,-58.7381C722.321,-48.5571 751.15,-34.8399 771.434,-25.1884" stroke="#d4d4d4" fill="none"></path><polygon points="699.966,-57.2556 696.203,-60.9841 701.47,-60.4161 699.966,-57.2556" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10 --><g class="node trait" id="graph169_10"><g id="a_trait|graph169_10"><a xlink:title="akka.cluster.ClusterEvent.ClusterDomainEvent" xlink:href="ClusterEvent$$ClusterDomainEvent.html#inheritance-diagram"><polygon points="461.5,-147 318.5,-147 318.5,-122 461.5,-122 461.5,-147" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="329" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="350" text-anchor="start">ClusterDomainEvent</text></a></g></g><!-- node10&#45;&gt;node0 --><g class="edge inheritance" id="graph169_10_0"><g id="a_inheritance|graph169_10_0"><a xlink:title="ClusterMetricsChanged is a subtype of ClusterDomainEvent"><path d="M323.884,-120.997C269.223,-110.661 192.215,-96.0983 139.01,-86.0371" stroke="#d4d4d4" fill="none"></path><polygon points="323.864,-122.775 329.103,-121.984 324.515,-119.335 323.864,-122.775" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node3 --><g class="edge inheritance" id="graph169_10_3"><g id="a_inheritance|graph169_10_3"><a xlink:title="ReachabilityEvent is a subtype of ClusterDomainEvent"><path d="M355.517,-120.115C329.104,-109.863 293.038,-95.8634 267.852,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="355.038,-121.806 360.332,-121.984 356.304,-118.543 355.038,-121.806" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node4 --><g class="edge inheritance" id="graph169_10_4"><g id="a_inheritance|graph169_10_4"><a xlink:title="RoleLeaderChanged is a subtype of ClusterDomainEvent"><path d="M390,-116.687C390,-106.917 390,-94.8534 390,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="388.25,-116.843 390,-121.843 391.75,-116.844 388.25,-116.843" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node5 --><g class="edge inheritance" id="graph169_10_5"><g id="a_inheritance|graph169_10_5"><a xlink:title="LeaderChanged is a subtype of ClusterDomainEvent"><path d="M423.575,-120.115C449.294,-109.863 484.41,-95.8634 508.933,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="422.884,-118.507 418.887,-121.984 424.18,-121.758 422.884,-118.507" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node9 --><g class="edge inheritance" id="graph169_10_9"><g id="a_inheritance|graph169_10_9"><a xlink:title="MemberEvent is a subtype of ClusterDomainEvent"><path d="M450.049,-120.936C499.354,-110.621 568.63,-96.1271 616.616,-86.0875" stroke="#d4d4d4" fill="none"></path><polygon points="449.578,-119.247 445.042,-121.984 450.294,-122.673 449.578,-119.247" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node object" id="graph169_11"><g id="a_object|graph169_11"><a xlink:title="akka.cluster.ClusterEvent.InitialStateAsEvents" xlink:href="ClusterEvent$$InitialStateAsEvents$.html#inheritance-diagram"><polygon points="886,-86 746,-86 746,-61 886,-61 886,-86" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-80.5" x="756" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="777" text-anchor="start">InitialStateAsEvents</text></a></g></g><!-- node12 --><g class="node object" id="graph169_12"><g id="a_object|graph169_12"><a xlink:title="akka.cluster.ClusterEvent.InitialStateAsSnapshot" xlink:href="ClusterEvent$$InitialStateAsSnapshot$.html#inheritance-diagram"><polygon points="1057.5,-86 904.5,-86 904.5,-61 1057.5,-61 1057.5,-86" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-80.5" x="915" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="936" text-anchor="start">InitialStateAsSnapshot</text></a></g></g><!-- node13 --><g class="node class" id="graph169_13"><g id="a_class|graph169_13"><a xlink:title="akka.cluster.ClusterEvent.SubscriptionInitialStateMode" xlink:href="ClusterEvent$$SubscriptionInitialStateMode.html#inheritance-diagram"><polygon points="988.5,-147 807.5,-147 807.5,-122 988.5,-122 988.5,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="818" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="839" text-anchor="start">SubscriptionInitialStateMode</text></a></g></g><!-- node13&#45;&gt;node11 --><g class="edge inheritance" id="graph169_13_11"><g id="a_inheritance|graph169_13_11"><a xlink:title="InitialStateAsEvents is a subtype of SubscriptionInitialStateMode"><path d="M877.595,-118.819C863.564,-108.723 845.186,-95.4995 832.167,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="876.719,-120.344 881.799,-121.843 878.763,-117.503 876.719,-120.344" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node13&#45;&gt;node12 --><g class="edge inheritance" id="graph169_13_12"><g id="a_inheritance|graph169_13_12"><a xlink:title="InitialStateAsSnapshot is a subtype of SubscriptionInitialStateMode"><path d="M918.654,-118.819C932.856,-108.723 951.458,-95.4995 964.636,-86.1323" stroke="#d4d4d4" fill="none"></path><polygon points="917.46,-117.52 914.398,-121.843 919.487,-120.373 917.46,-117.52" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="akka.cluster.ClusterEvent"><span>ClusterEvent</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="akka.cluster.ClusterEvent.ClusterDomainEvent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClusterDomainEventextendsAnyRef"></a>
+      <a id="ClusterDomainEvent:ClusterDomainEvent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$ClusterDomainEvent.html"><span class="name">ClusterDomainEvent</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@ClusterDomainEventextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Marker interface for cluster domain events.</p>
+    </li><li name="akka.cluster.ClusterEvent.ClusterMetricsChanged" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ClusterMetricsChangedextendsClusterEvent.ClusterDomainEventwithProductwithSerializable"></a>
+      <a id="ClusterMetricsChanged:ClusterMetricsChanged"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$ClusterMetricsChanged.html"><span class="name">ClusterMetricsChanged</span></a><span class="params">(<span name="nodeMetrics">nodeMetrics: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="NodeMetrics.html" class="extype" name="akka.cluster.NodeMetrics">NodeMetrics</a>]</span>)</span><span class="result"> extends <a href="ClusterEvent$$ClusterDomainEvent.html" class="extype" name="akka.cluster.ClusterEvent.ClusterDomainEvent">ClusterDomainEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@ClusterMetricsChangedextendsClusterEvent.ClusterDomainEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Current snapshot of cluster node metrics.</p><div class="fullcomment"><div class="comment cmt"><p>Current snapshot of cluster node metrics. Published to subscribers.
+</p></div></div>
+    </li><li name="akka.cluster.ClusterEvent.CurrentClusterState" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CurrentClusterStateextendsProductwithSerializable"></a>
+      <a id="CurrentClusterState:CurrentClusterState"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$CurrentClusterState.html"><span class="name">CurrentClusterState</span></a><span class="params">(<span name="members">members: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.collection.immutable.SortedSet" class="extype" target="_top">SortedSet</a>[<a href="Member.html" class="extype" name="akka.cluster.Member">Member</a>] = <span class="symbol"><span class="name"><a href="Member$.html">immutable.SortedSet.empty</a></span></span></span>, <span name="unreachable">unreachable: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="Member.html" class="extype" name="akka.cluster.Member">Member</a>] = <span class="symbol">Set.empty</span></span>, <span name="seenBy">seenBy: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../actor/Address.html" class="extype" name="akka.actor.Address">Address</a>] = <span class="symbol">Set.empty</span></span>, <span name="leader">leader: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../actor/Address.html" class="extype" name="akka.actor.Address">Address</a>] = <span class="symbol">None</span></span>, <span name="roleLeaderMap">roleLeaderMap: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../actor/Address.html" class="extype" name="akka.actor.Address">Address</a>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@CurrentClusterStateextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Current snapshot state of the cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Current snapshot state of the cluster. Sent to new subscriber.
+</p></div></div>
+    </li><li name="akka.cluster.ClusterEvent.LeaderChanged" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LeaderChangedextendsClusterEvent.ClusterDomainEventwithProductwithSerializable"></a>
+      <a id="LeaderChanged:LeaderChanged"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$LeaderChanged.html"><span class="name">LeaderChanged</span></a><span class="params">(<span name="leader">leader: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../actor/Address.html" class="extype" name="akka.actor.Address">Address</a>]</span>)</span><span class="result"> extends <a href="ClusterEvent$$ClusterDomainEvent.html" class="extype" name="akka.cluster.ClusterEvent.ClusterDomainEvent">ClusterDomainEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@LeaderChangedextendsClusterEvent.ClusterDomainEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Leader of the cluster members changed.</p><div class="fullcomment"><div class="comment cmt"><p>Leader of the cluster members changed. Published when the state change
+is first seen on a node.
+</p></div></div>
+    </li><li name="akka.cluster.ClusterEvent.MemberEvent" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MemberEventextendsClusterEvent.ClusterDomainEvent"></a>
+      <a id="MemberEvent:MemberEvent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$MemberEvent.html"><span class="name">MemberEvent</span></a><span class="result"> extends <a href="ClusterEvent$$ClusterDomainEvent.html" class="extype" name="akka.cluster.ClusterEvent.ClusterDomainEvent">ClusterDomainEvent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@MemberEventextendsClusterEvent.ClusterDomainEvent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Marker interface for membership events.</p><div class="fullcomment"><div class="comment cmt"><p>Marker interface for membership events.
+Published when the state change is first seen on a node.
+The state change was performed by the leader when there was
+convergence on the leader node, i.e. all members had seen previous
+state.
+</p></div></div>
+    </li><li name="akka.cluster.ClusterEvent.MemberExited" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemberExitedextendsClusterEvent.MemberEventwithProductwithSerializable"></a>
+      <a id="MemberExited:MemberExited"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$MemberExited.html"><span class="name">MemberExited</span></a><span class="params">(<span name="member">member: <a href="Member.html" class="extype" name="akka.cluster.Member">Member</a></span>)</span><span class="result"> extends <a href="ClusterEvent$$MemberEvent.html" class="extype" name="akka.cluster.ClusterEvent.MemberEvent">MemberEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@MemberExitedextendsClusterEvent.MemberEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Member status changed to <a href="MemberStatus$$Exiting$.html" class="extype" name="akka.cluster.MemberStatus.Exiting">MemberStatus.Exiting</a> and will be removed
+when all members have seen the <code>Exiting</code> status.</p>
+    </li><li name="akka.cluster.ClusterEvent.MemberRemoved" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MemberRemovedextendsClusterEvent.MemberEventwithProductwithSerializable"></a>
+      <a id="MemberRemoved:MemberRemoved"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$MemberRemoved.html"><span class="name">MemberRemoved</span></a><span class="params">(<span name="member">member: <a href="Member.html" class="extype" name="akka.cluster.Member">Member</a></span>, <span name="previousStatus">previousStatus: <a href="MemberStatus.html" class="extype" name="akka.cluster.MemberStatus">MemberStatus</a></span>)</span><span class="result"> extends <a href="ClusterEvent$$MemberEvent.html" class="extype" name="akka.cluster.ClusterEvent.MemberEvent">MemberEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@MemberRemovedextendsClusterEvent.MemberEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Member completely removed from the cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Member completely removed from the cluster.
+When <code>previousStatus</code> is <code>MemberStatus.Down</code> the node was removed
+after being detected as unreachable and downed.
+When <code>previousStatus</code> is <code>MemberStatus.Exiting</code> the node was removed
+after graceful leaving and exiting.
+</p></div></div>
+    </li><li name="akka.cluster.ClusterEvent.MemberUp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemberUpextendsClusterEvent.MemberEventwithProductwithSerializable"></a>
+      <a id="MemberUp:MemberUp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$MemberUp.html"><span class="name">MemberUp</span></a><span class="params">(<span name="member">member: <a href="Member.html" class="extype" name="akka.cluster.Member">Member</a></span>)</span><span class="result"> extends <a href="ClusterEvent$$MemberEvent.html" class="extype" name="akka.cluster.ClusterEvent.MemberEvent">MemberEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@MemberUpextendsClusterEvent.MemberEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Member status changed to Up.</p>
+    </li><li name="akka.cluster.ClusterEvent.ReachabilityEvent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReachabilityEventextendsClusterEvent.ClusterDomainEvent"></a>
+      <a id="ReachabilityEvent:ReachabilityEvent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$ReachabilityEvent.html"><span class="name">ReachabilityEvent</span></a><span class="result"> extends <a href="ClusterEvent$$ClusterDomainEvent.html" class="extype" name="akka.cluster.ClusterEvent.ClusterDomainEvent">ClusterDomainEvent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@ReachabilityEventextendsClusterEvent.ClusterDomainEvent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Marker interface to facilitate subscription of
+both <a href="ClusterEvent$$UnreachableMember.html" class="extype" name="akka.cluster.ClusterEvent.UnreachableMember">UnreachableMember</a> and <a href="ClusterEvent$$ReachableMember.html" class="extype" name="akka.cluster.ClusterEvent.ReachableMember">ReachableMember</a>.</p>
+    </li><li name="akka.cluster.ClusterEvent.ReachableMember" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReachableMemberextendsClusterEvent.ReachabilityEventwithProductwithSerializable"></a>
+      <a id="ReachableMember:ReachableMember"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$ReachableMember.html"><span class="name">ReachableMember</span></a><span class="params">(<span name="member">member: <a href="Member.html" class="extype" name="akka.cluster.Member">Member</a></span>)</span><span class="result"> extends <a href="ClusterEvent$$ReachabilityEvent.html" class="extype" name="akka.cluster.ClusterEvent.ReachabilityEvent">ReachabilityEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@ReachableMemberextendsClusterEvent.ReachabilityEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A member is considered as reachable by the failure detector
+after having been unreachable.</p><div class="fullcomment"><div class="comment cmt"><p>A member is considered as reachable by the failure detector
+after having been unreachable.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="ClusterEvent$$UnreachableMember.html" class="extype" name="akka.cluster.ClusterEvent.UnreachableMember">UnreachableMember</a>
+</p></span></dd></dl></div>
+    </li><li name="akka.cluster.ClusterEvent.RoleLeaderChanged" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RoleLeaderChangedextendsClusterEvent.ClusterDomainEventwithProductwithSerializable"></a>
+      <a id="RoleLeaderChanged:RoleLeaderChanged"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$RoleLeaderChanged.html"><span class="name">RoleLeaderChanged</span></a><span class="params">(<span name="role">role: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="leader">leader: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../actor/Address.html" class="extype" name="akka.actor.Address">Address</a>]</span>)</span><span class="result"> extends <a href="ClusterEvent$$ClusterDomainEvent.html" class="extype" name="akka.cluster.ClusterEvent.ClusterDomainEvent">ClusterDomainEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@RoleLeaderChangedextendsClusterEvent.ClusterDomainEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">First member (leader) of the members within a role set changed.</p><div class="fullcomment"><div class="comment cmt"><p>First member (leader) of the members within a role set changed.
+Published when the state change is first seen on a node.
+</p></div></div>
+    </li><li name="akka.cluster.ClusterEvent.SubscriptionInitialStateMode" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SubscriptionInitialStateModeextendsAnyRef"></a>
+      <a id="SubscriptionInitialStateMode:SubscriptionInitialStateMode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$SubscriptionInitialStateMode.html"><span class="name">SubscriptionInitialStateMode</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@SubscriptionInitialStateModeextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ClusterEvent.UnreachableMember" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnreachableMemberextendsClusterEvent.ReachabilityEventwithProductwithSerializable"></a>
+      <a id="UnreachableMember:UnreachableMember"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$UnreachableMember.html"><span class="name">UnreachableMember</span></a><span class="params">(<span name="member">member: <a href="Member.html" class="extype" name="akka.cluster.Member">Member</a></span>)</span><span class="result"> extends <a href="ClusterEvent$$ReachabilityEvent.html" class="extype" name="akka.cluster.ClusterEvent.ReachabilityEvent">ReachabilityEvent</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@UnreachableMemberextendsClusterEvent.ReachabilityEventwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A member is considered as unreachable by the failure detector.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="akka.cluster.ClusterEvent.InitialStateAsEvents" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InitialStateAsEvents"></a>
+      <a id="InitialStateAsEvents:InitialStateAsEvents"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$InitialStateAsEvents$.html"><span class="name">InitialStateAsEvents</span></a><span class="result"> extends <a href="ClusterEvent$$SubscriptionInitialStateMode.html" class="extype" name="akka.cluster.ClusterEvent.SubscriptionInitialStateMode">SubscriptionInitialStateMode</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@InitialStateAsEvents" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">When using this subscription mode the events corresponding
+to the current state will be sent to the subscriber to mimic what you would
+have seen if you were listening to the events when they occurred in the past.</p>
+    </li><li name="akka.cluster.ClusterEvent.InitialStateAsSnapshot" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InitialStateAsSnapshot"></a>
+      <a id="InitialStateAsSnapshot:InitialStateAsSnapshot"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusterEvent$$InitialStateAsSnapshot$.html"><span class="name">InitialStateAsSnapshot</span></a><span class="result"> extends <a href="ClusterEvent$$SubscriptionInitialStateMode.html" class="extype" name="akka.cluster.ClusterEvent.SubscriptionInitialStateMode">SubscriptionInitialStateMode</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@InitialStateAsSnapshot" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">When using this subscription mode a snapshot of
+<a href="ClusterEvent$$CurrentClusterState.html" class="extype" name="akka.cluster.ClusterEvent.CurrentClusterState">akka.cluster.ClusterEvent.CurrentClusterState</a> will be sent to the
+subscriber as the first message.</p>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="akka.cluster.ClusterEvent#initialStateAsEvents" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="initialStateAsEvents:akka.cluster.ClusterEvent.InitialStateAsEvents.type"></a>
+      <a id="initialStateAsEvents:InitialStateAsEvents.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initialStateAsEvents</span><span class="result">: <a href="ClusterEvent$$InitialStateAsEvents$.html" class="extype" name="akka.cluster.ClusterEvent.InitialStateAsEvents">InitialStateAsEvents</a>.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@initialStateAsEvents:akka.cluster.ClusterEvent.InitialStateAsEvents.type" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API
+</p>
+    </li><li name="akka.cluster.ClusterEvent#initialStateAsSnapshot" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="initialStateAsSnapshot:akka.cluster.ClusterEvent.InitialStateAsSnapshot.type"></a>
+      <a id="initialStateAsSnapshot:InitialStateAsSnapshot.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initialStateAsSnapshot</span><span class="result">: <a href="ClusterEvent$$InitialStateAsSnapshot$.html" class="extype" name="akka.cluster.ClusterEvent.InitialStateAsSnapshot">InitialStateAsSnapshot</a>.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@initialStateAsSnapshot:akka.cluster.ClusterEvent.InitialStateAsSnapshot.type" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API
+</p>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.cluster.ClusterEvent$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
