@@ -29,7 +29,7 @@ class System extends Actor {
   
   def receive = {
     case "Main" => print("YO, system just received a message from Main SuN.")
-    case _      => 
+    case _  => 
   }
 
 
