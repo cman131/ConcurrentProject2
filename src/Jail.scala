@@ -13,10 +13,10 @@ class Jail extends Actor {
   val log = Logging(context.system, this)
 
   def receive = {
-    case sendPassenger(passenger) =>
+    case SendPassenger(passenger) =>
       captives :+ passenger
       log.info("received passenger")
-    case poisonPill(kill) =>
+    case PoisonPill(kill) =>
       context.stop(self)
     case _ =>
       print("received unknown message")

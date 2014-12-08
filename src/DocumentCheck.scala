@@ -13,9 +13,6 @@
 import akka.actor.Actor;
 import akka.actor.ActorRef;
 
-case class sendPassenger(pass : Passenger)
-case class notifyEmpty(bool : Boolean)
-case class poisonPill(die : Boolean = true)
 
 class DocumentCheck extends Actor {
   
@@ -42,11 +39,11 @@ class DocumentCheck extends Actor {
   // Receive messages
   def receive = {
     // If I receive a passenger, push them onto the stack
-    case sendPassenger(psgr) => passengers.push(psgr)
+    case SendPassenger(psgr, true) => passengers.push(psgr)
     // If I receive a request, send a passenger to the requester
-    case notifyEmpty(b) => sendPassenger(sender)
+    case Notify(b) => sendPassenger(sender)
     // If I receive a poison pill, bite cyanide tablet in mouth
-    case poisonPill(die) => context.stop(self)
+    case PoisonPill(die) => context.stop(self)
     // Notify console when I don't understand a message
     case _ => print("DocCheck: I got a msg I don't understand")
   }
@@ -54,7 +51,7 @@ class DocumentCheck extends Actor {
   def sendPassenger(rcpt : ActorRef) {
     // If no more, send poison pill msg so they stop asking
     if (passengers.isEmpty) {
-      sender ! poisonPill(true)
+      sender ! PoisonPill(true)
       return
     }
     

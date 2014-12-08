@@ -27,10 +27,10 @@ class Security extends Actor {
   /** Messages... */
   def receive = {
     // If receiving a Passenger, check if they've been received twice
-    case sendPassenger(passenger) => checkPerson(sender, passenger)
+    case SendPassenger(passenger, true) => checkPerson(sender, passenger)
     
     // If receiving message from system, quit
-    case poisonPill(die) => tryQuit()
+    case PoisonPill(die) => tryQuit()
     
     // Handle all messages...
     case _ => print("Security: Unknown message received")

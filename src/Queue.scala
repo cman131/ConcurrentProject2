@@ -6,7 +6,7 @@
 import akka.actor.Actor
 import scala.collection.immutable.Queue
 
-class Queue extends Actor[Message] {
+class Queue extends Actor {
 	var body: BodyScanner
 	var bag: BagScanner
 	var isBagFree = true

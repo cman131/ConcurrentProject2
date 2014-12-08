@@ -4,6 +4,6 @@
 
 import akka.actor.Actor
 
-class SendPassenger(passenger : Passenger, result : Boolean) {
+case class SendPassenger(passenger : Passenger, result : Boolean) {
 
 }
