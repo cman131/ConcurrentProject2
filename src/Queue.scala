@@ -6,8 +6,6 @@
 import akka.actor.Actor
 import scala.collection.immutable.Queue
 
-sealed abstract class Message
-
 class Queue extends Actor[Message] {
 	var body: BodyScanner
 	var bag: BagScanner
