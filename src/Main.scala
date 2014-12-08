@@ -22,7 +22,7 @@ object Main {
     val securityActor = system.actorOf(Props(classOf[Security], jailActor, systemActor))
 
     val bagScannerActor = system.actorOf(Props[BagScanner])
-    val 
+    val bodyScannerActor = system.actorOf(Props[BodyScanner])
 
 
 
