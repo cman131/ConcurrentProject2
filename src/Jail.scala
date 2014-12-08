@@ -5,7 +5,6 @@ import akka.event.Logging
  * Kocsen Chung
  * Jail, receives all criminals
  */
-case class sendPassenger(pass: Passenger)
 
 class Jail extends Actor {
   var captives = List()
@@ -17,7 +16,9 @@ class Jail extends Actor {
     case sendPassenger(passenger) =>
       captives :+ passenger
       log.info("received passenger")
-
-    case _ => print("received unknown message")
+    case poisonPill(kill) =>
+      context.stop(self)
+    case _ =>
+      print("received unknown message")
   }
 }
