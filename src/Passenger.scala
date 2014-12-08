@@ -8,7 +8,7 @@
 
 import akka.actor.Actor
 
-object Passenger {
+class Passenger {
   
   // Some fields maybe??
   var hasBag : Boolean = true;
