@@ -26,6 +26,8 @@ object Main {
 
     val queueActor = system.actorOf(Props[Queue]) // need Setup msg
 
+    val documentCheckActor = system.actorOf(Props[DocumentCheck]) // need Setup msg
+
 
 
     println("Hello, world!")
