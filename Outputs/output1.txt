@@ -1,0 +1,78 @@
+Sample Run #1
+#Lines: 	 4
+#Passengers: 1
+
+Annotations are after '//' inside of output below
+============= OUTPUT STARTS HERE =============
+// All the creation and setup happens here //
+Creating line: 1
+Creating line: 2
+Body Scanner #1: is set up.
+Bag Scanner #1: is set up.
+Bag Scanner #2: is set up.
+Body Scanner #2: is set up.
+Creating line: 3
+Creating line: 4
+Body Scanner #3: is set up.
+Bag Scanner #3: is set up.
+Bag Scanner #4: is set up.
+Body Scanner #4: is set up.
+Sending into queue0
+Queue #3: is set up.
+Queue #1: is set up.
+Queue #4: is set up.
+// Setup is done here.
+// Nowe we start sending the passengers after sending them to document check
+Queue #1: has received passenger #1.
+Queue #2: is set up.
+// The Queue process starts here, sending over passenger to both body and bag scans
+Queue #1: sends passenger #1 to Bag Scanner #1.
+Queue #1: sends passenger #1 to Body Scanner #1.
+Bag Scanner #1: has received bag #1.
+Body Scanner #1: has received passenger #1.
+Bag Scanner #1: sends bag #1 to security.
+Body Scanner #1: sends passenger #1 to security.
+Bag Scanner #1: notifies queue #1 that it's empty.
+Body Scanner #1: notifies queue #1 that it's empty.
+Security: Received bag
+Security: Received passenger
+// When we have the bag and the passenger, we are done, we tell our system to keep track
+System: Notify() -> Passenger finished
+// System realizes its time to shut down, so the poison pill propagates through
+System: Shut down others, now shutting down self
+DocumentCheck: PoisonPill() -> Die
+Queue #1: PoisonPill -> Shutting down.
+Queue #4: PoisonPill -> Shutting down.
+Queue #1: poisoning Bag Scanner #1.
+Queue #2: PoisonPill -> Shutting down.
+Queue #1: poisoning Body Scanner #1.
+Queue #3: PoisonPill -> Shutting down.
+Body Scanner #1: PoisonPill -> Shutting down.
+Body Scanner #1: is now poisoning Security #1.
+Queue #4: poisoning Bag Scanner #4.
+Queue #3: poisoning Bag Scanner #3.
+Bag Scanner #4: PoisonPill -> Shutting down.
+Bag Scanner #1: PoisonPill -> Shutting down.
+Queue #2: poisoning Bag Scanner #2.
+Bag Scanner #1: is poisoning Security #1.
+Bag Scanner #3: PoisonPill -> Shutting down.
+Bag Scanner #4: is poisoning Security #4.
+Queue #3: poisoning Body Scanner #3.
+Queue #4: poisoning Body Scanner #4.
+Bag Scanner #3: is poisoning Security #3.
+Bag Scanner #2: PoisonPill -> Shutting down.
+Body Scanner #3: PoisonPill -> Shutting down.
+Queue #2: poisoning Body Scanner #2.
+Body Scanner #3: is now poisoning Security #3.
+Body Scanner #4: PoisonPill -> Shutting down.
+Body Scanner #4: is now poisoning Security #4.
+Bag Scanner #2: is poisoning Security #2.
+Security: PoisonPill -> Shutting down
+Security: PoisonPill -> Shutting down
+Security: PoisonPill -> Shutting down
+Body Scanner #2: PoisonPill -> Shutting down.
+Body Scanner #2: is now poisoning Security #2.
+Security: PoisonPill -> Shutting down
+// Jail is reponsible for the last step in shutting down, it'll shut down the system entirely.
+Jail: PoisonPill -> All passengers are going to permanent detention, shutting down
+============= OUTPUT ENDS HERE =============
