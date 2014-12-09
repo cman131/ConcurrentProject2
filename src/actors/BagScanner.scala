@@ -25,9 +25,9 @@ class BagScanner extends Actor {
 			line = msg.getLine()
 			println("Bag Scanner #"+line+": is set up.")
 		case msg: SendPassenger => // receive a new passenger
-			println("Bag Scanner #"+line+": has received passenger #"+msg.passenger.getId()+".")
+			println("Bag Scanner #"+line+": has received bag #"+msg.passenger.getId()+".")
 			val result: Boolean = (new util.Random).nextInt(5)!=2
-			println("Bag Scanner #"+line+": sends passenger #"+msg.passenger.getId()+" to security.")
+			println("Bag Scanner #"+line+": sends bag #"+msg.passenger.getId()+" to security.")
 			security ! new SendPassenger(msg.passenger, result, false)
 			println("Bag Scanner #"+line+": notifies queue #"+line+" that it's empty.")
 			queue ! new Notify(true)
