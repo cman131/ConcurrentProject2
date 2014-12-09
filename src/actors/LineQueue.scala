@@ -29,7 +29,7 @@ class LineQueue extends Actor {
 			bag ! new PoisonPill(true)
 			println("Queue #"+line+" is now poisoning Body Scanner #"+line+".")
 			body ! new PoisonPill(true)
-			context().stop(self())
+			context.stop(self)
 		case msg: Setup => // receive setup msg
 			body = msg.getBody()
 			bag = msg.getBag()

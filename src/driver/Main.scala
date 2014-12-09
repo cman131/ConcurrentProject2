@@ -31,7 +31,7 @@ object Main {
 
     val lineQueues = new ListBuffer[LineQueue]
 
-    val system = ActorSystem("mySystem")
+    val system = ActorSystem.create("mySystem")
 
     val jailActor = system.actorOf(Props[actors.Jail])
     val systemActor = system.actorOf(Props(classOf[System], NUM_PASSENGERS))
@@ -57,7 +57,7 @@ object Main {
     for (passNum <- 1 to NUM_PASSENGERS) {
       // Create passenger and send it to document Check actor
       val passenger = new Passenger(passNum)
-      documentCheckActor ! SendPassenger(passenger, true)
+      documentCheckActor ! SendPassenger(passenger, true, false)
     }
 
   }

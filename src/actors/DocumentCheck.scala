@@ -40,7 +40,7 @@ class DocumentCheck extends Actor {
   // Receive messages
   def receive = {
     // If I receive a passenger, push them onto the stack
-    case SendPassenger(psgr, true) => 
+    case SendPassenger(psgr, true, false) => 
       passengers.push(psgr)
       sendPassenger()
     // If I receive a poison pill, bite cyanide tablet in mouth

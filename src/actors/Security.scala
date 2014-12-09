@@ -9,8 +9,9 @@ class Security extends Actor {
   var _line : Int
   var _jail : ActorRef = null
   var _system : ActorRef = null
-  var _passengers : Map[Passenger, Int] = Map()
-  var _doClose : Boolean = false;
+  var _passengers : Map[Passenger, Boolean] = Map()
+  var _bags : Map[Passenger, Boolean] = Map()
+  var _poisonPillCnt : Int = 0
   
   
   // Configured with the line it is in and a jailRef and systemRef
@@ -29,7 +30,7 @@ class Security extends Actor {
   /** Messages... */
   def receive = {
     // If receiving a poo.Passenger, check if they've been received twice
-    case SendPassenger(passenger, true) => checkPerson(sender, passenger)
+    case msg : SendPassenger => checkPerson(msg.isBody, msg.passenger, msg.result)
     
     // If receiving message from system, quit
     case PoisonPill(die) => tryQuit()
@@ -40,28 +41,39 @@ class Security extends Actor {
   
   /** Helper methods */
   
-  def checkPerson(sender : ActorRef, psgr : Passenger) {
+  def checkPerson(isBody : Boolean, psgr : Passenger, result : Boolean) {
+    // Add to map
+    isBody match {
+    case false =>
+      _bags += psgr -> result
+    case true =>
+      _passengers += psgr -> result
+    case _ => println("Security: I have no idea who this is...")
+  }
     
-    // Check if they're in the map, set value to 2 if they are
     
-    // If not in map, add to the map and set value to 1
-    _passengers += psgr -> 1
     
-    // If we are supposed to close, try it again
-    if (_doClose) {
-      tryQuit()
+    // if both maps have this passenger ref, clean up
+    if (_bags.contains(psgr) && _passengers.contains(psgr)) {
+      // If bag or passenger failed, send to jail
+      if (!_bags(psgr) || !_passengers(psgr)) {
+    	  _jail ! SendPassenger(psgr,result, false)
+      }
+      // Once both are received, notify system
+      _system ! Notify(true)
     }
+    
   }
   
   /**
    * actors.Security can only quit if all people and bags have been received
    */
   def tryQuit() {
-    _doClose = true;
-    _passengers.foreach {
-      key_val => if (key_val._2 != 2) { return }
+    _poisonPillCnt += 1
+    // If received poisonPill from both scanners, give up and die
+    if (_poisonPillCnt >= 2) {
+      context.stop(self)
     }
-    // If we made it through, close up shop
-    context.stop(self)
+    
   }
 }
