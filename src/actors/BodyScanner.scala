@@ -10,9 +10,9 @@ import messages.{PoisonPill, Setup, SendPassenger, Notify}
 
 class BodyScanner extends Actor {
 
-	var queue: ActorRef
-	var security: ActorRef
-	var line: Integer
+	var queue: ActorRef = null
+	var security: ActorRef = null
+	var line: Integer = null
 
 	def receive = {
 		case msg: PoisonPill =>

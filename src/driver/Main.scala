@@ -1,11 +1,15 @@
 package driver
 
 import actors._
-import akka.actor.{ActorSystem, Props}
+import akka.actor.{ActorSystem, ActorRef, Props}
 import messages.{SendPassenger, Setup}
 import poo.Passenger
 
 import scala.collection.mutable.ListBuffer
+class Main {
+  
+}
+
 
 /**
  * Created by Conor on 11/20/2014.
@@ -29,11 +33,11 @@ object Main {
      * -
      */
 
-    val lineQueues = new ListBuffer[LineQueue]
+    val lineQueues = new ListBuffer[ActorRef]
 
     val system = ActorSystem.create("mySystem")
 
-    val jailActor = system.actorOf(Props[actors.Jail])
+    val jailActor = system.actorOf(Props(classOf[Jail], system))
     val systemActor = system.actorOf(Props(classOf[System], NUM_PASSENGERS))
 
     for (a <- 1 to NUM_LINES) {
@@ -44,14 +48,14 @@ object Main {
       val queueActor = system.actorOf(Props[LineQueue])
       val setupMsg = Setup(queueActor, securityActor, bodyScannerActor, bagScannerActor, a)
 
-      lineQueues :+ queueActor
+      lineQueues += queueActor
 
       bagScannerActor ! setupMsg
       bodyScannerActor ! setupMsg
-      bodyScannerActor ! setupMsg
+      queueActor ! setupMsg
     }
 
-    val documentCheckActor = system.actorOf(Props(classOf[DocumentCheck], lineQueues))
+    val documentCheckActor = system.actorOf(Props(classOf[DocumentCheck], systemActor, lineQueues))
     systemActor ! documentCheckActor
 
     for (passNum <- 1 to NUM_PASSENGERS) {

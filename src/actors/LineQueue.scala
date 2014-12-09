@@ -13,9 +13,9 @@ import poo.Passenger
 import collection.mutable.Queue
 
 class LineQueue extends Actor {
-	var body: ActorRef
-	var bag: ActorRef
-	var line: Integer
+	var body: ActorRef =  null
+	var bag: ActorRef = null
+	var line: Integer = null
 	var isBagFree = true
 	var isBodyFree = true
 

@@ -5,21 +5,22 @@ package actors
  * actors.Jail, receives all criminals
  */
 
-import akka.actor.Actor
+import akka.actor.{ Actor, ActorSystem }
 import messages._
 
-class Jail extends Actor {
+class Jail(sys : ActorSystem) extends Actor {
   var captives = List()
 
 
   def receive = {
     case SendPassenger(passenger, true, false) =>
       captives :+ passenger
-      println("Received passenger, sending to jail")
+      println("Jail: SendPassenger() -> Received passenger")
     case PoisonPill(kill) =>
-      println("All passengers are going to permanent detention")
+      println("Jail: PoisonPill -> All passengers are going to permanent detention, shutting down")
+      sys.shutdown()
       context.stop(self)
     case _ =>
-      print("received unknown message")
+      print("Jail: Received unknown message")
   }
 }
