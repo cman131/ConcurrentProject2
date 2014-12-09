@@ -52,6 +52,7 @@ object Main {
     }
 
     val documentCheckActor = system.actorOf(Props(classOf[DocumentCheck], lineQueues))
+    systemActor ! documentCheckActor
 
     for (passNum <- 1 to NUM_PASSENGERS) {
       // Create passenger and send it to document Check actor
