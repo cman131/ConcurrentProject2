@@ -18,7 +18,7 @@ class BagScanner extends Actor {
 			println("Bag Scanner #"+line+" has been poisoned! Shutting down.")
 			println("Bag Scanner #"+line+" is now poisoning Security #"+line+".")
 			security ! new PoisonPill(true)
-			context().stop(self())
+			context.stop(self)
 		case msg: Setup => // receive setup msg
 			queue = msg.getQueue()
 			security = msg.getSecurity()
