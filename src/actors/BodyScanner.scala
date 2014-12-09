@@ -6,9 +6,7 @@
 package actors
 
 import akka.actor.{ActorRef, Actor}
-import messages.Setup
-import messages.SendPassenger
-import messages.Notify
+import messages.{PoisonPill, Setup, SendPassenger, Notify}
 
 class BodyScanner extends Actor {
 
@@ -17,6 +15,11 @@ class BodyScanner extends Actor {
 	var line: Integer
 
 	def receive = {
+		case msg: PoisonPill =>
+			println("Body Scanner #"+line+" has been poisoned! Shutting down.")
+			println("Body Scanner #"+line+" is now poisoning Security #"+line+".")
+			security ! new PoisonPill(true)
+			context().stop(self())
 		case msg: Setup => // receive setup msg
 			queue = msg.getQueue()
 			security = msg.getSecurity()
