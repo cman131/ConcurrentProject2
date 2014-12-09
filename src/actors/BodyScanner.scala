@@ -21,7 +21,7 @@ class BodyScanner extends Actor {
 			security = msg.getSecurity()
 		case msg: SendPassenger => // receive a new passenger
 			val result: Boolean = (new util.Random).nextInt(5)!=2
-			security ! new SendPassenger(msg.getPassenger(), result)
+			security ! new SendPassenger(msg.passenger, result)
 			queue ! new Notify(true)
 	}
 }

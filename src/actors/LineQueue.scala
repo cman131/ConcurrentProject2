@@ -28,8 +28,8 @@ class LineQueue extends Actor {
 			body = msg.getBody()
 			bag = msg.getBag()
 		case msg: SendPassenger => // receive a new passenger
-			bodies += msg.getPassenger() //+: bodies
-			bags += msg.getPassenger() //+: bags
+			bodies += msg.passenger //+: bodies
+			bags += msg.passenger //+: bags
 			// Now update the scanners if they are free
 			if(isBagFree){
 				bag ! new SendPassenger(bags.dequeue())
@@ -41,21 +41,20 @@ class LineQueue extends Actor {
 			}
 
 		case msg: Notify => // a scanner has become free
-		{
 			case b: BodyScanner =>
-				if(bodies.size()>0){
+				if(bodies.size>0){
 					body ! new SendPassenger(bodies.dequeue())
 				}
 				else{
 					isBodyFree = true;
 				}
 			case b: BagScanner =>
-				if(bags.size()>0){
+				if(bags.size>0){
 					bag ! new SendPassenger(bags.dequeue())
 				}
 				else{
 					isBagFree = true;
 				}
-		}
+		
 	}
 }

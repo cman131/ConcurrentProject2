@@ -1,5 +1,8 @@
+package driver
+
 import actors._
 import akka.actor.{ActorSystem, Props}
+
 /**
  * Created by Conor on 11/20/2014.
  * main entry point
@@ -18,14 +21,14 @@ object Main {
      */
     val system = ActorSystem("mySystem")
 
-    val jailActor = system.actorOf(Props[Jail])
+    val jailActor = system.actorOf(Props[actors.Jail])
     val systemActor = system.actorOf(Props(classOf[System], NUM_PASSENGERS))
     val securityActor = system.actorOf(Props(classOf[Security], jailActor, systemActor))
 
     val bagScannerActor = system.actorOf(Props[BagScanner]) // need messages.Setup msg
     val bodyScannerActor = system.actorOf(Props[BodyScanner]) // need messages.Setup msg
 
-    val queueActor = system.actorOf(Props[Queue]) // need messages.Setup msg
+    val queueActor = system.actorOf(Props[LineQueue]) // need messages.Setup msg
 
     val documentCheckActor = system.actorOf(Props[DocumentCheck]) // need messages.Setup msg
 

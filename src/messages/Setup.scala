@@ -6,7 +6,7 @@ package messages
 
 import akka.actor.ActorRef
 
-class Setup(queueRef : ActorRef, securityRef : ActorRef, bodyRef: ActorRef, bagRef: ActorRef) {
+case class Setup(queueRef : ActorRef, securityRef : ActorRef, bodyRef: ActorRef, bagRef: ActorRef) {
   def getQueue(): ActorRef = {
     return queueRef
   }

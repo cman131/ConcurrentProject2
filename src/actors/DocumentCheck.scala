@@ -13,6 +13,9 @@ package actors
  * @author Geoff Berl
  */;
 
+import akka.actor.{ Actor, ActorRef }
+import messages._
+import poo.Passenger
 
 class DocumentCheck extends Actor {
   

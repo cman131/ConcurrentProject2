@@ -5,6 +5,10 @@ package actors
  * actors.Jail, receives all criminals
  */
 
+import akka.actor.Actor
+import akka.event.Logging
+import messages._
+
 class Jail extends Actor {
   var captives = List()
 
@@ -12,7 +16,7 @@ class Jail extends Actor {
   val log = Logging(context.system, this)
 
   def receive = {
-    case SendPassenger(passenger) =>
+    case SendPassenger(passenger, true) =>
       captives :+ passenger
       log.info("received passenger")
     case PoisonPill(kill) =>

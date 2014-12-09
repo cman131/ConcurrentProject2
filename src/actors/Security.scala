@@ -1,5 +1,9 @@
 package actors;
 
+import akka.actor.{Actor, ActorRef}
+import messages._
+import poo.Passenger
+
 class Security extends Actor {
 
   var _line : Int

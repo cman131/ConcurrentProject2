@@ -7,6 +7,10 @@ package actors
  * to the DocumentCheck object for the airport application.
  */
 
+import akka.actor.Actor
+import scala.collection.mutable.ListBuffer
+import poo.Passenger
+
 class System extends Actor {
 
   //var docCheck : ActorRef;
