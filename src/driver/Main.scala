@@ -2,7 +2,8 @@ package driver
 
 import actors._
 import akka.actor.{ActorSystem, Props}
-import messages.Setup
+import messages.{SendPassenger, Setup}
+import poo.Passenger
 
 import scala.collection.mutable.ListBuffer
 
@@ -52,8 +53,11 @@ object Main {
 
     val documentCheckActor = system.actorOf(Props(classOf[DocumentCheck], lineQueues))
 
+    for (passNum <- 1 to NUM_PASSENGERS) {
+      // Create passenger and send it to document Check actor
+      val passenger = new Passenger(passNum)
+      documentCheckActor ! SendPassenger(passenger, true)
+    }
 
-
-    println("Hello, world!")
   }
 }
