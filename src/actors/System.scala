@@ -7,32 +7,39 @@ package actors
  * to the DocumentCheck object for the airport application.
  */
 
-import akka.actor.Actor
+import akka.actor.{ Actor, ActorRef }
 import scala.collection.mutable.ListBuffer
 import poo.Passenger
+import messages.{Notify, PoisonPill}
 
 class System extends Actor {
 
-  //var docCheck : ActorRef;
-  var passengers = new ListBuffer[Passenger]();
+  var psgrCnt : Int = 0
+  var psgrCompleteCnt : Int = 0
+  var docCheck : ActorRef
   
   /**
    * Create a system with some number of airport check lines
    */
   def this(numPassengers : Int) = {
-    this();
-    
-    // Create passengers
-    for(i <- 1 to numPassengers) {
-      val passenger = new Passenger();
-      passengers += passenger;
-    }
-    
+    this()
+    this.psgrCnt = numPassengers
   }
   
   def receive = {
-    case "Main" => print("YO, system just received a message from Main SuN.")
-    case _  => 
+    case ref : ActorRef =>
+      docCheck = ref
+    case Notify(bool) => 
+      psgrCnt += 1
+      if (psgrCompleteCnt == psgrCnt) {
+        // Shut the peeps down
+        docCheck ! PoisonPill(true)
+      }
+      // shutdown myself
+      println("System: Shut down others, now shutting down self")
+      context.stop(self)
+      
+    case _  => println("System: Received a message I don't understand")
   }
 
 

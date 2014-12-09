@@ -13,9 +13,9 @@ class Jail extends Actor {
 
 
   def receive = {
-    case SendPassenger(passenger, true) =>
+    case SendPassenger(passenger, true, false) =>
       captives :+ passenger
-      println("Received passenger going to jail")
+      println("Received passenger, sending to jail")
     case PoisonPill(kill) =>
       println("All passengers are going to permanent detention")
       context.stop(self)
