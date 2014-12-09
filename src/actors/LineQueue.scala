@@ -7,9 +7,7 @@ package actors
 
 import akka.actor.{ActorRef, Actor}
 
-import messages.Setup
-import messages.SendPassenger
-import messages.Notify
+import messages.{PoisonPill, Setup, SendPassenger, Notify}
 import poo.Passenger
 
 import collection.mutable.Queue
@@ -25,6 +23,13 @@ class LineQueue extends Actor {
 	val bags = new Queue[Passenger]
 
 	def receive = {
+		case msg: PoisonPill =>
+			println("Queue #"+line+" has been poisoned! Shutting down.")
+			println("Queue #"+line+" is now poisoning Bag Scanner #"+line+".")
+			bag ! new PoisonPill(true)
+			println("Queue #"+line+" is now poisoning Body Scanner #"+line+".")
+			body ! new PoisonPill(true)
+			context().stop(self())
 		case msg: Setup => // receive setup msg
 			body = msg.getBody()
 			bag = msg.getBag()
