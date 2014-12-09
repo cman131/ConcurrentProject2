@@ -35,7 +35,7 @@ class Security extends Actor {
     case PoisonPill(die) => tryQuit()
     
     // Handle all messages...
-    case _ => print("actors.Security: Unknown message received")
+    case _ => println("actors.Security: Unknown message received")
   }
   
   /** Helper methods */
