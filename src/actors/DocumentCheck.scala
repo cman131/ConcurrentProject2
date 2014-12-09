@@ -22,19 +22,17 @@ class DocumentCheck extends Actor {
 //  var queues : List[actors.Queue]
   var passengers : scala.collection.mutable.Stack[Passenger]
   var system : ActorRef
+  var queues : List[LineQueue]
+  var nextLineQ : Int = 0
   
   /**
    * Abstract Constructor to receive reference to the system so that 
    * the class object can send docCheck failures to the system.
    */
-  def this(system : ActorRef) {
+  def this(system : ActorRef, queues : List[LineQueue]) {
     this()
     this.system = system
-    
-//    // ugly but works for now
-//    for (i <- 1 to qs.size) {
-//      queues = qs(i) :: queues
-//    }
+    this.queues = queues
     
   }
   
@@ -42,35 +40,43 @@ class DocumentCheck extends Actor {
   // Receive messages
   def receive = {
     // If I receive a passenger, push them onto the stack
-    case SendPassenger(psgr, true) => passengers.push(psgr)
-    // If I receive a request, send a passenger to the requester
-    case Notify(b) => sendPassenger(sender)
+    case SendPassenger(psgr, true) => 
+      passengers.push(psgr)
+      sendPassenger()
     // If I receive a poison pill, bite cyanide tablet in mouth
     case PoisonPill(die) => context.stop(self)
     // messages.Notify console when I don't understand a message
-    case _ => print("DocCheck: I got a msg I don't understand")
+    case _ => println("DocCheck: I got a msg I don't understand")
   }
   
-  def sendPassenger(rcpt : ActorRef) {
-    // If no more, send poison pill msg so they stop asking
+  def sendPassenger() {
+    // If no passengers... you lose, you get NOTHING!
     if (passengers.isEmpty) {
-      sender ! PoisonPill(true)
       return
     }
     
-    // If there are passengers, implement a 85% chance of sending one.
+    // Create random and pop our passenger
     var rand = new scala.util.Random
-    while (rand.nextFloat() > 0.15f && !passengers.isEmpty) {
-      system ! passengers.pop()
-    }
-
-    // Now send one... maybe, if there aren't any left, send an empty message
-    if (!passengers.isEmpty) {
-      sender ! passengers.pop()
-    } else {
-      sender ! null
+    val psgr : Passenger = passengers.pop()
+    
+    // If there are passengers, implement a 20% chance of failing.
+    if (rand.nextFloat() <= 0.20f) {
+      system ! Notify(true)
+    } else { // or send one... maybe, if we got this far
+      queues(nextLineQ).self ! psgr
+      incLineQueue()
     }
     
+  }
+  
+  def incLineQueue() {
+    if (nextLineQ == queues.size-1) {
+      // Reset
+      nextLineQ = 0
+    } else {
+      // Next
+      nextLineQ += 1  
+    }
   }
   
 }
