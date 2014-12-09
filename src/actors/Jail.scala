@@ -6,20 +6,18 @@ package actors
  */
 
 import akka.actor.Actor
-import akka.event.Logging
 import messages._
 
 class Jail extends Actor {
   var captives = List()
 
 
-  val log = Logging(context.system, this)
-
   def receive = {
     case SendPassenger(passenger, true) =>
       captives :+ passenger
-      log.info("received passenger")
+      println("Received passenger going to jail")
     case PoisonPill(kill) =>
+      println("All passengers are going to permanent detention")
       context.stop(self)
     case _ =>
       print("received unknown message")
