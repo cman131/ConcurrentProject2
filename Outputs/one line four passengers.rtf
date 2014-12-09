@@ -1,0 +1,42 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs22 \cf0 Creating line: 1\
+Body Scanner #1: is set up.\
+Bag Scanner #1: is set up.\
+Sending notify to System (passenger failed)\
+Sending into queue0\
+System: Notify() -> Passenger finished\
+Sending notify to System (passenger failed)\
+Sending notify to System (passenger failed)\
+System: Notify() -> Passenger finished\
+System: Notify() -> Passenger finished\
+Queue #1: is set up.\
+Queue #1: has received passenger #2.\
+Queue #1: sends passenger #2 to Bag Scanner #1.\
+Queue #1: sends passenger #2 to Body Scanner #1.\
+Bag Scanner #1: has received bag #2.\
+Bag Scanner #1: sends bag #2 to security.\
+Body Scanner #1: has received passenger #2.\
+Bag Scanner #1: notifies queue #1 that it's empty.\
+Security: Received bag\
+Body Scanner #1: sends passenger #2 to security.\
+Body Scanner #1: notifies queue #1 that it's empty.\
+Security: Received passenger\
+Security: Passenger sent to jail\
+System: Notify() -> Passenger finished\
+Jail: Received unknown messageSystem: Shut down others, now shutting down self\
+DocumentCheck: PoisonPill() -> Die\
+Queue #1: PoisonPill -> Shutting down.\
+Queue #1: poisoning Bag Scanner #1.\
+Queue #1: poisoning Body Scanner #1.\
+Bag Scanner #1: PoisonPill -> Shutting down.\
+Bag Scanner #1: is poisoning Security #1.\
+Body Scanner #1: PoisonPill -> Shutting down.\
+Body Scanner #1: is now poisoning Security #1.\
+Security: PoisonPill -> Shutting down\
+Jail: PoisonPill -> All passengers are going to permanent detention, shutting down}
