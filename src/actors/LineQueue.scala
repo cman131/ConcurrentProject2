@@ -55,7 +55,7 @@ class LineQueue extends Actor {
 					body ! new SendPassenger(pass)
 				}
 				else{
-					isBodyFree = true;
+					isBodyFree = true
 				}
 			case b: BagScanner =>
 				println("Queue #"+line+" has been notified that Bag Scanner #"+line+"is free.")
@@ -65,7 +65,7 @@ class LineQueue extends Actor {
 					bag ! new SendPassenger(pass)
 				}
 				else{
-					isBagFree = true;
+					isBagFree = true
 				}
 		
 	}
