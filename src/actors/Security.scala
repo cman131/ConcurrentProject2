@@ -1,6 +1,4 @@
-
-import akka.actor.Actor;
-import akka.actor.ActorRef;
+package actors;
 
 class Security extends Actor {
 
@@ -33,7 +31,7 @@ class Security extends Actor {
     case PoisonPill(die) => tryQuit()
     
     // Handle all messages...
-    case _ => print("Security: Unknown message received")
+    case _ => print("actors.Security: Unknown message received")
   }
   
   /** Helper methods */
@@ -52,7 +50,7 @@ class Security extends Actor {
   }
   
   /**
-   * Security can only quit if all people and bags have been received
+   * actors.Security can only quit if all people and bags have been received
    */
   def tryQuit() {
     _doClose = true;

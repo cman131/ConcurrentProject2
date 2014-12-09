@@ -141,10 +141,10 @@ send them on after the burst ended or a flush request is received.</p>
   <span class="c1">// boilerplate ...</span>
 <span class="o">}</span>
 
-<span class="n">public</span> <span class="k">final</span> <span class="k">class</span> <span class="nc">Queue</span> <span class="o">{</span>
+<span class="n">public</span> <span class="k">final</span> <span class="k">class</span> <span class="nc">actors.Queue</span> <span class="o">{</span>
   <span class="k">private</span> <span class="k">final</span> <span class="nc">Object</span> <span class="n">obj</span><span class="o">;</span>
 
-  <span class="n">public</span> <span class="nc">Queue</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">public</span> <span class="nc">actors.Queue</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="n">obj</span> <span class="k">=</span> <span class="n">obj</span><span class="o">;</span>
   <span class="o">}</span>
 
@@ -173,7 +173,7 @@ send them on after the burst ended or a flush request is received.</p>
 </pre></div>
 </div>
 <p><tt class="docutils literal"><span class="pre">SetTarget</span></tt> is needed for starting it up, setting the destination for the
-<tt class="docutils literal"><span class="pre">Batches</span></tt> to be passed on; <tt class="docutils literal"><span class="pre">Queue</span></tt> will add to the internal queue while
+<tt class="docutils literal"><span class="pre">Batches</span></tt> to be passed on; <tt class="docutils literal"><span class="pre">actors.Queue</span></tt> will add to the internal queue while
 <tt class="docutils literal"><span class="pre">Flush</span></tt> will mark the end of a burst.</p>
 <p>The actor can be in two states: no message queued (aka <tt class="docutils literal"><span class="pre">Idle</span></tt>) or some
 message queued (aka <tt class="docutils literal"><span class="pre">Active</span></tt>). The states and the state data is defined like this:</p>
@@ -264,7 +264,7 @@ shall work identically in both states, we make use of the fact that any event
 which is not handled by the <tt class="docutils literal"><span class="pre">when()</span></tt> block is passed to the
 <tt class="docutils literal"><span class="pre">whenUnhandled()</span></tt> block:</p>
 <div class="highlight-scala"><div class="highlight"><pre><span class="n">whenUnhandled</span><span class="o">(</span>
-  <span class="n">matchEvent</span><span class="o">(</span><span class="nc">Queue</span><span class="o">.</span><span class="n">class</span><span class="o">,</span> <span class="nc">Todo</span><span class="o">.</span><span class="n">class</span><span class="o">,</span>
+  <span class="n">matchEvent</span><span class="o">(</span><span class="nc">actors.Queue</span><span class="o">.</span><span class="n">class</span><span class="o">,</span> <span class="nc">Todo</span><span class="o">.</span><span class="n">class</span><span class="o">,</span>
     <span class="o">(</span><span class="n">queue</span><span class="o">,</span> <span class="n">todo</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">goTo</span><span class="o">(</span><span class="nc">Active</span><span class="o">).</span><span class="n">using</span><span class="o">(</span><span class="n">todo</span><span class="o">.</span><span class="n">addElement</span><span class="o">(</span><span class="n">queue</span><span class="o">.</span><span class="n">getObj</span><span class="o">()))).</span>
     <span class="n">anyEvent</span><span class="o">((</span><span class="n">event</span><span class="o">,</span> <span class="n">state</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
       <span class="n">log</span><span class="o">().</span><span class="n">warning</span><span class="o">(</span><span class="s">&quot;received unhandled request {} in state {}/{}&quot;</span><span class="o">,</span>
@@ -273,10 +273,10 @@ which is not handled by the <tt class="docutils literal"><span class="pre">when(
     <span class="o">}));</span>
 </pre></div>
 </div>
-<p>The first case handled here is adding <tt class="docutils literal"><span class="pre">Queue()</span></tt> requests to the internal
+<p>The first case handled here is adding <tt class="docutils literal"><span class="pre">actors.Queue()</span></tt> requests to the internal
 queue and going to the <tt class="docutils literal"><span class="pre">Active</span></tt> state (this does the obvious thing of staying
 in the <tt class="docutils literal"><span class="pre">Active</span></tt> state if already there), but only if the FSM data are not
-<tt class="docutils literal"><span class="pre">Uninitialized</span></tt> when the <tt class="docutils literal"><span class="pre">Queue()</span></tt> event is received. Otherwise—and in all
+<tt class="docutils literal"><span class="pre">Uninitialized</span></tt> when the <tt class="docutils literal"><span class="pre">actors.Queue()</span></tt> event is received. Otherwise—and in all
 other non-handled cases—the second case just logs a warning and does not change
 the internal state.</p>
 <p>The only missing piece is where the <tt class="docutils literal"><span class="pre">Batches</span></tt> are actually sent to the
@@ -323,15 +323,15 @@ using the <a class="reference internal" href="../scala/testing.html#akka-testkit
       <span class="k">final</span> <span class="nc">ActorRef</span> <span class="n">probe</span> <span class="k">=</span> <span class="n">getRef</span><span class="o">();</span>
 
       <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">SetTarget</span><span class="o">(</span><span class="n">probe</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
-      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">Queue</span><span class="o">(</span><span class="mi">42</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
-      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">Queue</span><span class="o">(</span><span class="mi">43</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
+      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">actors.Queue</span><span class="o">(</span><span class="mi">42</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
+      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">actors.Queue</span><span class="o">(</span><span class="mi">43</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
       <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="n">list1</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
       <span class="n">list1</span><span class="o">.</span><span class="n">add</span><span class="o">(</span><span class="mi">42</span><span class="o">);</span>
       <span class="n">list1</span><span class="o">.</span><span class="n">add</span><span class="o">(</span><span class="mi">43</span><span class="o">);</span>
       <span class="n">expectMsgEquals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Batch</span><span class="o">(</span><span class="n">list1</span><span class="o">));</span>
-      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">Queue</span><span class="o">(</span><span class="mi">44</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
+      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">actors.Queue</span><span class="o">(</span><span class="mi">44</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
       <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="nc">Flush</span><span class="o">,</span> <span class="n">probe</span><span class="o">);</span>
-      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">Queue</span><span class="o">(</span><span class="mi">45</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
+      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">actors.Queue</span><span class="o">(</span><span class="mi">45</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
       <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">&gt;</span> <span class="n">list2</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
       <span class="n">list2</span><span class="o">.</span><span class="n">add</span><span class="o">(</span><span class="mi">44</span><span class="o">);</span>
       <span class="n">expectMsgEquals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Batch</span><span class="o">(</span><span class="n">list2</span><span class="o">));</span>
@@ -349,7 +349,7 @@ using the <a class="reference internal" href="../scala/testing.html#akka-testkit
         <span class="n">system</span><span class="o">.</span><span class="n">actorOf</span><span class="o">(</span><span class="nc">Props</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="nc">Buncher</span><span class="o">.</span><span class="n">class</span><span class="o">));</span>
       <span class="k">final</span> <span class="nc">ActorRef</span> <span class="n">probe</span> <span class="k">=</span> <span class="n">getRef</span><span class="o">();</span>
 
-      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">Queue</span><span class="o">(</span><span class="mi">42</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
+      <span class="n">buncher</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="k">new</span> <span class="nc">actors.Queue</span><span class="o">(</span><span class="mi">42</span><span class="o">),</span> <span class="n">probe</span><span class="o">);</span>
       <span class="n">expectNoMsg</span><span class="o">();</span>
       <span class="n">system</span><span class="o">.</span><span class="n">stop</span><span class="o">(</span><span class="n">buncher</span><span class="o">);</span>
     <span class="o">}};</span>

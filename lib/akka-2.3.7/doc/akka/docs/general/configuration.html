@@ -216,7 +216,7 @@ akka {
   loglevel = &quot;DEBUG&quot;
 
   # Log level for the very basic logger activated during ActorSystem startup.
-  # This logger prints the log messages to stdout (System.out).
+  # This logger prints the log messages to stdout (actors.System.out).
   # Options: OFF, ERROR, WARNING, INFO, DEBUG
   stdout-loglevel = &quot;DEBUG&quot;
 
@@ -286,7 +286,7 @@ the setting (file &amp; line number) plus possible comments which were present,
 e.g. in the reference configuration. The settings as merged with the reference
 and parsed by the actor system can be displayed like this:</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">final</span> <span class="n">ActorSystem</span> <span class="n">system</span> <span class="o">=</span> <span class="n">ActorSystem</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">system</span><span class="o">.</span><span class="na">settings</span><span class="o">());</span>
+<span class="n">actors.System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">system</span><span class="o">.</span><span class="na">settings</span><span class="o">());</span>
 <span class="c1">// this is a shortcut for system.settings().config().root().render()</span>
 </pre></div>
 </div>
@@ -549,7 +549,7 @@ akka {
   loglevel = &quot;INFO&quot;
 
   # Log level for the very basic logger activated during ActorSystem startup.
-  # This logger prints the log messages to stdout (System.out).
+  # This logger prints the log messages to stdout (actors.System.out).
   # Options: OFF, ERROR, WARNING, INFO, DEBUG
   stdout-loglevel = &quot;WARNING&quot;
 
@@ -577,7 +577,7 @@ akka {
   # Toggles whether threads created by this ActorSystem should be daemons or not
   daemonic = off
 
-  # JVM shutdown, System.exit(-1), in case of a fatal error,
+  # JVM shutdown, actors.System.exit(-1), in case of a fatal error,
   # such as OutOfMemoryError
   jvm-exit-on-fatal-error = on
 
@@ -1927,7 +1927,7 @@ akka {
     # every module will respect this setting.
     use-dispatcher = &quot;akka.remote.default-remote-dispatcher&quot;
 
-    ### Security settings
+    ### actors.Security settings
 
     # Enable untrusted mode for full security of server managed actors, prevents
     # system messages to be send by clients, e.g. messages like &#39;Create&#39;,
@@ -2080,7 +2080,7 @@ akka {
     system-message-buffer-size = 1000
 
     # This setting defines the maximum idle time after an individual
-    # acknowledgement for system messages is sent. System message delivery
+    # acknowledgement for system messages is sent. actors.System message delivery
     # is guaranteed by explicit acknowledgement messages. These acks are
     # piggybacked on ordinary traffic messages. If no traffic is detected
     # during the time period configured here, the remoting will send out

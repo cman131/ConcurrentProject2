@@ -103,7 +103,7 @@ it does the reason was one of</p>
 upon overflow will have to drop messages)</li>
 <li>or it failed due to a catastrophic VM error, e.g. an
 <tt class="xref py py-class docutils literal"><span class="pre">OutOfMemoryError</span></tt>, a memory access violation (“segmentation fault”,
-GPF, etc.), JVM bug—or someone calling <tt class="docutils literal"><span class="pre">System.exit()</span></tt>.</li>
+GPF, etc.), JVM bug—or someone calling <tt class="docutils literal"><span class="pre">actors.System.exit()</span></tt>.</li>
 </ul>
 <p>In all of these cases, the actor was very likely not in a position to process
 the message anyway, so this part of the non-guarantee is not problematic.</p>

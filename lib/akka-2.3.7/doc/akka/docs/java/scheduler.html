@@ -125,7 +125,7 @@ by the <tt class="docutils literal"><span class="pre">akka.scheduler.tick-durati
   <span class="k">new</span> <span class="nc">Runnable</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
     <span class="n">public</span> <span class="n">void</span> <span class="n">run</span><span class="o">()</span> <span class="o">{</span>
-      <span class="n">testActor</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="n">currentTimeMillis</span><span class="o">(),</span> <span class="nc">ActorRef</span><span class="o">.</span><span class="n">noSender</span><span class="o">());</span>
+      <span class="n">testActor</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="nc">actors.System</span><span class="o">.</span><span class="n">currentTimeMillis</span><span class="o">(),</span> <span class="nc">ActorRef</span><span class="o">.</span><span class="n">noSender</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">},</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">());</span>
 </pre></div>

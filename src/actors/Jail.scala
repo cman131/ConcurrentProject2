@@ -1,9 +1,8 @@
-import akka.actor.Actor
-import akka.event.Logging
+package actors
 
 /**
  * Kocsen Chung
- * Jail, receives all criminals
+ * actors.Jail, receives all criminals
  */
 
 class Jail extends Actor {

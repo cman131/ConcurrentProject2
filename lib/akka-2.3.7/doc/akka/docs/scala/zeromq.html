@@ -185,7 +185,7 @@ and <tt class="docutils literal"><span class="pre">Load</span></tt> events on th
   <span class="k">def</span> <span class="n">receive</span><span class="k">:</span> <span class="kt">Receive</span> <span class="o">=</span> <span class="o">{</span>
     <span class="k">case</span> <span class="nc">Tick</span> <span class="k">=&gt;</span>
       <span class="k">val</span> <span class="n">currentHeap</span> <span class="k">=</span> <span class="n">memory</span><span class="o">.</span><span class="n">getHeapMemoryUsage</span>
-      <span class="k">val</span> <span class="n">timestamp</span> <span class="k">=</span> <span class="nc">System</span><span class="o">.</span><span class="n">currentTimeMillis</span>
+      <span class="k">val</span> <span class="n">timestamp</span> <span class="k">=</span> <span class="nc">actors.System</span><span class="o">.</span><span class="n">currentTimeMillis</span>
 
       <span class="c1">// use akka SerializationExtension to convert to bytes</span>
       <span class="k">val</span> <span class="n">heapPayload</span> <span class="k">=</span> <span class="n">ser</span><span class="o">.</span><span class="n">serialize</span><span class="o">(</span><span class="nc">Heap</span><span class="o">(</span><span class="n">timestamp</span><span class="o">,</span> <span class="n">currentHeap</span><span class="o">.</span><span class="n">getUsed</span><span class="o">,</span>

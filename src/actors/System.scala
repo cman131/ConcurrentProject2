@@ -1,12 +1,11 @@
+package actors
+
 /**
- * System.scala
+ * actors.System.scala
  * 
- * System is in charge of making Passenger objects and sending their references
+ * actors.System is in charge of making Passenger objects and sending their references
  * to the DocumentCheck object for the airport application.
  */
-import akka.actor.Actor;
-import akka.actor.ActorRef;
-import scala.collection.mutable.ListBuffer
 
 class System extends Actor {
 

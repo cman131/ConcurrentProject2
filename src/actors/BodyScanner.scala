@@ -3,8 +3,12 @@
  * The Body scanner in the airport
  */
 
-import akka.actor.Actor
-import akka.actor.ActorRef
+package actors
+
+import akka.actors.Actor
+import messages.Setup
+import messages.SendPassenger
+import messages.Notify
 
 class BodyScanner extends Actor[Message] {
 	var queue: Queue
@@ -13,9 +17,9 @@ class BodyScanner extends Actor[Message] {
 	def receive = {
 		case msg: Setup => // receive setup msg
 			queue = msg.queueRef
-			security = msg.secRef
+			security = msg.securityRef
 		case msg: SendPassenger => // receive a new passenger
-			result = (new scala.util.Random).nextInt(5)!=2
+			val result = (new scala.util.Random).nextInt(5)!=2
 			security ! new SendPassenger(msg.passenger, result)
 			queue ! new Notify(true)
 	}

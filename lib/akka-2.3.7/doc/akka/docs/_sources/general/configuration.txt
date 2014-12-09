@@ -144,7 +144,7 @@ A custom ``application.conf`` might look like this::
     loglevel = "DEBUG"
 
     # Log level for the very basic logger activated during ActorSystem startup.
-    # This logger prints the log messages to stdout (System.out).
+    # This logger prints the log messages to stdout (actors.System.out).
     # Options: OFF, ERROR, WARNING, INFO, DEBUG
     stdout-loglevel = "DEBUG"
 
@@ -228,7 +228,7 @@ and parsed by the actor system can be displayed like this:
 .. code-block:: java
 
   final ActorSystem system = ActorSystem.create();
-  System.out.println(system.settings());
+  actors.System.out.println(system.settings());
   // this is a shortcut for system.settings().config().root().render()
 
 A Word About ClassLoaders

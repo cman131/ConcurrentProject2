@@ -94,7 +94,7 @@ which takes the fully-qualified class-name of a
 the root guardian’s response will be to terminate the guardian, which in effect
 will shut down the whole actor system.
 
-``/system``: The System Guardian
+``/system``: The actors.System Guardian
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This special guardian has been introduced in order to achieve an orderly

@@ -1,11 +1,11 @@
-System (Actor)
+actors.System (Actor)
 Document Checker (Actor)
-Security (Actor)
+actors.Security (Actor)
 Passenger
 
 
 Conor:
- - Queue (Actor)
+ - actors.Queue (Actor)
  - Body Scanner (Actor)
  - Bag Scanner (Actor)
  - sendPassenger (message)
@@ -14,7 +14,7 @@ Geoff:
 
 Kocsen:
  - Main
- - Jail (Actor)
- - Setup (message)
+ - actors.Jail (Actor)
+ - messages.Setup (message)
  - Nofify (message)
 

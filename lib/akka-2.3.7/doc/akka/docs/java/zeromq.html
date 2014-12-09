@@ -232,7 +232,7 @@ and <tt class="docutils literal"><span class="pre">Load</span></tt> events on th
   <span class="n">public</span> <span class="n">void</span> <span class="n">onReceive</span><span class="o">(</span><span class="nc">Object</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">message</span><span class="o">.</span><span class="n">equals</span><span class="o">(</span><span class="nc">TICK</span><span class="o">))</span> <span class="o">{</span>
       <span class="nc">MemoryUsage</span> <span class="n">currentHeap</span> <span class="k">=</span> <span class="n">memory</span><span class="o">.</span><span class="n">getHeapMemoryUsage</span><span class="o">();</span>
-      <span class="n">long</span> <span class="n">timestamp</span> <span class="k">=</span> <span class="nc">System</span><span class="o">.</span><span class="n">currentTimeMillis</span><span class="o">();</span>
+      <span class="n">long</span> <span class="n">timestamp</span> <span class="k">=</span> <span class="nc">actors.System</span><span class="o">.</span><span class="n">currentTimeMillis</span><span class="o">();</span>
 
       <span class="c1">// use akka SerializationExtension to convert to bytes</span>
       <span class="nc">ByteString</span> <span class="n">heapTopic</span> <span class="k">=</span> <span class="nc">ByteString</span><span class="o">.</span><span class="n">fromString</span><span class="o">(</span><span class="s">&quot;health.heap&quot;</span><span class="o">,</span> <span class="s">&quot;UTF-8&quot;</span><span class="o">);</span>

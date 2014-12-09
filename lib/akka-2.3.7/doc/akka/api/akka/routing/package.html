@@ -174,7 +174,7 @@ All routees share the same mailbox.</p><p>Although the technique used in this im
 actual implementation is probably best described as &quot;work donating&quot; because the actor of which
 work is being stolen takes the initiative.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="BalancingPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.BalancingPool" class="extmbr" name="akka.routing.BalancingPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -182,7 +182,7 @@ router's supervisor for handling.</p><p>The router's supervisor will treat the e
 Therefore a directive to stop or restart will cause the router itself to stop or
 restart. The router, in turn, will cause its children to stop and restart.
 </p></div><dl class="paramcmts block"><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -258,7 +258,7 @@ the router is defined in the configuration file for the actor being used.
     </span>
       <p class="shortcomment cmt">A router pool that broadcasts a message to all its routees.</p><div class="fullcomment"><div class="comment cmt"><p>A router pool that broadcasts a message to all its routees.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="BroadcastPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.BroadcastPool" class="extmbr" name="akka.routing.BroadcastPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -267,7 +267,7 @@ Therefore a directive to stop or restart will cause the router itself to stop or
 restart. The router, in turn, will cause its children to stop and restart.
 </p></div><dl class="paramcmts block"><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
 </p></dd><dt class="param">resizer</dt><dd class="cmt"><p>optional resizer that dynamically adjust the pool size
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -366,7 +366,7 @@ the router is defined in the configuration file for the actor being used.
 sent message.</p><div class="fullcomment"><div class="comment cmt"><p>A router pool that uses consistent hashing to select a routee based on the
 sent message. The selection is described in <a href="ConsistentHashingRoutingLogic.html" class="extype" name="akka.routing.ConsistentHashingRoutingLogic">akka.routing.ConsistentHashingRoutingLogic</a>.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="ConsistentHashingPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.ConsistentHashingPool" class="extmbr" name="akka.routing.ConsistentHashingPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -378,7 +378,7 @@ restart. The router, in turn, will cause its children to stop and restart.
 </p></dd><dt class="param">virtualNodesFactor</dt><dd class="cmt"><p>number of virtual nodes per node, used in <a href="ConsistentHash.html" class="extype" name="akka.routing.ConsistentHash">akka.routing.ConsistentHash</a>
 </p></dd><dt class="param">hashMapping</dt><dd class="cmt"><p>partial function from message to the data to
   use for the consistent hash key
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -715,7 +715,7 @@ the router is defined in the configuration file for the actor being used.
     </span>
       <p class="shortcomment cmt">A router pool that randomly selects one of the target routees to send a message to.</p><div class="fullcomment"><div class="comment cmt"><p>A router pool that randomly selects one of the target routees to send a message to.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="RandomPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.RandomPool" class="extmbr" name="akka.routing.RandomPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -724,7 +724,7 @@ Therefore a directive to stop or restart will cause the router itself to stop or
 restart. The router, in turn, will cause its children to stop and restart.
 </p></div><dl class="paramcmts block"><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
 </p></dd><dt class="param">resizer</dt><dd class="cmt"><p>optional resizer that dynamically adjust the pool size
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -841,7 +841,7 @@ the router is defined in the configuration file for the actor being used.
       <p class="shortcomment cmt">A router pool that uses round-robin to select a routee.</p><div class="fullcomment"><div class="comment cmt"><p>A router pool that uses round-robin to select a routee. For concurrent calls,
 round robin is just a best effort.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="RoundRobinPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.RoundRobinPool" class="extmbr" name="akka.routing.RoundRobinPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -850,7 +850,7 @@ Therefore a directive to stop or restart will cause the router itself to stop or
 restart. The router, in turn, will cause its children to stop and restart.
 </p></div><dl class="paramcmts block"><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
 </p></dd><dt class="param">resizer</dt><dd class="cmt"><p>optional resizer that dynamically adjust the pool size
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -1060,7 +1060,7 @@ the router is defined in the configuration file for the actor being used.
     </span>
       <p class="shortcomment cmt">A router pool that broadcasts the message to all routees, and replies with the first response.</p><div class="fullcomment"><div class="comment cmt"><p>A router pool that broadcasts the message to all routees, and replies with the first response.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="ScatterGatherFirstCompletedPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.ScatterGatherFirstCompletedPool" class="extmbr" name="akka.routing.ScatterGatherFirstCompletedPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1071,7 +1071,7 @@ restart. The router, in turn, will cause its children to stop and restart.
 </p></dd><dt class="param">resizer</dt><dd class="cmt"><p>optional resizer that dynamically adjust the pool size
 </p></dd><dt class="param">within</dt><dd class="cmt"><p>expecting at least one reply within this duration, otherwise
   it will reply with <a href="../pattern/AskTimeoutException.html" class="extype" name="akka.pattern.AskTimeoutException">akka.pattern.AskTimeoutException</a> in a <a href="../actor/Status$$Failure.html" class="extype" name="akka.actor.Status.Failure">akka.actor.Status.Failure</a>
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -1138,7 +1138,7 @@ restart. The router, in turn, will cause its children to stop and restart.
 The selection is done in this order:</p><ul><li>pick any idle routee (not processing message) with empty mailbox</li><li>pick any routee with empty mailbox</li><li>pick routee with fewest pending messages in mailbox</li><li>pick any remote routee, remote actors are consider lowest priority,
     since their mailbox size is unknown</li></ul><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="SmallestMailboxPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.SmallestMailboxPool" class="extmbr" name="akka.routing.SmallestMailboxPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1147,7 +1147,7 @@ Therefore a directive to stop or restart will cause the router itself to stop or
 restart. The router, in turn, will cause its children to stop and restart.
 </p></div><dl class="paramcmts block"><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
 </p></dd><dt class="param">resizer</dt><dd class="cmt"><p>optional resizer that dynamically adjust the pool size
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -1225,7 +1225,7 @@ the router is defined in the configuration file for the actor being used.
 then wait a specified <code>interval</code> and then send to a second, random picked, and so on till one full cycle..</p><div class="fullcomment"><div class="comment cmt"><p>A router poll thats sends the message to a first, random picked, routee,
 then wait a specified <code>interval</code> and then send to a second, random picked, and so on till one full cycle..</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="TailChoppingPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.TailChoppingPool" class="extmbr" name="akka.routing.TailChoppingPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1237,7 +1237,7 @@ restart. The router, in turn, will cause its children to stop and restart.
 </p></dd><dt class="param">within</dt><dd class="cmt"><p>expecting at least one reply within this duration, otherwise
   it will reply with <a href="../pattern/AskTimeoutException.html" class="extype" name="akka.pattern.AskTimeoutException">akka.pattern.AskTimeoutException</a> in a <a href="../actor/Status$$Failure.html" class="extype" name="akka.actor.Status.Failure">akka.actor.Status.Failure</a>
 </p></dd><dt class="param">interval</dt><dd class="cmt"><p>duration after which next routee will be picked
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -1313,7 +1313,7 @@ In this case the 'nrOfInstances' will be ignored and the 'routees' will be used.
 <br>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="BroadcastRouter.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.BroadcastRouter" class="extmbr" name="akka.routing.BroadcastRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1359,7 +1359,7 @@ actor(s). In this case the 'nrOfInstances' will be ignored and the 'routees' wil
 <br>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="ConsistentHashingRouter.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.ConsistentHashingRouter" class="extmbr" name="akka.routing.ConsistentHashingRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1444,7 +1444,7 @@ In this case the 'nrOfInstances' will be ignored and the 'routees' will be used.
 <br>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="RandomRouter.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.RandomRouter" class="extmbr" name="akka.routing.RandomRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1483,7 +1483,7 @@ In this case the 'nrOfInstances' will be ignored and the 'routees' will be used.
 <br>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="RoundRobinRouter.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.RoundRobinRouter" class="extmbr" name="akka.routing.RoundRobinRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1547,7 +1547,7 @@ In this case the 'nrOfInstances' will be ignored and the 'routees' will be used.
 <br/>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="ScatterGatherFirstCompletedRouter.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.ScatterGatherFirstCompletedRouter" class="extmbr" name="akka.routing.ScatterGatherFirstCompletedRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -1587,7 +1587,7 @@ In this case the 'nrOfInstances' will be ignored and the 'routees' will be used.
 <br>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="SmallestMailboxRouter.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.SmallestMailboxRouter" class="extmbr" name="akka.routing.SmallestMailboxRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the

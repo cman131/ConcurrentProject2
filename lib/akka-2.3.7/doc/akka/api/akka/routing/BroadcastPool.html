@@ -49,7 +49,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A router pool that broadcasts a message to all its routees.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.BroadcastPool" class="extmbr" name="akka.routing.BroadcastPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -58,7 +58,7 @@ Therefore a directive to stop or restart will cause the router itself to stop or
 restart. The router, in turn, will cause its children to stop and restart.
 </p></div><dl class="paramcmts block"><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
 </p></dd><dt class="param">resizer</dt><dd class="cmt"><p>optional resizer that dynamically adjust the pool size
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -166,7 +166,7 @@ restart. The router, in turn, will cause its children to stop and restart.
     </span>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
 </p></dd><dt class="param">resizer</dt><dd class="cmt"><p>optional resizer that dynamically adjust the pool size
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl></div>
@@ -740,8 +740,8 @@ delegated to this controller actor.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">strategy for supervising the routees, see 'Supervision Setup'
-</p><div class="fullcomment"><div class="comment cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+      <p class="shortcomment cmt">strategy for supervising the routees, see 'Supervision messages.Setup'
+</p><div class="fullcomment"><div class="comment cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.routing.BroadcastPool">BroadcastPool</a> → <a href="Pool.html" class="extype" name="akka.routing.Pool">Pool</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>

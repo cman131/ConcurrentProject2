@@ -10,7 +10,7 @@ all routees will share a single mailbox instance.
 Mailbox Selection
 =================
 
-Requiring a Message Queue Type for an Actor
+Requiring a Message actors.Queue Type for an Actor
 -------------------------------------------
 
 It is possible to require a certain type of message queue for a certain type of actor
@@ -34,7 +34,7 @@ a dispatcher with a specified mailbox type, then that will override this mapping
   The type of the queue in the mailbox created for an actor will be checked against the required type in the
   interface and if the queue doesn't implement the required type then actor creation will fail.
 
-Requiring a Message Queue Type for a Dispatcher
+Requiring a Message actors.Queue Type for a Dispatcher
 -----------------------------------------------
 
 A dispatcher may also have a requirement for the mailbox type used by the

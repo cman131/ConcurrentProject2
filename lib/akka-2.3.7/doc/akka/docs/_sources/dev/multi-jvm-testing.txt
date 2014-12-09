@@ -8,7 +8,7 @@
 Supports running applications (objects with main methods) and ScalaTest tests in multiple JVMs at the same time.
 Useful for integration testing where multiple systems communicate with each other.
 
-Setup
+messages.Setup
 =====
 
 The multi-JVM testing is an sbt plugin that you can find at `<http://github.com/typesafehub/sbt-multi-jvm>`_.

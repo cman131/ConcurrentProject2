@@ -384,13 +384,13 @@ To be notified  when the remoting subsystem has been shut down, listen to ``Remo
 
 To intercept generic remoting related errors, listen to ``RemotingErrorEvent`` which holds the ``Throwable`` cause.
 
-Remote Security
+Remote actors.Security
 ^^^^^^^^^^^^^^^
 
 Akka provides a couple of ways to enhance security between remote nodes (client/server):
 
 * Untrusted Mode
-* Security Cookie Handshake
+* actors.Security Cookie Handshake
 
 Untrusted Mode
 --------------

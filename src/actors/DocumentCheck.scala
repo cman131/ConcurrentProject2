@@ -1,22 +1,22 @@
+package actors
+
 
 /**
- * DocumentCheck.scala
+ * actors.DocumentCheck.scala
  * 
  * This class is like a queue in which it is sent a list of passengers.  As
- * 'Line's request passengers, DocumentCheck will distribute them until there
+ * 'Line's request passengers, actors.DocumentCheck will distribute them until there
  * are no more.  In addition, Document check will dismiss passengers at a 
  * probability of 15% to simulate documentation related issues with reference
  * to attempting to enter the airport entry line(s).
  * 
  * @author Geoff Berl
- */
-import akka.actor.Actor;
-import akka.actor.ActorRef;
+ */;
 
 
 class DocumentCheck extends Actor {
   
-//  var queues : List[Queue]
+//  var queues : List[actors.Queue]
   var passengers : scala.collection.mutable.Stack[Passenger]
   var system : ActorRef
   
@@ -44,7 +44,7 @@ class DocumentCheck extends Actor {
     case Notify(b) => sendPassenger(sender)
     // If I receive a poison pill, bite cyanide tablet in mouth
     case PoisonPill(die) => context.stop(self)
-    // Notify console when I don't understand a message
+    // messages.Notify console when I don't understand a message
     case _ => print("DocCheck: I got a msg I don't understand")
   }
   

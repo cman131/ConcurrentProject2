@@ -383,7 +383,7 @@ logger available in the 'akka-slf4j' module.</p>
 <div class="section" id="logging-to-stdout-during-startup-and-shutdown">
 <span id="slf4j-scala"></span><h2>Logging to stdout during startup and shutdown</h2>
 <p>When the actor system is starting up and shutting down the configured <tt class="docutils literal"><span class="pre">loggers</span></tt> are not used.
-Instead log messages are printed to stdout (System.out). The default log level for this
+Instead log messages are printed to stdout (actors.System.out). The default log level for this
 stdout logger is <tt class="docutils literal"><span class="pre">WARNING</span></tt> and it can be silenced completely by setting
 <tt class="docutils literal"><span class="pre">akka.stdout-loglevel=OFF</span></tt>.</p>
 </div>

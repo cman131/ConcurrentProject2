@@ -251,7 +251,7 @@ Logging to stdout during startup and shutdown
 =============================================
 
 While the actor system is starting up and shutting down the configured ``loggers`` are not used.
-Instead log messages are printed to stdout (System.out). The default log level for this
+Instead log messages are printed to stdout (actors.System.out). The default log level for this
 stdout logger is ``WARNING`` and it can be silenced completely by setting 
 ``akka.stdout-loglevel=OFF``.
 

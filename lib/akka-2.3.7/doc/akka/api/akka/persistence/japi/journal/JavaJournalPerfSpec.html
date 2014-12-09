@@ -49,7 +49,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>JAVA API</p><p>Java / JUnit consumable equivalent of <a href="../../journal/JournalPerfSpec.html" class="extype" name="akka.persistence.journal.JournalPerfSpec">akka.persistence.journal.JournalPerfSpec</a> and <a href="../../journal/JournalSpec.html" class="extype" name="akka.persistence.journal.JournalSpec">akka.persistence.journal.JournalSpec</a>.</p><p>This spec measures execution times of the basic operations that an <a href="../../PersistentActor.html" class="extype" name="akka.persistence.PersistentActor">akka.persistence.PersistentActor</a> provides,
 using the provided Journal (plugin).</p><p>It is *NOT* meant to be a comprehensive benchmark, but rather aims to help plugin developers to easily determine
-if their plugin's performance is roughly as expected. It also validates the plugin still works under &quot;more messages&quot; scenarios.</p><p>The measurements are by default printed to <code>System.out</code>, if you want to customise this please override the <a href="#info:org.scalatest.Informer" class="extmbr" name="akka.persistence.japi.journal.JavaJournalPerfSpec#info">#info</a> method.</p><p>The benchmark iteration and message counts are easily customisable by overriding these methods:</p><pre>@Override
+if their plugin's performance is roughly as expected. It also validates the plugin still works under &quot;more messages&quot; scenarios.</p><p>The measurements are by default printed to <code>actors.System.out</code>, if you want to customise this please override the <a href="#info:org.scalatest.Informer" class="extmbr" name="akka.persistence.japi.journal.JavaJournalPerfSpec#info">#info</a> method.</p><p>The benchmark iteration and message counts are easily customisable by overriding these methods:</p><pre>@Override
 public long awaitDurationMillis() { <span class="kw">return</span> <span class="num">10000</span>; }
 
 @Override
@@ -4094,7 +4094,7 @@ function returns true.
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Obtain current time (<code>System.nanoTime</code>) as Duration.</p><div class="fullcomment"><div class="comment cmt"><p>Obtain current time (<code>System.nanoTime</code>) as Duration.
+      <p class="shortcomment cmt">Obtain current time (<code>actors.System.nanoTime</code>) as Duration.</p><div class="fullcomment"><div class="comment cmt"><p>Obtain current time (<code>actors.System.nanoTime</code>) as Duration.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../testkit/TestKitBase.html" class="extype" name="akka.testkit.TestKitBase">TestKitBase</a></dd></dl></div>
     </li><li name="org.scalatest.Matchers#of" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="of[T](implicitev:scala.reflect.Manifest[T]):org.scalatest.words.ResultOfOfTypeInvocation[T]"></a>

@@ -144,7 +144,7 @@ project.
 
 Summary of the essential parts for using Akka with SBT:
 
-SBT installation instructions on `https://github.com/harrah/xsbt/wiki/Setup <https://github.com/harrah/xsbt/wiki/Setup>`_
+SBT installation instructions on `https://github.com/harrah/xsbt/wiki/messages.Setup <https://github.com/harrah/xsbt/wiki/messages.Setup>`_
 
 ``build.sbt`` file:
 
@@ -200,17 +200,17 @@ Uses the `Scala plugin <http://gradle.org/docs/current/userguide/scala_plugin.ht
 Using Akka with Eclipse
 -----------------------
 
-Setup SBT project and then use `sbteclipse <https://github.com/typesafehub/sbteclipse>`_ to generate a Eclipse project.
+messages.Setup SBT project and then use `sbteclipse <https://github.com/typesafehub/sbteclipse>`_ to generate a Eclipse project.
 
 Using Akka with IntelliJ IDEA
 -----------------------------
 
-Setup SBT project and then use `sbt-idea <https://github.com/mpeltonen/sbt-idea>`_ to generate a IntelliJ IDEA project.
+messages.Setup SBT project and then use `sbt-idea <https://github.com/mpeltonen/sbt-idea>`_ to generate a IntelliJ IDEA project.
 
 Using Akka with NetBeans
 ------------------------
 
-Setup SBT project and then use `nbsbt <https://github.com/dcaoyuan/nbsbt>`_ to generate a NetBeans project.
+messages.Setup SBT project and then use `nbsbt <https://github.com/dcaoyuan/nbsbt>`_ to generate a NetBeans project.
 
 You should also use `nbscala <https://github.com/dcaoyuan/nbscala>`_ for general scala support in the IDE.
 

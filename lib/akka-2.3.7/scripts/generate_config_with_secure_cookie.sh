@@ -9,7 +9,7 @@ import java.security.{MessageDigest, SecureRandom}
 
 object Crypt {
   val hex = "0123456789ABCDEF"
-  val lineSeparator = System.getProperty("line.separator")
+  val lineSeparator = actors.System.getProperty("line.separator")
 
   lazy val random = SecureRandom.getInstance("SHA1PRNG")
 

@@ -122,7 +122,7 @@ on several machines to find out what’s going on. I’m sure you have browsed t
 
 This is where the Spider pattern comes in."
 
-The pattern is described `Discovering Message Flows in Actor System with the Spider Pattern <http://letitcrash.com/post/30585282971/discovering-message-flows-in-actor-systems-with-the>`_.
+The pattern is described `Discovering Message Flows in Actor actors.System with the Spider Pattern <http://letitcrash.com/post/30585282971/discovering-message-flows-in-actor-systems-with-the>`_.
 
 Scheduling Periodic Messages
 ============================

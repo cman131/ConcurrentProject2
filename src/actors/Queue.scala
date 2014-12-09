@@ -1,10 +1,15 @@
+package actors
+
 /**
  * Created by Conor on 12/3/2014.
  * The queue in the airport
  */
 
-import akka.actor.Actor
-import scala.collection.immutable.Queue
+import akka.actors.Actor
+import messages.Setup
+import messages.SendPassenger
+import messages.Notify
+import scala.collection.mutable.Queue
 
 class Queue extends Actor {
 	var body: BodyScanner

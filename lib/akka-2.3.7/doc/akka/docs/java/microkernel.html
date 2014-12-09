@@ -132,7 +132,7 @@ of creating a Bootable):</p>
       <span class="k">if</span> <span class="o">(</span><span class="n">message</span> <span class="o">==</span> <span class="s">&quot;start&quot;</span><span class="o">)</span>
         <span class="n">worldActor</span><span class="o">.</span><span class="n">tell</span><span class="o">(</span><span class="s">&quot;Hello&quot;</span><span class="o">,</span> <span class="n">getSelf</span><span class="o">());</span>
       <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">message</span> <span class="n">instanceof</span> <span class="nc">String</span><span class="o">)</span>
-        <span class="nc">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&quot;Received message &#39;%s&#39;&quot;</span><span class="o">,</span> <span class="n">message</span><span class="o">));</span>
+        <span class="nc">actors.System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&quot;Received message &#39;%s&#39;&quot;</span><span class="o">,</span> <span class="n">message</span><span class="o">));</span>
       <span class="k">else</span>
         <span class="n">unhandled</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
     <span class="o">}</span>

@@ -47,7 +47,7 @@ The contract of our “Buncher” actor is that it accepts or produces the follo
    :exclude: boilerplate
 
 ``SetTarget`` is needed for starting it up, setting the destination for the
-``Batches`` to be passed on; ``Queue`` will add to the internal queue while
+``Batches`` to be passed on; ``actors.Queue`` will add to the internal queue while
 ``Flush`` will mark the end of a burst.
 
 The actor can be in two states: no message queued (aka ``Idle``) or some
@@ -95,10 +95,10 @@ which is not handled by the ``when()`` block is passed to the
 
 .. includecode:: ../../../akka-samples/akka-docs-java-lambda/src/test/java/docs/actor/fsm/Buncher.java#unhandled-elided
 
-The first case handled here is adding ``Queue()`` requests to the internal
+The first case handled here is adding ``actors.Queue()`` requests to the internal
 queue and going to the ``Active`` state (this does the obvious thing of staying
 in the ``Active`` state if already there), but only if the FSM data are not
-``Uninitialized`` when the ``Queue()`` event is received. Otherwise—and in all
+``Uninitialized`` when the ``actors.Queue()`` event is received. Otherwise—and in all
 other non-handled cases—the second case just logs a warning and does not change
 the internal state.
 

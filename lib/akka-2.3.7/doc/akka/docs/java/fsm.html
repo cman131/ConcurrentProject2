@@ -203,10 +203,10 @@ delivered in batches to a configurable target actor. The messages involved are:<
   <span class="o">}</span>
 <span class="o">}</span>
 
-<span class="n">public</span> <span class="k">final</span> <span class="k">class</span> <span class="nc">Queue</span> <span class="o">{</span>
+<span class="n">public</span> <span class="k">final</span> <span class="k">class</span> <span class="nc">actors.Queue</span> <span class="o">{</span>
   <span class="k">final</span> <span class="nc">Object</span> <span class="n">o</span><span class="o">;</span>
 
-  <span class="n">public</span> <span class="nc">Queue</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">public</span> <span class="nc">actors.Queue</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="n">o</span> <span class="k">=</span> <span class="n">o</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
@@ -264,8 +264,8 @@ class:</p>
   <span class="o">}</span>
 
   <span class="k">private</span> <span class="n">void</span> <span class="n">whenUnhandled</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">o</span> <span class="n">instanceof</span> <span class="nc">Queue</span> <span class="o">&amp;&amp;</span> <span class="n">isInitialized</span><span class="o">())</span> <span class="o">{</span>
-      <span class="n">enqueue</span><span class="o">(((</span><span class="nc">Queue</span><span class="o">)</span> <span class="n">o</span><span class="o">).</span><span class="n">o</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">o</span> <span class="n">instanceof</span> <span class="nc">actors.Queue</span> <span class="o">&amp;&amp;</span> <span class="n">isInitialized</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">enqueue</span><span class="o">(((</span><span class="nc">actors.Queue</span><span class="o">)</span> <span class="n">o</span><span class="o">).</span><span class="n">o</span><span class="o">);</span>
       <span class="n">setState</span><span class="o">(</span><span class="nc">State</span><span class="o">.</span><span class="nc">ACTIVE</span><span class="o">);</span>
 
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>

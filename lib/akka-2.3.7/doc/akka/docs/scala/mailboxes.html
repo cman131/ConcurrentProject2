@@ -98,7 +98,7 @@ all routees will share a single mailbox instance.</p>
 <div class="section" id="mailbox-selection">
 <h2>Mailbox Selection</h2>
 <div class="section" id="requiring-a-message-queue-type-for-an-actor">
-<h3>Requiring a Message Queue Type for an Actor</h3>
+<h3>Requiring a Message actors.Queue Type for an Actor</h3>
 <p>It is possible to require a certain type of message queue for a certain type of actor
 by having that actor extend the parameterized trait <tt class="xref py py-class docutils literal"><span class="pre">RequiresMessageQueue</span></tt>. Here is
 an example:</p>
@@ -132,7 +132,7 @@ trait and if the queue doesn't implement the required type then actor creation w
 </div>
 </div>
 <div class="section" id="requiring-a-message-queue-type-for-a-dispatcher">
-<h3>Requiring a Message Queue Type for a Dispatcher</h3>
+<h3>Requiring a Message actors.Queue Type for a Dispatcher</h3>
 <p>A dispatcher may also have a requirement for the mailbox type used by the
 actors running on it. An example is the BalancingDispatcher which requires a
 message queue that is thread-safe for multiple concurrent consumers. Such a

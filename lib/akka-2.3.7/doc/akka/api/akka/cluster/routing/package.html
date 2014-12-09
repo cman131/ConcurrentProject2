@@ -123,7 +123,7 @@ cluster metric data.</p><div class="fullcomment"><div class="comment cmt"><p>A r
 cluster metric data.</p><p>It uses random selection of routees based on probabilities derived from
 the remaining capacity of corresponding node.</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="AdaptiveLoadBalancingPool.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.cluster.routing.AdaptiveLoadBalancingPool" class="extmbr" name="akka.cluster.routing.AdaptiveLoadBalancingPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -133,7 +133,7 @@ restart. The router, in turn, will cause its children to stop and restart.
 </p></div><dl class="paramcmts block"><dt class="param">metricsSelector</dt><dd class="cmt"><p>decides what probability to use for selecting a routee, based
   on remaining capacity as indicated by the node metrics
 </p></dd><dt class="param">nrOfInstances</dt><dd class="cmt"><p>initial number of routees in the pool
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -371,7 +371,7 @@ actor(s). In this case the 'nrOfInstances' will be ignored and the 'routees' wil
 <br>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="AdaptiveLoadBalancingRouter.html#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.cluster.routing.AdaptiveLoadBalancingRouter" class="extmbr" name="akka.cluster.routing.AdaptiveLoadBalancingRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -581,7 +581,7 @@ Low heap capacity =&gt; small weight.
       </a>
     </span>
       <p class="shortcomment cmt">MetricsSelector that uses the system load average metrics.</p><div class="fullcomment"><div class="comment cmt"><p>MetricsSelector that uses the system load average metrics.
-System load average is OS-specific average load on the CPUs in the system,
+actors.System load average is OS-specific average load on the CPUs in the system,
 for the past 1 minute. The system is possibly nearing a bottleneck if the
 system load average is nearing number of cpus/cores.
 Low load average capacity =&gt; small weight.

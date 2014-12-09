@@ -50,7 +50,7 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A router poll thats sends the message to a first, random picked, routee,
 then wait a specified <code>interval</code> and then send to a second, random picked, and so on till one full cycle..</p><p>The configuration parameter trumps the constructor arguments. This means that
 if you provide <code>nrOfInstances</code> during instantiation they will be ignored if
-the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.TailChoppingPool" class="extmbr" name="akka.routing.TailChoppingPool#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
@@ -62,7 +62,7 @@ restart. The router, in turn, will cause its children to stop and restart.
 </p></dd><dt class="param">within</dt><dd class="cmt"><p>expecting at least one reply within this duration, otherwise
   it will reply with <a href="../pattern/AskTimeoutException.html" class="extype" name="akka.pattern.AskTimeoutException">akka.pattern.AskTimeoutException</a> in a <a href="../actor/Status$$Failure.html" class="extype" name="akka.actor.Status.Failure">akka.actor.Status.Failure</a>
 </p></dd><dt class="param">interval</dt><dd class="cmt"><p>duration after which next routee will be picked
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -174,7 +174,7 @@ restart. The router, in turn, will cause its children to stop and restart.
 </p></dd><dt class="param">within</dt><dd class="cmt"><p>expecting at least one reply within this duration, otherwise
   it will reply with <a href="../pattern/AskTimeoutException.html" class="extype" name="akka.pattern.AskTimeoutException">akka.pattern.AskTimeoutException</a> in a <a href="../actor/Status$$Failure.html" class="extype" name="akka.actor.Status.Failure">akka.actor.Status.Failure</a>
 </p></dd><dt class="param">interval</dt><dd class="cmt"><p>duration after which next routee will be picked
-</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+</p></dd><dt class="param">supervisorStrategy</dt><dd class="cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></dd><dt class="param">routerDispatcher</dt><dd class="cmt"><p>dispatcher to use for the router head actor, which handles
   supervision, death watch and router management messages
 </p></dd></dl></div>
@@ -766,8 +766,8 @@ delegated to this controller actor.
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">strategy for supervising the routees, see 'Supervision Setup'
-</p><div class="fullcomment"><div class="comment cmt"><p>strategy for supervising the routees, see 'Supervision Setup'
+      <p class="shortcomment cmt">strategy for supervising the routees, see 'Supervision messages.Setup'
+</p><div class="fullcomment"><div class="comment cmt"><p>strategy for supervising the routees, see 'Supervision messages.Setup'
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.routing.TailChoppingPool">TailChoppingPool</a> → <a href="Pool.html" class="extype" name="akka.routing.Pool">Pool</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>

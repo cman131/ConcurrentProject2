@@ -189,7 +189,7 @@ compare subscribers and how exactly to classify.</p>
 <p>A test for this implementation may look like this:</p>
 <div class="highlight-scala"><div class="highlight"><pre><span class="k">val</span> <span class="n">lookupBus</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">LookupBusImpl</span>
 <span class="n">lookupBus</span><span class="o">.</span><span class="n">subscribe</span><span class="o">(</span><span class="n">testActor</span><span class="o">,</span> <span class="s">&quot;greetings&quot;</span><span class="o">)</span>
-<span class="n">lookupBus</span><span class="o">.</span><span class="n">publish</span><span class="o">(</span><span class="nc">MsgEnvelope</span><span class="o">(</span><span class="s">&quot;time&quot;</span><span class="o">,</span> <span class="nc">System</span><span class="o">.</span><span class="n">currentTimeMillis</span><span class="o">()))</span>
+<span class="n">lookupBus</span><span class="o">.</span><span class="n">publish</span><span class="o">(</span><span class="nc">MsgEnvelope</span><span class="o">(</span><span class="s">&quot;time&quot;</span><span class="o">,</span> <span class="nc">actors.System</span><span class="o">.</span><span class="n">currentTimeMillis</span><span class="o">()))</span>
 <span class="n">lookupBus</span><span class="o">.</span><span class="n">publish</span><span class="o">(</span><span class="nc">MsgEnvelope</span><span class="o">(</span><span class="s">&quot;greetings&quot;</span><span class="o">,</span> <span class="s">&quot;hello&quot;</span><span class="o">))</span>
 <span class="n">expectMsg</span><span class="o">(</span><span class="s">&quot;hello&quot;</span><span class="o">)</span>
 </pre></div>

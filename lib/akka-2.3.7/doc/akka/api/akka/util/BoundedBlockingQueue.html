@@ -47,10 +47,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>BoundedBlockingQueue wraps any Queue and turns the result into a BlockingQueue with a limited capacity.</p></div><dl class="paramcmts block"><dt class="tparam">E</dt><dd class="cmt"><p>- The type of the contents of this Queue
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>BoundedBlockingQueue wraps any actors.Queue and turns the result into a BlockingQueue with a limited capacity.</p></div><dl class="paramcmts block"><dt class="tparam">E</dt><dd class="cmt"><p>- The type of the contents of this actors.Queue
 </p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="http://github.com/akka/akka/tree/v2.3.7//akka-actor/src/main/scala/akka/util/BoundedBlockingQueue.scala" target="_blank">BoundedBlockingQueue.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="java.util.concurrent.BlockingQueue">BlockingQueue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.AbstractQueue">AbstractQueue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.Queue">Queue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.AbstractCollection">AbstractCollection</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.lang.Iterable">Iterable</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="java.util.concurrent.BlockingQueue">BlockingQueue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.AbstractQueue">AbstractQueue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.Queue">actors.Queue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.AbstractCollection">AbstractCollection</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.util.Collection">Collection</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <span class="extype" name="java.lang.Iterable">Iterable</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>], <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
             <div class="subClasses hiddenContent"><a href="../dispatch/BoundedPriorityMailbox$$MessageQueue.html" class="extype" name="akka.dispatch.BoundedPriorityMailbox.MessageQueue">MessageQueue</a></div>
@@ -75,7 +75,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="akka.util.BoundedBlockingQueue"><span>BoundedBlockingQueue</span></li><li class="in" name="java.util.concurrent.BlockingQueue"><span>BlockingQueue</span></li><li class="in" name="java.util.AbstractQueue"><span>AbstractQueue</span></li><li class="in" name="java.util.Queue"><span>Queue</span></li><li class="in" name="java.util.AbstractCollection"><span>AbstractCollection</span></li><li class="in" name="java.util.Collection"><span>Collection</span></li><li class="in" name="java.lang.Iterable"><span>Iterable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="akka.util.BoundedBlockingQueue"><span>BoundedBlockingQueue</span></li><li class="in" name="java.util.concurrent.BlockingQueue"><span>BlockingQueue</span></li><li class="in" name="java.util.AbstractQueue"><span>AbstractQueue</span></li><li class="in" name="java.util.Queue"><span>actors.Queue</span></li><li class="in" name="java.util.AbstractCollection"><span>AbstractCollection</span></li><li class="in" name="java.util.Collection"><span>Collection</span></li><li class="in" name="java.lang.Iterable"><span>Iterable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -109,14 +109,14 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BoundedBlockingQueue</span><span class="params">(<span name="maxCapacity">maxCapacity: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="backing">backing: <span class="extype" name="java.util.Queue">Queue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>]</span>)</span>
+        <span class="name">BoundedBlockingQueue</span><span class="params">(<span name="maxCapacity">maxCapacity: <a href="http://www.scala-lang.org/api/2.11.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="backing">backing: <span class="extype" name="java.util.Queue">actors.Queue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#akka.util.BoundedBlockingQueue@&lt;init&gt;(maxCapacity:Int,backing:java.util.Queue[E]):akka.util.BoundedBlockingQueue[E]" title="Permalink" target="_top">
+      <a href="../../index.html#akka.util.BoundedBlockingQueue@&lt;init&gt;(maxCapacity:Int,backing:java.util.actors.Queue[E]):akka.util.BoundedBlockingQueue[E]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">maxCapacity</dt><dd class="cmt"><p>- the maximum capacity of this Queue, needs to be &gt; 0</p></dd><dt class="param">backing</dt><dd class="cmt"><p>- the backing Queue</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">maxCapacity</dt><dd class="cmt"><p>- the maximum capacity of this actors.Queue, needs to be &gt; 0</p></dd><dt class="param">backing</dt><dd class="cmt"><p>- the backing actors.Queue</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -238,7 +238,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractQueue → Queue → AbstractCollection → Collection</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractQueue → actors.Queue → AbstractCollection → Collection</dd></dl></div>
     </li><li name="java.util.AbstractQueue#addAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="addAll(x$1:java.util.Collection[_&lt;:E]):Boolean"></a>
       <a id="addAll(Collection[_&lt;:E]):Boolean"></a>
@@ -397,7 +397,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractQueue → Queue</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractQueue → actors.Queue</dd></dl></div>
     </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((BoundedBlockingQueue[E])⇒Boolean,⇒Any):BoundedBlockingQueue[E]"></a>
@@ -681,7 +681,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">- the maximum capacity of this Queue, needs to be &gt; 0</p>
+      <p class="shortcomment cmt">- the maximum capacity of this actors.Queue, needs to be &gt; 0</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -766,7 +766,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.util.BoundedBlockingQueue">BoundedBlockingQueue</a> → BlockingQueue → Queue</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.util.BoundedBlockingQueue">BoundedBlockingQueue</a> → BlockingQueue → actors.Queue</dd></dl></div>
     </li><li name="akka.util.BoundedBlockingQueue#peek" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="peek():E"></a>
       <a id="peek():E"></a>
@@ -783,7 +783,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.util.BoundedBlockingQueue">BoundedBlockingQueue</a> → Queue</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.util.BoundedBlockingQueue">BoundedBlockingQueue</a> → actors.Queue</dd></dl></div>
     </li><li name="akka.util.BoundedBlockingQueue#poll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="poll():E"></a>
       <a id="poll():E"></a>
@@ -800,7 +800,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.util.BoundedBlockingQueue">BoundedBlockingQueue</a> → Queue</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="akka.util.BoundedBlockingQueue">BoundedBlockingQueue</a> → actors.Queue</dd></dl></div>
     </li><li name="akka.util.BoundedBlockingQueue#poll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="poll(timeout:Long,unit:java.util.concurrent.TimeUnit):E"></a>
       <a id="poll(Long,TimeUnit):E"></a>
@@ -885,7 +885,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractQueue → Queue</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractQueue → actors.Queue</dd></dl></div>
     </li><li name="akka.util.BoundedBlockingQueue#removeAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="removeAll(c:java.util.Collection[_]):Boolean"></a>
       <a id="removeAll(Collection[_]):Boolean"></a>
@@ -1126,7 +1126,7 @@
             </div><div class="parent" name="java.util.AbstractQueue">
               <h3>Inherited from <span class="extype" name="java.util.AbstractQueue">AbstractQueue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>]</h3>
             </div><div class="parent" name="java.util.Queue">
-              <h3>Inherited from <span class="extype" name="java.util.Queue">Queue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>]</h3>
+              <h3>Inherited from <span class="extype" name="java.util.Queue">actors.Queue</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>]</h3>
             </div><div class="parent" name="java.util.AbstractCollection">
               <h3>Inherited from <span class="extype" name="java.util.AbstractCollection">AbstractCollection</span>[<span class="extype" name="akka.util.BoundedBlockingQueue.E">E</span>]</h3>
             </div><div class="parent" name="java.util.Collection">

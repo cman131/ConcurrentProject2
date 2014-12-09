@@ -352,7 +352,7 @@ maximum time bound, the overall block may take arbitrarily longer in this case.
 
 .. note::
 
-   All times are measured using ``System.nanoTime``, meaning that they describe
+   All times are measured using ``actors.System.nanoTime``, meaning that they describe
    wall time, not CPU time or system time.
 
 Accounting for Slow Test Systems

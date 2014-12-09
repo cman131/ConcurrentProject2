@@ -15,7 +15,7 @@ it does the reason was one of
   upon overflow will have to drop messages)
 * or it failed due to a catastrophic VM error, e.g. an
   :class:`OutOfMemoryError`, a memory access violation (“segmentation fault”,
-  GPF, etc.), JVM bug—or someone calling ``System.exit()``.
+  GPF, etc.), JVM bug—or someone calling ``actors.System.exit()``.
 
 In all of these cases, the actor was very likely not in a position to process
 the message anyway, so this part of the non-guarantee is not problematic.

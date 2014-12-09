@@ -55,7 +55,7 @@ In this case the 'nrOfInstances' will be ignored and the 'routees' will be used.
 <br>
 <b>The</b> configuration parameter trumps the constructor arguments. This means that
 if you provide either 'nrOfInstances' or 'routees' during instantiation they will
-be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision Setup </h3><p>Any routees that are created by a router will be created as the router's children.
+be ignored if the router is defined in the configuration file for the actor being used.</p><h3> Supervision messages.Setup </h3><p>Any routees that are created by a router will be created as the router's children.
 The router is therefore also the children's supervisor.</p><p>The supervision strategy of the router actor can be configured with
 <a href="#withSupervisorStrategy(strategy:akka.actor.SupervisorStrategy):akka.routing.RandomRouter" class="extmbr" name="akka.routing.RandomRouter#withSupervisorStrategy">#withSupervisorStrategy</a>. If no strategy is provided, routers default to
 a strategy of “always escalate”. This means that errors are passed up to the
