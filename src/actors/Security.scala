@@ -24,7 +24,7 @@ class Security extends Actor {
   
   /** Messages... */
   def receive = {
-    // If receiving a Passenger, check if they've been received twice
+    // If receiving a poo.Passenger, check if they've been received twice
     case SendPassenger(passenger, true) => checkPerson(sender, passenger)
     
     // If receiving message from system, quit

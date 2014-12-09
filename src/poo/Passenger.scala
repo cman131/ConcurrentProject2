@@ -1,5 +1,7 @@
+package poo
+
 /**
- * Passenger.scala
+ * poo.Passenger.scala
  *
  * Simple class to represent a passenger who owns one bag.
  *

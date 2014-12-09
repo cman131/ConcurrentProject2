@@ -3,7 +3,7 @@ package actors
 /**
  * actors.System.scala
  * 
- * actors.System is in charge of making Passenger objects and sending their references
+ * actors.System is in charge of making poo.Passenger objects and sending their references
  * to the DocumentCheck object for the airport application.
  */
 

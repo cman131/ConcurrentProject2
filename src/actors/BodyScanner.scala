@@ -5,22 +5,23 @@
 
 package actors
 
-import akka.actors.Actor
+import akka.actor.{ActorRef, Actor}
 import messages.Setup
 import messages.SendPassenger
 import messages.Notify
 
-class BodyScanner extends Actor[Message] {
-	var queue: Queue
-	var security: Security
+class BodyScanner extends Actor {
+
+	var queue: ActorRef
+	var security: ActorRef
 
 	def receive = {
 		case msg: Setup => // receive setup msg
-			queue = msg.queueRef
-			security = msg.securityRef
+			queue = msg.getQueue()
+			security = msg.getSecurity()
 		case msg: SendPassenger => // receive a new passenger
-			val result = (new scala.util.Random).nextInt(5)!=2
-			security ! new SendPassenger(msg.passenger, result)
+			val result: Boolean = (new util.Random).nextInt(5)!=2
+			security ! new SendPassenger(msg.getPassenger(), result)
 			queue ! new Notify(true)
 	}
 }

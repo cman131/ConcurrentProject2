@@ -5,28 +5,31 @@ package actors
  * The queue in the airport
  */
 
-import akka.actors.Actor
+import akka.actor.{ActorRef, Actor}
+
 import messages.Setup
 import messages.SendPassenger
 import messages.Notify
-import scala.collection.mutable.Queue
+import poo.Passenger
 
-class Queue extends Actor {
-	var body: BodyScanner
-	var bag: BagScanner
+import collection.mutable.Queue
+
+class LineQueue extends Actor {
+	var body: ActorRef
+	var bag: ActorRef
 	var isBagFree = true
 	var isBodyFree = true
 
-	val bodies = Queue.empty[Passenger]
-	val bags = Queue.empty[Passenger]
+	val bodies = new Queue[Passenger]
+	val bags = new Queue[Passenger]
 
 	def receive = {
 		case msg: Setup => // receive setup msg
-			body = msg.bodyRef
-			bag = msg.bagRef
+			body = msg.getBody()
+			bag = msg.getBag()
 		case msg: SendPassenger => // receive a new passenger
-			bodies = msg.passenger +: bodies
-			bags = msg.passenger +: bags
+			bodies += msg.getPassenger() //+: bodies
+			bags += msg.getPassenger() //+: bags
 			// Now update the scanners if they are free
 			if(isBagFree){
 				bag ! new SendPassenger(bags.dequeue())
