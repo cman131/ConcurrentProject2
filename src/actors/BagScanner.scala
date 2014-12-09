@@ -28,7 +28,7 @@ class BagScanner extends Actor {
 			println("Bag Scanner #"+line+" has received a new passenger.")
 			val result: Boolean = (new util.Random).nextInt(5)!=2
 			println("Bag Scanner #"+line+" sends passenger #"+msg.passenger.getId()+" to security.")
-			security ! new SendPassenger(msg.passenger, result)
+			security ! new SendPassenger(msg.passenger, result, false)
 			println("Bag Scanner #"+line+" notifies queue #"+line+" that it's empty.")
 			queue ! new Notify(true)
 	}

@@ -29,7 +29,7 @@ class BodyScanner extends Actor {
 			println("Body Scanner #"+line+" has received a new passenger.")
 			val result: Boolean = (new util.Random).nextInt(5)!=2
 			println("Body Scanner #"+line+" sends passenger #"+msg.passenger.getId()+" to security.")
-			security ! new SendPassenger(msg.passenger, result)
+			security ! new SendPassenger(msg.passenger, result, true)
 			println("Body Scanner #"+line+" notifies queue #"+line+" that it's empty.")
 			queue ! new Notify(true)
 	}
