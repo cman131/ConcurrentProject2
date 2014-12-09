@@ -8,7 +8,7 @@ package poo
  * @author Geoff Berl
  */
 
-class Passenger {
+class Passenger(id: Integer) {
 
   // Some fields maybe??
   var hasBag: Boolean = true
@@ -20,6 +20,10 @@ class Passenger {
 
   def setHasBag(b: Boolean) {
     this.hasBag = b
+  }
+
+  def getId(): Integer = {
+    return id
   }
 
 }

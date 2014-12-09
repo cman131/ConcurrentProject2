@@ -17,6 +17,7 @@ import collection.mutable.Queue
 class LineQueue extends Actor {
 	var body: ActorRef
 	var bag: ActorRef
+	var line: Integer
 	var isBagFree = true
 	var isBodyFree = true
 
@@ -27,6 +28,8 @@ class LineQueue extends Actor {
 		case msg: Setup => // receive setup msg
 			body = msg.getBody()
 			bag = msg.getBag()
+			line = msg.getLine()
+			println("Queue #"+line+" is set up.")
 		case msg: SendPassenger => // receive a new passenger
 			bodies += msg.passenger //+: bodies
 			bags += msg.passenger //+: bags
