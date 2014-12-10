@@ -13,16 +13,21 @@ import poo.Passenger
 import collection.mutable.Queue
 
 class LineQueue extends Actor {
+	// Define references to known actors
 	var body: ActorRef =  null
 	var bag: ActorRef = null
+	
+	//Define state of line and scanners
 	var line: Integer = null
 	var isBagFree = true
 	var isBodyFree = true
 
+	// Tracks bags and people who haven't been scanned yet
 	val bodies = new Queue[Passenger]
 	val bags = new Queue[Passenger]
 
 	def receive = {
+		// Kill self and siblings on poison pill message
 		case msg: PoisonPill =>
 			println("Queue #"+line+": PoisonPill -> Shutting down.")
 			println("Queue #"+line+": poisoning Bag Scanner #"+line+".")
@@ -30,6 +35,7 @@ class LineQueue extends Actor {
 			println("Queue #"+line+": poisoning Body Scanner #"+line+".")
 			body ! new PoisonPill(true)
 			context.stop(self)
+		// set up reference and line state on setup message
 		case msg: Setup => // receive setup msg
 			body = msg.getBody()
 			bag = msg.getBag()
@@ -37,8 +43,11 @@ class LineQueue extends Actor {
 			println("Queue #"+line+": is set up.")
 		case msg: SendPassenger => // receive a new passenger
 			println("Queue #"+line+": has received passenger #"+msg.passenger.getId()+".")
+			
+			// log the new passenger and bag
 			bodies += msg.passenger //+: bodies
 			bags += msg.passenger //+: bags
+
 			// Now update the scanners if they are free
 			if(isBagFree){
 				println("Queue #"+line+": sends passenger #"+msg.passenger.getId()+" to Bag Scanner #"+line+".")
@@ -50,7 +59,7 @@ class LineQueue extends Actor {
 				body ! new SendPassenger(bodies.dequeue())
 				isBodyFree = false
 			}
-
+		// Log that the scanner is free and fill it if able
 		case msg: Notify => // a scanner has become free
 			case b: BodyScanner =>
 				println("Queue #"+line+": has been notified that Body Scanner #"+line+"is free.")

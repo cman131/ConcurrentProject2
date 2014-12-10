@@ -14,20 +14,25 @@ class BagScanner extends Actor {
 	var line: Integer = null
 
 	def receive = {
+		// poison siblings and kill self on poison pill
 		case msg: PoisonPill =>
 			println("Bag Scanner #"+line+": PoisonPill -> Shutting down.")
 			println("Bag Scanner #"+line+": is poisoning Security #"+line+".")
 			security ! new PoisonPill(true)
 			context.stop(self)
+		// Set up references and line state
 		case msg: Setup => // receive setup msg
 			queue = msg.getQueue()
 			security = msg.getSecurity()
 			line = msg.getLine()
 			println("Bag Scanner #"+line+": is set up.")
-		case msg: SendPassenger => // receive a new passenger
+		// receive and process a new bag
+		case msg: SendPassenger => // receive a new bag
 			println("Bag Scanner #"+line+": has received bag #"+msg.passenger.getId()+".")
 			val result: Boolean = (new util.Random).nextInt(5)!=2
 			println("Bag Scanner #"+line+": sends bag #"+msg.passenger.getId()+" to security.")
+
+			// send to security and notify the queue
 			security ! new SendPassenger(msg.passenger, result, false)
 			println("Bag Scanner #"+line+": notifies queue #"+line+" that it's empty.")
 			queue ! new Notify(true)
