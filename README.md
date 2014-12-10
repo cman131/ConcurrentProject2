@@ -12,6 +12,7 @@ Instructions:
 
 	Alternatively:
 	3. run executeMe.bat (Executes the jar)
+     or java -jar tsa.jar
 
 No command line arguments, but you can change the number of lines or 
 passengers in the Main.scala file
