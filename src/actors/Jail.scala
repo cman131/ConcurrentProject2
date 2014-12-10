@@ -11,7 +11,12 @@ import messages._
 class Jail(sys : ActorSystem) extends Actor {
   var captives = List()
 
-
+  /**
+   * Receives a passsenger and puts im in the captives Array List.
+   *
+   * At the end of the day receives a poison pill, stops the system and then itself.
+   * @return N/A
+   */
   def receive = {
     case SendPassenger(passenger, true, false) =>
       captives :+ passenger
